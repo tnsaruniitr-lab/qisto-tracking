@@ -46,7 +46,8 @@ const COMP_ALIAS = {
   'admin': 'admin console', 'admin console': 'admin console', 'admin ops console': 'admin console',
   'merchant': 'merchant portal', 'merchant portal': 'merchant portal',
   'workers': 'workers', 'workers & dunning': 'workers',
-  'localization': 'localization', 'hardening': 'hardening', 'hardening & qa': 'hardening', 'qa': 'hardening'
+  'localization': 'localization', 'hardening': 'hardening', 'hardening & qa': 'hardening', 'qa': 'hardening',
+  'integrations': 'integrations', 'sms': 'integrations', 'banking': 'integrations', 'push': 'integrations'
 };
 const MSTATE = {
   todo: { label: 'not started', cls: 'todo' },

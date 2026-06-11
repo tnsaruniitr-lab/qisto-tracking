@@ -2,7 +2,7 @@
   "updatedAt": "2026-06-11",
   "progress": {
     "modelNote": "every bar reserves its last 20% as a test & rework buffer (hatched) — it only fills once the stream is tested in production; build progress alone can never reach 100%",
-    "scopeNote": "scope expanded 2026-06-11 after the first full review: admin ops wiring, portal redesigns, localization and DB-integration tests added — overall % dropped accordingly. New productroadmap.md items added after this date lower the affected workstream automatically.",
+    "scopeNote": "scope expanded 2026-06-11 after the first full review: admin ops wiring, portal redesigns, localization, DB-integration tests, an integrations workstream (SMS/OTP, banking, push) and properly-sized store releases added — overall % dropped accordingly. New productroadmap.md items added after this date lower the affected workstream automatically.",
     "headline": "money loop live in production · product layer catching up to the backend",
     "scopeBaseline": "2026-06-11",
     "bufferPct": 20,
@@ -13,7 +13,8 @@
       { "label": "merchant portal", "weight": 10, "pct": 45, "baseEffort": 12, "tested": false, "note": "QR quote + order flow works; redesign planned" },
       { "label": "workers", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "reminders, late fees, dunning — not started" },
       { "label": "localization", "weight": 10, "pct": 0, "baseEffort": 12, "tested": false, "note": "Arabic, RTL, SYP amounts — required for a Damascus launch" },
-      { "label": "hardening", "weight": 15, "pct": 35, "baseEffort": 20, "tested": false, "note": "124 unit tests green; DB-backed integration tests not started" }
+      { "label": "hardening", "weight": 15, "pct": 35, "baseEffort": 20, "tested": false, "note": "124 unit tests green; DB-backed integration tests not started" },
+      { "label": "integrations", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "SMS/OTP provider, bank-statement import, push notifications — external rails, not started" }
     ]
   },
   "milestones": [

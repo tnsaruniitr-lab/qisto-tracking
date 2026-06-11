@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T14:53:54.536Z",
+  "generatedAt": "2026-06-11T15:04:46.496Z",
   "totals24h": {
-    "commits": 20,
-    "files": 157,
-    "additions": 6925,
-    "deletions": 3082
+    "commits": 21,
+    "files": 158,
+    "additions": 6931,
+    "deletions": 3085
   },
   "areas24h": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "label": "repo config",
-      "files": 5
+      "files": 6
     },
     {
       "label": "migrations",
@@ -163,13 +163,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 16
+      "commits": 17
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 31
+      "commits": 32
     },
     {
       "name": "Manasvi",
@@ -177,6 +177,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "5d7f6b86030dcc8b62da269fbb454854d36b44e0",
+      "message": "docs(roadmap): integrations component (SMS/OTP, bank import, push) + store release split into pipeline & submission",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T15:04:14Z"
+    },
     {
       "sha": "b0c4eb1b3e7a7ed7aac5683a2602867849f00612",
       "message": "docs: productroadmap.md — drives the build tracker (read hourly)",
@@ -350,16 +356,10 @@
       "message": "Merge pull request #2 from tnsaruniitr-lab/feat/admin-module",
       "author": "Manasvi",
       "date": "2026-06-10T08:54:13Z"
-    },
-    {
-      "sha": "a6513fa7baa1a42dcccbfc1c27dabc3e48b7e459",
-      "message": "fix(tests): mock admin/repo.js so admin.test.ts runs without DATABASE_URL",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:52:57Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-11T14:53:54.536Z",
+    "fetchedAt": "2026-06-11T15:04:46.496Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -426,8 +426,24 @@
         "added": "2026-06-11"
       },
       {
-        "item": "Real SMS provider + abuse caps",
-        "component": "backend core",
+        "item": "Real SMS/OTP provider + abuse caps",
+        "component": "integrations",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "EAS build pipeline + signing (iOS & Android)",
+        "component": "customer app",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Bank statement import for reconciliation",
+        "component": "integrations",
         "effort": "M",
         "status": "planned",
         "lane": "next",
@@ -442,8 +458,16 @@
         "added": "2026-06-11"
       },
       {
-        "item": "App store builds (iOS + Android)",
+        "item": "App Store & Play Store submission, listings + review fixes",
         "component": "customer app",
+        "effort": "L",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Push notifications for payment reminders",
+        "component": "integrations",
         "effort": "M",
         "status": "planned",
         "lane": "later",
