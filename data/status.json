@@ -393,6 +393,10 @@
   ],
   "shipped": [
     {
+      "area": "panels",
+      "text": "admin console & merchant portal rebranded to the Qisto design system and switched to auto-deploy — every push to main ships both, at the same URLs"
+    },
+    {
       "area": "money loop",
       "text": "full repayment cycle live — customer reports a transfer, admin reconciles, ledger posts, credit restores, loan closes"
     },
@@ -508,6 +512,10 @@
     {
       "label": "design prototype",
       "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/"
+    },
+    {
+      "label": "customer web app",
+      "url": "https://qisto-customer-web-production.up.railway.app"
     },
     {
       "label": "admin console",
