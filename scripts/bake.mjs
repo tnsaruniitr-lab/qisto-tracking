@@ -1,7 +1,9 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 
 const REPO = 'tnsaruniitr-lab/qisto';
-const TOKEN = process.env.GITHUB_TOKEN || '';
+// qisto is private — prefer a PAT with read access to it (QISTO_READ_TOKEN);
+// fall back to GITHUB_TOKEN for local runs / if the repo is public again.
+const TOKEN = process.env.QISTO_READ_TOKEN || process.env.GITHUB_TOKEN || '';
 const HOUR = 3600e3;
 const now = Date.now();
 

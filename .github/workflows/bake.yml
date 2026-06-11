@@ -19,6 +19,9 @@ jobs:
           node-version: 22
       - run: node scripts/bake.mjs
         env:
+          # qisto is private; the default GITHUB_TOKEN can't read it. Add a fine-grained
+          # PAT with read access to tnsaruniitr-lab/qisto as secret QISTO_READ_TOKEN.
+          QISTO_READ_TOKEN: ${{ secrets.QISTO_READ_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: commit if changed
         id: commit
