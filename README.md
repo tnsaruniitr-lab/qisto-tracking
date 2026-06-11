@@ -14,6 +14,12 @@ Three layers, freshest first:
 4. **Roadmap (hourly)** — the bake also reads [`productroadmap.md`](https://github.com/tnsaruniitr-lab/qisto/blob/main/productroadmap.md) from the qisto repo. Items drive the roadmap lanes; items **added after the scope baseline** automatically dilute the matching workstream's % (effort-weighted: S≈1 M≈3 L≈8 XL≈15 pts), and unknown component names spawn a new category row on the page.
 5. **Daily reviews** — each day's independent audit goes in `data/reviews/YYYY-MM-DD.json` (scorecard dimensions, what's great, issues, verdict, five things next — see [`2026-06-11.json`](data/reviews/2026-06-11.json) for the format). Append the date to [`data/reviews/index.json`](data/reviews/index.json). The page renders the latest review in full and builds the score trend from the whole archive.
 
+## Sections & test access
+
+Every section below the hero folds under its summary header (the count stays visible when collapsed); each viewer's open/closed choice persists in `localStorage`. Reference-heavy sections start collapsed.
+
+The **test access** card shows the public surface URLs only. All credentials — test phones, PINs, OTP, reference codes, the admin login — live in the **private** `tnsaruniitr-lab/qisto-qa` repo (`TEST-RUNBOOK.md`). The public page links to it, but the link 404s for anyone without repo access. Never put credentials in this public repo.
+
 ## Progress model
 
 The headline % is a weighted average over workstreams in `status.json`, with two honesty mechanisms on top:
