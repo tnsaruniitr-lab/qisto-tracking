@@ -1,31 +1,31 @@
 {
-  "generatedAt": "2026-06-11T14:25:55.615Z",
+  "generatedAt": "2026-06-11T14:35:10.319Z",
   "totals24h": {
-    "commits": 16,
-    "files": 146,
-    "additions": 6566,
-    "deletions": 2980
+    "commits": 18,
+    "files": 154,
+    "additions": 6833,
+    "deletions": 3046
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 75
+      "files": 77
     },
     {
       "label": "customer app",
-      "files": 46
+      "files": 51
     },
     {
       "label": "tests",
       "files": 9
     },
     {
-      "label": "migrations",
+      "label": "repo config",
       "files": 4
     },
     {
-      "label": "repo config",
-      "files": 3
+      "label": "migrations",
+      "files": 4
     },
     {
       "label": "admin console",
@@ -163,13 +163,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 12
+      "commits": 14
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 27
+      "commits": 29
     },
     {
       "name": "Manasvi",
@@ -177,6 +177,18 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "54b984c52f3fe695099b9e11e00fb2400938f80f",
+      "message": "fix(auth): relax OTP rate limits while DEV_OTP set (staging); strict in prod",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T14:31:51Z"
+    },
+    {
+      "sha": "5b61b18fcd2375d350e5a6aca57a29bc15d085dd",
+      "message": "chore(customer-app): enable web target for in-browser testing",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T14:27:08Z"
+    },
     {
       "sha": "07545046ab252682b49875f05681ee32bceb5229",
       "message": "fix(customer-app): no +963 prefill on login (caused wrong-account logins); clearer placeholder",
@@ -344,18 +356,6 @@
       "message": "fix: remove unused variables in merchant and admin screens (TS6133)",
       "author": "Manasvi",
       "date": "2026-06-10T08:37:46Z"
-    },
-    {
-      "sha": "8159a90759fc4e63cafb23f3e22ee220cac02066",
-      "message": "merge: sync feat/admin-module with main — resolve module type conflicts and fix pnpm build approvals",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:30:05Z"
-    },
-    {
-      "sha": "3b6c817a3456defc4696ee15ad113997f5d59224",
-      "message": "fix: replace native argon2 with @node-rs/argon2, fix timestamptz and exactOptionalPropertyTypes errors",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:09:30Z"
     }
   ]
 }
