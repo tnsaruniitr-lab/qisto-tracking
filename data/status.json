@@ -1,26 +1,28 @@
 {
   "updatedAt": "2026-06-11",
   "progress": {
-    "modelNote": "a workstream only reaches 100% when it is shipped, audited and production-ready — testing and rework are priced in, not appended",
-    "scopeNote": "scope expanded 2026-06-11 after the first full review: admin ops wiring, portal redesign, localization and DB-integration tests added — overall % dropped accordingly",
+    "modelNote": "every bar reserves its last 20% as a test & rework buffer (hatched) — it only fills once the stream is tested in production; build progress alone can never reach 100%",
+    "scopeNote": "scope expanded 2026-06-11 after the first full review: admin ops wiring, portal redesigns, localization and DB-integration tests added — overall % dropped accordingly. New productroadmap.md items added after this date lower the affected workstream automatically.",
     "headline": "money loop live in production · product layer catching up to the backend",
+    "scopeBaseline": "2026-06-11",
+    "bufferPct": 20,
     "workstreams": [
-      { "label": "backend core", "weight": 25, "pct": 85, "note": "money loop live; reconciliation amount check + durable events outstanding" },
-      { "label": "customer app", "weight": 15, "pct": 70, "note": "full loop wired to live API; Arabic/RTL/SYP and store builds missing" },
-      { "label": "admin ops console", "weight": 15, "pct": 25, "note": "screens exist but mostly mock data — being wired to the live endpoints" },
-      { "label": "merchant portal", "weight": 10, "pct": 45, "note": "QR quote + order flow works; redesign planned" },
-      { "label": "workers & dunning", "weight": 10, "pct": 0, "note": "reminders, late fees, overdue flow not started" },
-      { "label": "localization AR/RTL/SYP", "weight": 10, "pct": 0, "note": "required for a Damascus mass-market launch" },
-      { "label": "hardening & QA", "weight": 15, "pct": 35, "note": "124 unit tests green; DB-backed integration tests not started" }
+      { "label": "backend core", "weight": 25, "pct": 85, "baseEffort": 40, "tested": false, "note": "money loop live; reconciliation amount check + durable events outstanding" },
+      { "label": "customer app", "weight": 15, "pct": 70, "baseEffort": 25, "tested": false, "note": "full loop wired to live API; Arabic/RTL/SYP and store builds missing" },
+      { "label": "admin console", "weight": 15, "pct": 25, "baseEffort": 20, "tested": false, "note": "screens exist but mostly mock data — being wired to the live endpoints" },
+      { "label": "merchant portal", "weight": 10, "pct": 45, "baseEffort": 12, "tested": false, "note": "QR quote + order flow works; redesign planned" },
+      { "label": "workers", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "reminders, late fees, dunning — not started" },
+      { "label": "localization", "weight": 10, "pct": 0, "baseEffort": 12, "tested": false, "note": "Arabic, RTL, SYP amounts — required for a Damascus launch" },
+      { "label": "hardening", "weight": 15, "pct": 35, "baseEffort": 20, "tested": false, "note": "124 unit tests green; DB-backed integration tests not started" }
     ]
   },
   "milestones": [
-    { "id": "M1", "title": "identity & KYC", "state": "done" },
-    { "id": "M2", "title": "purchase loop", "state": "done" },
-    { "id": "M3", "title": "money loop", "state": "done" },
-    { "id": "M4", "title": "customer app", "state": "active" },
-    { "id": "M5", "title": "ops & portals", "state": "next" },
-    { "id": "M6", "title": "launch hardening", "state": "next" }
+    { "id": "M1", "title": "identity & KYC", "state": "testing", "stateNote": "live in production, not formally tested" },
+    { "id": "M2", "title": "purchase loop", "state": "testing", "stateNote": "live in production, not formally tested" },
+    { "id": "M3", "title": "money loop", "state": "testing", "stateNote": "live, but reconciliation amount gap open" },
+    { "id": "M4", "title": "customer app", "state": "progress", "stateNote": "wired to live API, in polish" },
+    { "id": "M5", "title": "ops & portals", "state": "todo", "stateNote": "" },
+    { "id": "M6", "title": "launch hardening", "state": "todo", "stateNote": "" }
   ],
   "stats": { "tests": 124, "services": "3/3" },
   "moneyLoop": [

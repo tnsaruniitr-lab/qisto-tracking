@@ -85,6 +85,38 @@ const areas24h = Object.entries(areas)
   .map(([label, n]) => ({ label, files: n }))
   .sort((a, b) => b.files - a.files);
 
+let roadmap = null;
+try {
+  const r = await fetch(`https://raw.githubusercontent.com/${REPO}/main/productroadmap.md`, {
+    headers: { 'User-Agent': 'qisto-tracking-bake' }
+  });
+  if (r.ok) {
+    const md = await r.text();
+    const rows = md.split('\n').filter(l => l.trim().startsWith('|'));
+    const items = [];
+    for (const row of rows) {
+      const cells = row.split('|').slice(1, -1).map(c => c.trim());
+      if (cells.length < 6 || cells[0] === 'item' || /^-+$/.test(cells[0].replace(/[: ]/g, '-'))) continue;
+      const [item, component, effort, status, lane, added] = cells;
+      if (!item) continue;
+      items.push({
+        item,
+        component: component.toLowerCase(),
+        effort: effort.toUpperCase(),
+        status: status.toLowerCase(),
+        lane: ['now', 'next', 'later'].includes(lane.toLowerCase()) ? lane.toLowerCase() : 'later',
+        added
+      });
+    }
+    roadmap = { fetchedAt: new Date(now).toISOString(), items };
+    console.log(`roadmap: ${items.length} items parsed`);
+  } else {
+    console.log(`roadmap: not found (${r.status})`);
+  }
+} catch (e) {
+  console.log('roadmap: fetch failed', e.message);
+}
+
 const recentCommits = commits.slice(0, 30).map(c => ({
   sha: c.sha,
   message: c.commit.message.split('\n')[0],
@@ -98,7 +130,8 @@ const stats = {
   areas24h,
   velocity,
   contributors7d,
-  recentCommits
+  recentCommits,
+  roadmap
 };
 
 mkdirSync('data', { recursive: true });

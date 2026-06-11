@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-11T14:43:29.965Z",
+  "generatedAt": "2026-06-11T14:53:54.536Z",
   "totals24h": {
-    "commits": 19,
-    "files": 156,
-    "additions": 6898,
+    "commits": 20,
+    "files": 157,
+    "additions": 6925,
     "deletions": 3082
   },
   "areas24h": [
@@ -21,7 +21,7 @@
     },
     {
       "label": "repo config",
-      "files": 4
+      "files": 5
     },
     {
       "label": "migrations",
@@ -163,13 +163,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 15
+      "commits": 16
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 30
+      "commits": 31
     },
     {
       "name": "Manasvi",
@@ -177,6 +177,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "b0c4eb1b3e7a7ed7aac5683a2602867849f00612",
+      "message": "docs: productroadmap.md — drives the build tracker (read hourly)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T14:51:02Z"
+    },
     {
       "sha": "1517c87b818946cffdb3cdc4e7c2939027e0220c",
       "message": "feat(customer-app): 4-mode splash selector — 2 styles (Ink/Bright) × 2 colours",
@@ -350,12 +356,115 @@
       "message": "fix(tests): mock admin/repo.js so admin.test.ts runs without DATABASE_URL",
       "author": "Manasvi",
       "date": "2026-06-10T08:52:57Z"
-    },
-    {
-      "sha": "ac1eb76d8a0e1af0ae4f6cf02f0c3f010856fb04",
-      "message": "fix: resolve all ESLint and TypeScript CI failures",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:49:35Z"
     }
-  ]
+  ],
+  "roadmap": {
+    "fetchedAt": "2026-06-11T14:53:54.536Z",
+    "items": [
+      {
+        "item": "Gate dev login bypass to non-production",
+        "component": "backend core",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Enforce amount matching in reconciliation",
+        "component": "backend core",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Wire admin console to live endpoints",
+        "component": "admin console",
+        "effort": "L",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Pick one settlement model, align docs with code",
+        "component": "backend core",
+        "effort": "M",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "DB-backed integration tests (recon, settlement, idempotency)",
+        "component": "hardening",
+        "effort": "L",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Arabic + RTL + SYP amounts across customer app",
+        "component": "localization",
+        "effort": "L",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Reminder, late-fee & dunning workers",
+        "component": "workers",
+        "effort": "L",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Merchant portal redesign",
+        "component": "merchant portal",
+        "effort": "L",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Real SMS provider + abuse caps",
+        "component": "backend core",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Admin portal redesign",
+        "component": "admin console",
+        "effort": "L",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "App store builds (iOS + Android)",
+        "component": "customer app",
+        "effort": "M",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Wallet top-up & early-payoff features",
+        "component": "customer app",
+        "effort": "L",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Credential rotation + append-only ledger guard",
+        "component": "backend core",
+        "effort": "S",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-11"
+      }
+    ]
+  }
 }

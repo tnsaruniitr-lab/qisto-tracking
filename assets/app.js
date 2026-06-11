@@ -39,25 +39,69 @@ function bars(el, rows, color) {
     <span class="bv">${esc(String(r.display ?? r.value))}</span></div>`).join('');
 }
 
-function renderStatus(s) {
-  const ws = s.progress.workstreams;
+const EFFORT_PTS = { S: 1, M: 3, L: 8, XL: 15 };
+const COMP_ALIAS = {
+  'backend': 'backend core', 'backend core': 'backend core',
+  'customer': 'customer app', 'customer app': 'customer app',
+  'admin': 'admin console', 'admin console': 'admin console', 'admin ops console': 'admin console',
+  'merchant': 'merchant portal', 'merchant portal': 'merchant portal',
+  'workers': 'workers', 'workers & dunning': 'workers',
+  'localization': 'localization', 'hardening': 'hardening', 'hardening & qa': 'hardening', 'qa': 'hardening'
+};
+const MSTATE = {
+  todo: { label: 'not started', cls: 'todo' },
+  progress: { label: 'in progress', cls: 'progress' },
+  testing: { label: 'testing', cls: 'testing' },
+  live: { label: 'tested & live', cls: 'live' }
+};
+
+function renderStatus(s, roadmapItems) {
+  const buffer = s.progress.bufferPct ?? 20;
+  const baseline = s.progress.scopeBaseline || '0000-00-00';
+  const ws = s.progress.workstreams.map(w => ({ ...w, pending: 0 }));
+
+  const newPts = {};
+  (roadmapItems || []).forEach(it => {
+    if (it.status === 'done' || it.status === 'dropped') return;
+    if (!(it.added > baseline)) return;
+    const key = COMP_ALIAS[it.component] || it.component;
+    newPts[key] = (newPts[key] || 0) + (EFFORT_PTS[it.effort] || 3);
+  });
+  const totalBase = ws.reduce((a, w) => a + w.baseEffort, 0);
+  for (const [comp, pts] of Object.entries(newPts)) {
+    const hit = ws.find(w => w.label === comp);
+    if (hit) hit.pending = pts;
+    else ws.push({ label: comp, weight: Math.max(4, Math.round(pts / totalBase * 100)), pct: 0, baseEffort: pts, pending: pts, tested: false, note: 'new category from productroadmap.md', isNew: true });
+  }
+
+  ws.forEach(w => {
+    w.eff = w.pending ? w.pct * w.baseEffort / (w.baseEffort + w.pending) : w.pct;
+    w.contrib = w.tested ? 100 : w.eff * (100 - buffer) / 100;
+  });
   const totalW = ws.reduce((a, w) => a + w.weight, 0);
-  const overall = Math.round(ws.reduce((a, w) => a + w.weight * w.pct, 0) / totalW);
+  const overall = Math.round(ws.reduce((a, w) => a + w.weight * w.contrib, 0) / totalW);
+
   $('progress-pct').textContent = overall + '%';
   $('progress-note').textContent = s.progress.headline;
   $('progress-bar').style.width = overall + '%';
-  $('workstreams').innerHTML = ws.map(w => `<div class="wrow" title="${esc(w.note)}">
-    <span class="wl">${esc(w.label)} <span class="dim">· ${w.weight}%</span></span>
-    <div class="bt"><div class="bf${w.pct ? '' : ' zero'}" style="width:${Math.max(2, w.pct)}%"></div></div>
-    <span class="wv">${w.pct}%</span></div>`).join('');
+  document.querySelector('.track').insertAdjacentHTML('beforeend', `<div class="buf" style="width:${buffer}%"></div>`);
+  $('workstreams').innerHTML = ws.map(w => `<div class="wrow" title="${esc(w.note)}${w.pending ? ` · +${w.pending} pts new scope pending` : ''}">
+    <span class="wl">${esc(w.label)}${w.isNew ? ' <span class="newchip">new</span>' : ''} <span class="dim">· ${Math.round(w.weight / totalW * 100)}%</span></span>
+    <div class="bt"><div class="bf${w.contrib >= 1 ? '' : ' zero'}${w.tested ? ' tested' : ''}" style="width:${Math.max(2, Math.round(w.contrib))}%"></div><div class="buf" style="width:${buffer}%"></div></div>
+    <span class="wv${w.pending ? ' diluted' : ''}">${Math.round(w.eff)}%</span></div>`).join('');
   $('model-note').textContent = s.progress.modelNote;
   $('scope-note').textContent = s.progress.scopeNote;
 
-  const active = s.milestones.find(m => m.state === 'active');
+  const active = s.milestones.find(m => m.state === 'progress');
   $('progress-milestone').textContent = active ? `${active.id.toLowerCase()} · ${active.title} in progress` : '';
-  $('stepper').innerHTML = s.milestones.map(m => `<li class="${m.state}">
-    <span class="node">${m.state === 'done' ? '<i class="ti ti-check"></i>' : ''}</span>
-    <span class="name">${esc(m.title)}</span><span class="tag">${m.id.toLowerCase()} · ${m.state}</span></li>`).join('');
+  $('stepper').innerHTML = s.milestones.map(m => {
+    const st = MSTATE[m.state] || MSTATE.todo;
+    return `<li class="${st.cls}" ${m.stateNote ? `title="${esc(m.stateNote)}"` : ''}>
+    <span class="node">${m.state === 'live' ? '<i class="ti ti-check"></i>' : ''}</span>
+    <span class="name">${esc(m.title)}</span><span class="tag">${m.id.toLowerCase()} · ${st.label}</span></li>`;
+  }).join('');
+  $('stepper-legend').innerHTML = Object.values(MSTATE).map(st =>
+    `<span class="lg"><span class="ldot ${st.cls}"></span>${st.label}</span>`).join('');
 
   $('stat-tests').textContent = s.stats.tests;
   $('money-loop').innerHTML = s.moneyLoop.map((st, i) =>
@@ -74,9 +118,26 @@ function renderStatus(s) {
             : `<div class="gph"><i class="ti ${esc(g.icon || 'ti-device-mobile')}"></i></div>`}
     <div class="ginfo"><p class="gt">${esc(g.title)} <i class="ti ti-external-link" style="font-size:11px"></i></p><p class="gd">${esc(g.desc)}</p></div></a>`).join('');
 
-  const lane = (key, title) => `<div class="lane lane-${key}"><p class="lh"><span class="ldot"></span>${title}</p>
-    ${s.roadmap[key].map(it => `<div class="litem"><span class="lt">${esc(it.label)}</span><span class="tag">${esc(it.tag)}</span></div>`).join('')}</div>`;
-  $('roadmap').innerHTML = lane('now', 'now') + lane('next', 'next') + lane('later', 'later');
+  if (roadmapItems && roadmapItems.length) {
+    const open = roadmapItems.filter(it => it.status !== 'done' && it.status !== 'dropped');
+    const done = roadmapItems.filter(it => it.status === 'done');
+    const lane = key => {
+      const items = open.filter(it => it.lane === key);
+      return `<div class="lane lane-${key}"><p class="lh"><span class="ldot"></span>${key} · ${items.length}</p>
+        ${items.map(it => `<div class="litem" title="added ${esc(it.added)}${it.added > baseline ? ' · new scope' : ''}">
+          <span class="sdot ${esc(it.status)}"></span>
+          <span class="lt">${esc(it.item)}</span>
+          <span class="tag">${esc(COMP_ALIAS[it.component] || it.component)}</span>
+          <span class="tag eff">${esc(it.effort)}</span></div>`).join('')}</div>`;
+    };
+    $('roadmap').innerHTML = lane('now') + lane('next') + lane('later');
+    $('roadmap-note').textContent = `driven by productroadmap.md in the qisto repo — re-read hourly · ${open.length} open${done.length ? ` · ${done.length} done` : ''} · S≈1d M≈3d L≈8d XL≈15d`;
+  } else {
+    const lane = (key) => `<div class="lane lane-${key}"><p class="lh"><span class="ldot"></span>${key}</p>
+      ${s.roadmap[key].map(it => `<div class="litem"><span class="lt">${esc(it.label)}</span><span class="tag">${esc(it.tag)}</span></div>`).join('')}</div>`;
+    $('roadmap').innerHTML = lane('now') + lane('next') + lane('later');
+    $('roadmap-note').textContent = 'roadmap snapshot — productroadmap.md not reachable';
+  }
 
   $('links').innerHTML = s.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} <i class="ti ti-external-link"></i></a>`).join('');
   $('live-pill').innerHTML = `<span class="dot"></span>${esc(s.stats.services)} services live`;
@@ -181,7 +242,7 @@ async function fetchLive() {
     fetch('data/status.json' + bust).then(r => r.json()),
     fetch('data/stats.json' + bust).then(r => r.json())
   ]);
-  renderStatus(status);
+  renderStatus(status, stats.roadmap?.items);
   renderStats(stats);
   renderReviews().catch(e => { $('scorecard').innerHTML = '<p class="mut">no review yet</p>'; console.error(e); });
   try {

@@ -35,27 +35,42 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .hero-top{display:flex;justify-content:space-between;gap:10px}
 .hero-num{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .big{font-size:34px;font-weight:600;letter-spacing:-.5px}
-.track{height:7px;border-radius:4px;background:var(--line-soft);overflow:hidden;margin:12px 0 18px}
+.track{position:relative;height:7px;border-radius:4px;background:var(--line-soft);overflow:hidden;margin:12px 0 18px}
 .fill{height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,var(--ocean),var(--violet));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.buf{position:absolute;right:0;top:0;bottom:0;border-left:1px dashed #39435F;background:repeating-linear-gradient(135deg,transparent 0 3px,rgba(255,255,255,.07) 3px 6px);pointer-events:none}
 .stepper{display:flex;gap:6px;margin:0;padding:0;list-style:none}
 .stepper li{flex:1;text-align:center;min-width:0}
 .stepper .node{width:20px;height:20px;border-radius:50%;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:11px}
-.stepper .done .node{background:var(--ocean);color:#fff}
-.stepper .active .node{background:transparent;border:2px solid var(--violet);position:relative}
-.stepper .active .node::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--violet);animation:pulse 1.8s infinite}
-.stepper .next .node{border:1px solid var(--line);background:var(--card-2)}
+.stepper .live .node{background:var(--green);color:#062417}
+.stepper .testing .node{background:transparent;border:2px solid #5EA2EF;position:relative}
+.stepper .testing .node::after{content:'';width:8px;height:8px;border-radius:50%;background:#5EA2EF}
+.stepper .progress .node{background:transparent;border:2px solid var(--amber);position:relative}
+.stepper .progress .node::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulse 1.8s infinite}
+.stepper .todo .node{border:1px solid var(--line);background:var(--card-2)}
 .stepper .name{font-size:11.5px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stepper .active .name{color:var(--violet-soft)}
-.stepper .next .name{color:var(--mut)}
+.stepper .live .name{color:var(--green)}
+.stepper .testing .name{color:#5EA2EF}
+.stepper .progress .name{color:var(--amber)}
+.stepper .todo .name{color:var(--mut)}
 .stepper .tag{font-size:10px;color:var(--dim)}
+.stepper-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;padding-top:10px;border-top:1px solid var(--line-soft)}
+.stepper-legend .lg{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--dim)}
+.stepper-legend .ldot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.stepper-legend .ldot.live{background:var(--green)}
+.stepper-legend .ldot.testing{background:#5EA2EF}
+.stepper-legend .ldot.progress{background:var(--amber)}
+.stepper-legend .ldot.todo{background:var(--card-2);border:1px solid var(--line)}
 
 .ws{display:grid;grid-template-columns:1fr 1fr;gap:7px 26px;margin:2px 0 12px}
 .wrow{display:flex;align-items:center;gap:10px}
-.wrow .wl{font-size:11.5px;width:148px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
-.wrow .bt{flex:1;height:6px;border-radius:3px;background:var(--line-soft);overflow:hidden}
+.wrow .wl{font-size:11.5px;width:128px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.wrow .bt{position:relative;flex:1;height:6px;border-radius:3px;background:var(--line-soft);overflow:hidden}
 .wrow .bf{height:100%;border-radius:3px;background:var(--ocean)}
 .wrow .bf.zero{background:var(--line)}
+.wrow .bf.tested{background:var(--green)}
 .wrow .wv{font-size:11px;color:var(--dim);width:34px;text-align:right;flex-shrink:0}
+.wrow .wv.diluted{color:var(--amber)}
+.newchip{font-size:9px;padding:1px 6px;border-radius:999px;background:var(--amber-bg);color:var(--amber)}
 .model-note{font-size:11px;color:var(--dim);margin:0 0 2px}
 .scope-note{font-size:11px;color:var(--amber);margin:0 0 16px}
 .stage.warn{background:var(--amber-bg);color:var(--amber)}
@@ -100,6 +115,12 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .litem{display:flex;gap:8px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line-soft)}
 .litem .lt{font-size:12px;flex:1}
 .litem .tag{font-size:9.5px;padding:1px 7px;border-radius:999px;background:var(--card-2);border:1px solid var(--line-soft);color:var(--dim);flex-shrink:0;white-space:nowrap}
+.litem .tag.eff{color:var(--ocean-soft);border-color:#1D3A6B;min-width:14px;text-align:center}
+.sdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;align-self:center}
+.sdot.planned{background:var(--card-2);border:1px solid var(--line)}
+.sdot.in-progress{background:var(--amber)}
+.sdot.testing{background:#5EA2EF}
+.sdot.done{background:var(--green)}
 
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}
 .stat{padding:12px 15px}
@@ -197,11 +218,33 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .twocol,.audit-grid,.grid2,.ws,.sdims,.lanes{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stepper{flex-wrap:wrap}
+  .stepper{flex-wrap:wrap;gap:10px 4px}
   .stepper li{flex:1 1 30%}
   .big{font-size:28px}
 }
 @media (max-width:460px){
+  .wrap{padding:18px 13px 44px}
+  .card{padding:14px}
   .gallery{grid-template-columns:1fr}
+  .gshot,.gph{aspect-ratio:16/9;max-height:170px}
   .commit .sha{display:none}
+  .commit{flex-wrap:wrap}
+  .commit .msg{white-space:normal;flex-basis:100%;order:3}
+  .commit .when{margin-left:auto}
+  .wrow .wl,.sdim .dl{width:112px;font-size:11px}
+  .wrow .wl .dim{display:none}
+  .stepper .name{white-space:normal;line-height:1.25;font-size:10.5px}
+  .stepper .tag{display:block;margin-top:1px}
+  .finding{flex-wrap:wrap;row-gap:3px}
+  .finding .ftext{flex-basis:100%;order:3}
+  .score-head{gap:10px}
+  .score-big{font-size:28px}
+  .loop{justify-content:flex-start}
+  .loop .stage{font-size:10.5px;padding:4px 10px}
+  .topbar{gap:10px}
+  .topbar-right{margin-left:0}
+  .hero-top{flex-wrap:wrap}
+  .foot{gap:12px}
+  .ship{flex-wrap:wrap}
+  .ship .stext{flex-basis:100%}
 }
