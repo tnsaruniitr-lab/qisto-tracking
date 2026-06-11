@@ -191,6 +191,14 @@ function renderStatus(s, roadmapItems) {
         <span class="sdot ${ar.score != null ? 'done' : 'planned'}"></span><span>${esc(ar.label)}</span>
         ${ar.score != null ? `<b>${ar.score}/10</b>` : '<span class="pill pill-pend">pending</span>'}</div>`).join('')}</div>`;
   }
+  if (s.qaReports) {
+    const qa = s.qaReports;
+    $('qa-note').textContent = `· ${qa.reports.length} report${qa.reports.length === 1 ? '' : 's'} · ${qa.openCases.length} open case groups`;
+    $('qa-reports').innerHTML =
+      qa.reports.map(r => `<div class="finding"><span class="sev low">report</span><div><b><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></b> <span class="mut">· ${esc(r.date)}</span><br><span class="mut">${esc(r.verdict)}</span></div></div>`).join('') +
+      qa.openCases.map(c => `<div class="finding"><span class="sev ${esc(c.sev)}">${esc(c.sev)}</span><div><b>${esc(c.id)}</b> ${esc(c.title)} · <a href="${esc(c.issue)}" target="_blank" rel="noopener">issue <i class="ti ti-external-link"></i></a></div></div>`).join('') +
+      `<p class="mut" style="padding:8px 0 10px;margin:0"><a href="${esc(qa.registerUrl)}" target="_blank" rel="noopener">full open-findings register →</a></p>`;
+  }
   if (s.appScores) {
     const a = s.appScores;
     $('appscore-note').textContent = '· ' + a.note;

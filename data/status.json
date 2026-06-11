@@ -7,55 +7,213 @@
     "scopeBaseline": "2026-06-11",
     "bufferPct": 20,
     "workstreams": [
-      { "label": "backend core", "weight": 25, "pct": 85, "baseEffort": 40, "tested": false, "note": "money loop live; reconciliation amount check + durable events outstanding" },
-      { "label": "customer app", "weight": 15, "pct": 70, "baseEffort": 25, "tested": false, "note": "full loop wired to live API; Arabic/RTL/SYP and store builds missing" },
-      { "label": "admin console", "weight": 15, "pct": 25, "baseEffort": 20, "tested": false, "note": "screens exist but mostly mock data — being wired to the live endpoints" },
-      { "label": "merchant portal", "weight": 10, "pct": 45, "baseEffort": 12, "tested": false, "note": "QR quote + order flow works; redesign planned" },
-      { "label": "workers", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "reminders, late fees, dunning — not started" },
-      { "label": "localization", "weight": 10, "pct": 0, "baseEffort": 12, "tested": false, "note": "Arabic, RTL, SYP amounts — required for a Damascus launch" },
-      { "label": "hardening", "weight": 15, "pct": 35, "baseEffort": 20, "tested": false, "note": "124 unit tests green; DB-backed integration tests not started" },
-      { "label": "integrations", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "SMS/OTP provider, bank-statement import, push notifications — external rails, not started" },
-      { "label": "release & store", "weight": 8, "pct": 14, "baseEffort": 12, "tested": false, "note": "iOS account + signing fully wired (cert, profile, ASC app) — one eas login from a TestFlight build; Android & store listings pending" }
+      {
+        "label": "backend core",
+        "weight": 25,
+        "pct": 85,
+        "baseEffort": 40,
+        "tested": false,
+        "note": "money loop live; reconciliation amount check + durable events outstanding"
+      },
+      {
+        "label": "customer app",
+        "weight": 15,
+        "pct": 70,
+        "baseEffort": 25,
+        "tested": false,
+        "note": "full loop wired to live API; Arabic/RTL/SYP and store builds missing"
+      },
+      {
+        "label": "admin console",
+        "weight": 15,
+        "pct": 25,
+        "baseEffort": 20,
+        "tested": false,
+        "note": "screens exist but mostly mock data — being wired to the live endpoints"
+      },
+      {
+        "label": "merchant portal",
+        "weight": 10,
+        "pct": 45,
+        "baseEffort": 12,
+        "tested": false,
+        "note": "QR quote + order flow works; redesign planned"
+      },
+      {
+        "label": "workers",
+        "weight": 10,
+        "pct": 0,
+        "baseEffort": 10,
+        "tested": false,
+        "note": "reminders, late fees, dunning — not started"
+      },
+      {
+        "label": "localization",
+        "weight": 10,
+        "pct": 0,
+        "baseEffort": 12,
+        "tested": false,
+        "note": "Arabic, RTL, SYP amounts — required for a Damascus launch"
+      },
+      {
+        "label": "hardening",
+        "weight": 15,
+        "pct": 35,
+        "baseEffort": 20,
+        "tested": false,
+        "note": "124 unit tests green; DB-backed integration tests not started"
+      },
+      {
+        "label": "integrations",
+        "weight": 10,
+        "pct": 0,
+        "baseEffort": 10,
+        "tested": false,
+        "note": "SMS/OTP provider, bank-statement import, push notifications — external rails, not started"
+      },
+      {
+        "label": "release & store",
+        "weight": 8,
+        "pct": 14,
+        "baseEffort": 12,
+        "tested": false,
+        "note": "iOS account + signing fully wired (cert, profile, ASC app) — one eas login from a TestFlight build; Android & store listings pending"
+      }
     ]
   },
   "milestones": [
-    { "id": "M1", "title": "identity & KYC", "state": "testing", "stateNote": "live in production, not formally tested" },
-    { "id": "M2", "title": "purchase loop", "state": "testing", "stateNote": "live in production, not formally tested" },
-    { "id": "M3", "title": "money loop", "state": "testing", "stateNote": "live, but reconciliation amount gap open" },
-    { "id": "M4", "title": "customer app", "state": "progress", "stateNote": "wired to live API, in polish" },
-    { "id": "M5", "title": "ops & portals", "state": "todo", "stateNote": "" },
-    { "id": "M6", "title": "launch hardening", "state": "todo", "stateNote": "" }
+    {
+      "id": "M1",
+      "title": "identity & KYC",
+      "state": "testing",
+      "stateNote": "live in production, not formally tested"
+    },
+    {
+      "id": "M2",
+      "title": "purchase loop",
+      "state": "testing",
+      "stateNote": "live in production, not formally tested"
+    },
+    {
+      "id": "M3",
+      "title": "money loop",
+      "state": "testing",
+      "stateNote": "live, but reconciliation amount gap open"
+    },
+    {
+      "id": "M4",
+      "title": "customer app",
+      "state": "progress",
+      "stateNote": "wired to live API, in polish"
+    },
+    {
+      "id": "M5",
+      "title": "ops & portals",
+      "state": "todo",
+      "stateNote": ""
+    },
+    {
+      "id": "M6",
+      "title": "launch hardening",
+      "state": "todo",
+      "stateNote": ""
+    }
   ],
-  "stats": { "tests": 124, "services": "3/3" },
+  "stats": {
+    "tests": 124,
+    "services": "3/3"
+  },
   "moneyLoop": [
-    { "label": "purchase", "live": true },
-    { "label": "delivery", "live": true },
-    { "label": "monthly bill", "live": true },
-    { "label": "repayment", "live": true },
-    { "label": "reconciliation", "live": true, "warn": "amount not yet checked — matching is by reference only" },
-    { "label": "settlement", "live": true }
+    {
+      "label": "purchase",
+      "live": true
+    },
+    {
+      "label": "delivery",
+      "live": true
+    },
+    {
+      "label": "monthly bill",
+      "live": true
+    },
+    {
+      "label": "repayment",
+      "live": true
+    },
+    {
+      "label": "reconciliation",
+      "live": true,
+      "warn": "amount not yet checked — matching is by reference only"
+    },
+    {
+      "label": "settlement",
+      "live": true
+    }
   ],
   "securityAudit": {
     "status": "scheduled · not yet run",
     "note": "dedicated pre-launch security audit — scheduled once the two open criticals are fixed and the apps are bundled. Until then, the daily review above tracks interim security posture.",
     "areas": [
-      { "label": "authentication & sessions", "score": null },
-      { "label": "money movement & ledger", "score": null },
-      { "label": "data protection & KYC PII", "score": null },
-      { "label": "API abuse & rate limiting", "score": null },
-      { "label": "infrastructure & secrets", "score": null },
-      { "label": "mobile app hardening", "score": null }
+      {
+        "label": "authentication & sessions",
+        "score": null
+      },
+      {
+        "label": "money movement & ledger",
+        "score": null
+      },
+      {
+        "label": "data protection & KYC PII",
+        "score": null
+      },
+      {
+        "label": "API abuse & rate limiting",
+        "score": null
+      },
+      {
+        "label": "infrastructure & secrets",
+        "score": null
+      },
+      {
+        "label": "mobile app hardening",
+        "score": null
+      }
     ]
   },
   "appScores": {
     "note": "measured once the apps are bundled — store builds are on the roadmap",
     "apps": [
-      { "name": "customer app · iOS", "reason": "awaiting EAS build + device testing", "scores": null },
-      { "name": "customer app · Android", "reason": "awaiting EAS build + device testing", "scores": null },
-      { "name": "admin console · web", "reason": "measured after live-endpoint wiring", "scores": null },
-      { "name": "merchant portal · web", "reason": "measured after redesign", "scores": null }
+      {
+        "name": "customer app · iOS",
+        "reason": "awaiting EAS build + device testing",
+        "scores": null
+      },
+      {
+        "name": "customer app · Android",
+        "reason": "awaiting EAS build + device testing",
+        "scores": null
+      },
+      {
+        "name": "admin console · web",
+        "reason": "measured after live-endpoint wiring",
+        "scores": null
+      },
+      {
+        "name": "merchant portal · web",
+        "reason": "measured after redesign",
+        "scores": null
+      }
     ],
-    "plannedMetrics": ["startup time", "bundle size", "crash-free rate", "Lighthouse performance", "accessibility", "offline behaviour", "RTL rendering", "low-end device test"]
+    "plannedMetrics": [
+      "startup time",
+      "bundle size",
+      "crash-free rate",
+      "Lighthouse performance",
+      "accessibility",
+      "offline behaviour",
+      "RTL rendering",
+      "low-end device test"
+    ]
   },
   "release": {
     "note": "Path from a working app to live in the stores. Externally gated — needs Apple Developer and Google Play accounts and passes external review.",
@@ -65,13 +223,40 @@
         "icon": "ti-brand-apple",
         "store": "App Store",
         "steps": [
-          { "stage": "developer account", "status": "done", "note": "Apple Team 7C2ZL7J8NP · App Store Connect app created" },
-          { "stage": "signing & certificates", "status": "done", "note": "dist cert + provisioning profile + ASC API key all in place" },
-          { "stage": "EAS production build", "status": "in-progress", "note": "building on EAS — build #3 (be7b0e1f)" },
-          { "stage": "beta testing", "label": "TestFlight", "status": "in-progress", "note": "auto-submit scheduled after build" },
-          { "stage": "store listing", "status": "planned", "note": "screenshots, description, metadata" },
-          { "stage": "app review", "status": "planned" },
-          { "stage": "live", "status": "planned" }
+          {
+            "stage": "developer account",
+            "status": "done",
+            "note": "Apple Team 7C2ZL7J8NP · App Store Connect app created"
+          },
+          {
+            "stage": "signing & certificates",
+            "status": "done",
+            "note": "dist cert + provisioning profile + ASC API key all in place"
+          },
+          {
+            "stage": "EAS production build",
+            "status": "in-progress",
+            "note": "building on EAS — build #3 (be7b0e1f)"
+          },
+          {
+            "stage": "beta testing",
+            "label": "TestFlight",
+            "status": "in-progress",
+            "note": "auto-submit scheduled after build"
+          },
+          {
+            "stage": "store listing",
+            "status": "planned",
+            "note": "screenshots, description, metadata"
+          },
+          {
+            "stage": "app review",
+            "status": "planned"
+          },
+          {
+            "stage": "live",
+            "status": "planned"
+          }
         ]
       },
       {
@@ -79,13 +264,38 @@
         "icon": "ti-brand-android",
         "store": "Play Store",
         "steps": [
-          { "stage": "developer account", "status": "planned", "note": "needs Google Play Console" },
-          { "stage": "signing & keystore", "status": "planned", "note": "EAS-managed keystore" },
-          { "stage": "EAS production build", "status": "planned" },
-          { "stage": "beta testing", "label": "Play internal testing", "status": "planned" },
-          { "stage": "store listing", "status": "planned", "note": "screenshots, description, metadata" },
-          { "stage": "Play review", "status": "planned" },
-          { "stage": "live", "status": "planned" }
+          {
+            "stage": "developer account",
+            "status": "planned",
+            "note": "needs Google Play Console"
+          },
+          {
+            "stage": "signing & keystore",
+            "status": "planned",
+            "note": "EAS-managed keystore"
+          },
+          {
+            "stage": "EAS production build",
+            "status": "planned"
+          },
+          {
+            "stage": "beta testing",
+            "label": "Play internal testing",
+            "status": "planned"
+          },
+          {
+            "stage": "store listing",
+            "status": "planned",
+            "note": "screenshots, description, metadata"
+          },
+          {
+            "stage": "Play review",
+            "status": "planned"
+          },
+          {
+            "stage": "live",
+            "status": "planned"
+          }
         ]
       }
     ]
@@ -102,9 +312,18 @@
         "url": "https://github.com/tnsaruniitr-lab/qisto/tree/main/apps/customer",
         "urlLabel": "app source",
         "creds": [
-          { "label": "phone", "value": "+963991234567" },
-          { "label": "PIN", "value": "123456" },
-          { "label": "OTP", "value": "000000" }
+          {
+            "label": "phone",
+            "value": "+963991234567"
+          },
+          {
+            "label": "PIN",
+            "value": "123456"
+          },
+          {
+            "label": "OTP",
+            "value": "000000"
+          }
         ]
       },
       {
@@ -112,8 +331,14 @@
         "icon": "ti-layout-dashboard",
         "url": "https://qisto-admin-production.up.railway.app",
         "creds": [
-          { "label": "email", "value": "admin@qisto.sy" },
-          { "label": "password", "value": "ask team / Railway env" }
+          {
+            "label": "email",
+            "value": "admin@qisto.sy"
+          },
+          {
+            "label": "password",
+            "value": "ask team / Railway env"
+          }
         ]
       },
       {
@@ -121,9 +346,18 @@
         "icon": "ti-building-store",
         "url": "https://qisto-merchant-production.up.railway.app",
         "creds": [
-          { "label": "phone", "value": "+963111000001" },
-          { "label": "store", "value": "Al-Nour Electronics" },
-          { "label": "OTP", "value": "000000" }
+          {
+            "label": "phone",
+            "value": "+963111000001"
+          },
+          {
+            "label": "store",
+            "value": "Al-Nour Electronics"
+          },
+          {
+            "label": "OTP",
+            "value": "000000"
+          }
         ]
       }
     ],
@@ -132,51 +366,200 @@
     "runbookLabel": "Full QA runbook (private repo)"
   },
   "decisions": [
-    { "title": "One monthly bill", "detail": "all purchases roll into a single payment reference due at month-end — one transfer clears everything" },
-    { "title": "Month-end due dates", "detail": "every installment lands on a calendar month-end, never odd mid-month dates" },
-    { "title": "Plan belongs to the merchant", "detail": "stores choose 1 or 3 monthly payments — shoppers never pick a plan at checkout" },
-    { "title": "Customers pay Qisto, never the store", "detail": "repayments go to Qisto by bank transfer and are reconciled by reference — merchants are settled separately" },
-    { "title": "Zero interest, merchant-financed", "detail": "customers pay no interest or fees — Qisto earns a 7% merchant fee per sale" },
-    { "title": "Credit ladder", "detail": "down payment shrinks as customers repay on time — 60% for new customers down to 25% for trusted ones" }
+    {
+      "title": "One monthly bill",
+      "detail": "all purchases roll into a single payment reference due at month-end — one transfer clears everything"
+    },
+    {
+      "title": "Month-end due dates",
+      "detail": "every installment lands on a calendar month-end, never odd mid-month dates"
+    },
+    {
+      "title": "Plan belongs to the merchant",
+      "detail": "stores choose 1 or 3 monthly payments — shoppers never pick a plan at checkout"
+    },
+    {
+      "title": "Customers pay Qisto, never the store",
+      "detail": "repayments go to Qisto by bank transfer and are reconciled by reference — merchants are settled separately"
+    },
+    {
+      "title": "Zero interest, merchant-financed",
+      "detail": "customers pay no interest or fees — Qisto earns a 7% merchant fee per sale"
+    },
+    {
+      "title": "Credit ladder",
+      "detail": "down payment shrinks as customers repay on time — 60% for new customers down to 25% for trusted ones"
+    }
   ],
   "shipped": [
-    { "area": "money loop", "text": "full repayment cycle live — customer reports a transfer, admin reconciles, ledger posts, credit restores, loan closes" },
-    { "area": "billing", "text": "consolidated monthly bill — one reference per customer per month across all purchases and merchants" },
-    { "area": "customer app", "text": "mobile app wired to the live API — login, KYC, wallet, scan-to-pay, monthly statement — with the Ink Royale design and animated splash" },
-    { "area": "commerce", "text": "month-end installment model — plans owned by merchants, schedules generated automatically" },
-    { "area": "security", "text": "critical role-check vulnerability found by adversarial audit, fixed and verified in production the same day" },
-    { "area": "ledger", "text": "double-entry accounting ledger with balanced-posting guarantees behind every money movement" }
+    {
+      "area": "money loop",
+      "text": "full repayment cycle live — customer reports a transfer, admin reconciles, ledger posts, credit restores, loan closes"
+    },
+    {
+      "area": "billing",
+      "text": "consolidated monthly bill — one reference per customer per month across all purchases and merchants"
+    },
+    {
+      "area": "customer app",
+      "text": "mobile app wired to the live API — login, KYC, wallet, scan-to-pay, monthly statement — with the Ink Royale design and animated splash"
+    },
+    {
+      "area": "commerce",
+      "text": "month-end installment model — plans owned by merchants, schedules generated automatically"
+    },
+    {
+      "area": "security",
+      "text": "critical role-check vulnerability found by adversarial audit, fixed and verified in production the same day"
+    },
+    {
+      "area": "ledger",
+      "text": "double-entry accounting ledger with balanced-posting guarantees behind every money movement"
+    }
   ],
   "gallery": [
-    { "title": "customer app", "desc": "design prototype · 23 screens, EN/AR", "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/", "img": null, "icon": "ti-device-mobile" },
-    { "title": "admin console", "desc": "KYC queue, reconciliation, settlements", "url": "https://qisto-admin-production.up.railway.app", "img": null, "icon": "ti-layout-dashboard" },
-    { "title": "merchant portal", "desc": "QR quotes and order tracking", "url": "https://qisto-merchant-production.up.railway.app", "img": null, "icon": "ti-building-store" }
+    {
+      "title": "customer app",
+      "desc": "design prototype · 23 screens, EN/AR",
+      "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/",
+      "img": null,
+      "icon": "ti-device-mobile"
+    },
+    {
+      "title": "admin console",
+      "desc": "KYC queue, reconciliation, settlements",
+      "url": "https://qisto-admin-production.up.railway.app",
+      "img": null,
+      "icon": "ti-layout-dashboard"
+    },
+    {
+      "title": "merchant portal",
+      "desc": "QR quotes and order tracking",
+      "url": "https://qisto-merchant-production.up.railway.app",
+      "img": null,
+      "icon": "ti-building-store"
+    }
   ],
   "roadmap": {
     "now": [
-      { "label": "gate dev login bypass to non-production", "tag": "security" },
-      { "label": "enforce amount matching in reconciliation", "tag": "money" },
-      { "label": "wire admin console to live endpoints", "tag": "admin" },
-      { "label": "pick one settlement model, align docs with code", "tag": "docs" }
+      {
+        "label": "gate dev login bypass to non-production",
+        "tag": "security"
+      },
+      {
+        "label": "enforce amount matching in reconciliation",
+        "tag": "money"
+      },
+      {
+        "label": "wire admin console to live endpoints",
+        "tag": "admin"
+      },
+      {
+        "label": "pick one settlement model, align docs with code",
+        "tag": "docs"
+      }
     ],
     "next": [
-      { "label": "DB-backed integration tests — recon, settlement, idempotency", "tag": "quality" },
-      { "label": "Arabic + RTL + SYP amounts across the customer app", "tag": "localization" },
-      { "label": "reminder, late-fee & dunning workers", "tag": "workers" },
-      { "label": "merchant portal redesign", "tag": "portal" },
-      { "label": "real SMS provider + abuse caps", "tag": "infra" }
+      {
+        "label": "DB-backed integration tests — recon, settlement, idempotency",
+        "tag": "quality"
+      },
+      {
+        "label": "Arabic + RTL + SYP amounts across the customer app",
+        "tag": "localization"
+      },
+      {
+        "label": "reminder, late-fee & dunning workers",
+        "tag": "workers"
+      },
+      {
+        "label": "merchant portal redesign",
+        "tag": "portal"
+      },
+      {
+        "label": "real SMS provider + abuse caps",
+        "tag": "infra"
+      }
     ],
     "later": [
-      { "label": "admin portal redesign", "tag": "portal" },
-      { "label": "app store builds — iOS + Android", "tag": "mobile" },
-      { "label": "wallet top-up & early-payoff features", "tag": "features" },
-      { "label": "credential rotation + append-only ledger guard", "tag": "security" }
+      {
+        "label": "admin portal redesign",
+        "tag": "portal"
+      },
+      {
+        "label": "app store builds — iOS + Android",
+        "tag": "mobile"
+      },
+      {
+        "label": "wallet top-up & early-payoff features",
+        "tag": "features"
+      },
+      {
+        "label": "credential rotation + append-only ledger guard",
+        "tag": "security"
+      }
     ]
   },
   "links": [
-    { "label": "repository", "url": "https://github.com/tnsaruniitr-lab/qisto" },
-    { "label": "design prototype", "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/" },
-    { "label": "admin console", "url": "https://qisto-admin-production.up.railway.app" },
-    { "label": "merchant portal", "url": "https://qisto-merchant-production.up.railway.app" }
-  ]
+    {
+      "label": "repository",
+      "url": "https://github.com/tnsaruniitr-lab/qisto"
+    },
+    {
+      "label": "design prototype",
+      "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/"
+    },
+    {
+      "label": "admin console",
+      "url": "https://qisto-admin-production.up.railway.app"
+    },
+    {
+      "label": "merchant portal",
+      "url": "https://qisto-merchant-production.up.railway.app"
+    }
+  ],
+  "qaReports": {
+    "note": "Deep audits live in the qisto repo qa-reports/ folder; open cases are GitHub issues.",
+    "registerUrl": "https://github.com/tnsaruniitr-lab/qisto/blob/main/qa-reports/OPEN-FINDINGS.md",
+    "reports": [
+      {
+        "date": "2026-06-11",
+        "title": "Money-math end-to-end audit",
+        "verdict": "Core math verified correct: live production scenarios across 3 merchant configs, 41-invariant checklist, 400k-case property tests, full ledger balance. 4 HIGH + 4 MED hardening cases opened (failure/race paths, not wrong math).",
+        "url": "https://github.com/tnsaruniitr-lab/qisto/blob/main/qa-reports/qisto-money-math-audit-2026-06-11.md"
+      }
+    ],
+    "openCases": [
+      {
+        "id": "QA-1",
+        "sev": "high",
+        "title": "Guard reconciliation & billing on goods-delivered",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/7"
+      },
+      {
+        "id": "QA-2",
+        "sev": "high",
+        "title": "Settlement approve/pay race — possible double merchant payout",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/8"
+      },
+      {
+        "id": "QA-3",
+        "sev": "high",
+        "title": "Delivery accrual fire-and-forget — lost ledger postings on crash",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/9"
+      },
+      {
+        "id": "QA-4",
+        "sev": "high",
+        "title": "Zero-amount guards: $0 loans never close; 0%-fee settlements wedge",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/10"
+      },
+      {
+        "id": "QA-5..8",
+        "sev": "medium",
+        "title": "Idempotency scoping+TTL · bank-amount matching · term locking · reconcile batch isolation",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/11"
+      }
+    ]
+  }
 }
