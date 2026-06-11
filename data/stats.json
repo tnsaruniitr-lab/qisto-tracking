@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T14:35:10.319Z",
+  "generatedAt": "2026-06-11T14:43:29.965Z",
   "totals24h": {
-    "commits": 18,
-    "files": 154,
-    "additions": 6833,
-    "deletions": 3046
+    "commits": 19,
+    "files": 156,
+    "additions": 6898,
+    "deletions": 3082
   },
   "areas24h": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "label": "customer app",
-      "files": 51
+      "files": 53
     },
     {
       "label": "tests",
@@ -163,13 +163,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 14
+      "commits": 15
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 29
+      "commits": 30
     },
     {
       "name": "Manasvi",
@@ -177,6 +177,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "1517c87b818946cffdb3cdc4e7c2939027e0220c",
+      "message": "feat(customer-app): 4-mode splash selector — 2 styles (Ink/Bright) × 2 colours",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T14:36:08Z"
+    },
     {
       "sha": "54b984c52f3fe695099b9e11e00fb2400938f80f",
       "message": "fix(auth): relax OTP rate limits while DEV_OTP set (staging); strict in prod",
@@ -350,12 +356,6 @@
       "message": "fix: resolve all ESLint and TypeScript CI failures",
       "author": "Manasvi",
       "date": "2026-06-10T08:49:35Z"
-    },
-    {
-      "sha": "c54e122584debe114c5e18cf0560249818905b3d",
-      "message": "fix: remove unused variables in merchant and admin screens (TS6133)",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:37:46Z"
     }
   ]
 }
