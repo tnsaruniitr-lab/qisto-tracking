@@ -34,6 +34,28 @@
     { "label": "reconciliation", "live": true, "warn": "amount not yet checked — matching is by reference only" },
     { "label": "settlement", "live": true }
   ],
+  "securityAudit": {
+    "status": "scheduled · not yet run",
+    "note": "dedicated pre-launch security audit — scheduled once the two open criticals are fixed and the apps are bundled. Until then, the daily review above tracks interim security posture.",
+    "areas": [
+      { "label": "authentication & sessions", "score": null },
+      { "label": "money movement & ledger", "score": null },
+      { "label": "data protection & KYC PII", "score": null },
+      { "label": "API abuse & rate limiting", "score": null },
+      { "label": "infrastructure & secrets", "score": null },
+      { "label": "mobile app hardening", "score": null }
+    ]
+  },
+  "appScores": {
+    "note": "measured once the apps are bundled — store builds are on the roadmap",
+    "apps": [
+      { "name": "customer app · iOS", "reason": "awaiting EAS build + device testing", "scores": null },
+      { "name": "customer app · Android", "reason": "awaiting EAS build + device testing", "scores": null },
+      { "name": "admin console · web", "reason": "measured after live-endpoint wiring", "scores": null },
+      { "name": "merchant portal · web", "reason": "measured after redesign", "scores": null }
+    ],
+    "plannedMetrics": ["startup time", "bundle size", "crash-free rate", "Lighthouse performance", "accessibility", "offline behaviour", "RTL rendering", "low-end device test"]
+  },
   "decisions": [
     { "title": "One monthly bill", "detail": "all purchases roll into a single payment reference due at month-end — one transfer clears everything" },
     { "title": "Month-end due dates", "detail": "every installment lands on a calendar month-end, never odd mid-month dates" },

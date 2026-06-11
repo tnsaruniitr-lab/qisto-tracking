@@ -142,6 +142,27 @@ function renderStatus(s, roadmapItems) {
 
   $('links').innerHTML = s.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} <i class="ti ti-external-link"></i></a>`).join('');
   $('live-pill').innerHTML = `<span class="dot"></span>${esc(s.stats.services)} services live`;
+
+  if (s.securityAudit) {
+    const sa = s.securityAudit;
+    $('sec-note').textContent = '· ' + sa.status;
+    $('security-audit').innerHTML = `<p class="pend-r" style="margin:0 0 10px">${esc(sa.note)}</p>
+      <div class="sec-areas">${sa.areas.map(ar => `<div class="sec-area">
+        <span class="sdot ${ar.score != null ? 'done' : 'planned'}"></span><span>${esc(ar.label)}</span>
+        ${ar.score != null ? `<b>${ar.score}/10</b>` : '<span class="pill pill-pend">pending</span>'}</div>`).join('')}</div>`;
+  }
+  if (s.appScores) {
+    const a = s.appScores;
+    $('appscore-note').textContent = '· ' + a.note;
+    $('app-scores').innerHTML = a.apps.map(app => app.scores
+      ? `<div class="card"><p class="lbl">${esc(app.name)}</p><div class="bars">${app.scores.map(m => `<div class="brow">
+          <span class="bl">${esc(m.label)}</span>
+          <div class="bt"><div class="bf" style="width:${Math.max(3, m.pct)}%"></div></div>
+          <span class="bv">${esc(m.display)}</span></div>`).join('')}</div></div>`
+      : `<div class="card pend"><div class="pend-head"><p class="lbl" style="margin:0">${esc(app.name)}</p><span class="pill pill-pend">pending</span></div>
+          <p class="pend-r">${esc(app.reason)}</p></div>`).join('')
+      + `<div class="planned"><span class="plbl">will measure:</span>${a.plannedMetrics.map(m => `<span class="chip">${esc(m)}</span>`).join('')}</div>`;
+  }
 }
 
 function renderStats(st) {
