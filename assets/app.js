@@ -118,12 +118,16 @@ function renderStatus(s, roadmapItems) {
 
   if (s.testAccess && $('test-access')) {
     const t = s.testAccess;
-    $('test-access').innerHTML = `<p class="pend-r" style="margin:0 0 12px">${esc(t.note)}</p>
+    $('test-access').innerHTML =
+      (t.warning ? `<div class="ta-warn"><i class="ti ti-alert-triangle" aria-hidden="true"></i><span>${esc(t.warning)}</span></div>` : '') +
+      `<p class="pend-r" style="margin:0 0 12px">${esc(t.note)}</p>
       <div class="ta-grid">${t.surfaces.map(su => `<div class="ta-card">
         <div class="ta-head"><i class="ti ${esc(su.icon)}" aria-hidden="true"></i><span>${esc(su.name)}</span></div>
         <a class="ta-link" href="${esc(su.url)}" target="_blank" rel="noopener">${esc(su.url.replace(/^https?:\/\//, ''))} <i class="ti ti-external-link"></i></a>
-        <p class="ta-cred"><i class="ti ti-lock" aria-hidden="true"></i> ${esc(su.access)}</p></div>`).join('')}</div>
-      <a class="ta-vault" href="${esc(t.runbookUrl)}" target="_blank" rel="noopener"><i class="ti ti-book" aria-hidden="true"></i> ${esc(t.runbookLabel)} <i class="ti ti-external-link"></i></a>`;
+        <p class="ta-cred"><i class="ti ti-login-2" aria-hidden="true"></i> ${esc(su.access)}</p></div>`).join('')}</div>` +
+      (t.credentials ? `<div class="ta-creds">${t.credentials.map(c => `<div class="ta-crow"><span class="ck">${esc(c.label)}</span><code class="cv">${esc(c.value)}</code></div>`).join('')}</div>` : '') +
+      (t.refFormats ? `<p class="ta-ref"><span class="ck">reference codes</span> <code>${esc(t.refFormats)}</code></p>` : '') +
+      `<a class="ta-vault" href="${esc(t.runbookUrl)}" target="_blank" rel="noopener"><i class="ti ti-book" aria-hidden="true"></i> ${esc(t.runbookLabel)} <i class="ti ti-external-link"></i></a>`;
   }
 
   $('gallery').innerHTML = s.gallery.map(g => `<a class="gcard" href="${esc(g.url)}" target="_blank" rel="noopener">

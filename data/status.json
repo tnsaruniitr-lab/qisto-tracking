@@ -57,14 +57,24 @@
     "plannedMetrics": ["startup time", "bundle size", "crash-free rate", "Lighthouse performance", "accessibility", "offline behaviour", "RTL rendering", "low-end device test"]
   },
   "testAccess": {
-    "note": "Live surfaces for end-to-end testing. The URLs below are public; all credentials — test phone numbers, PINs, OTP, reference codes and the admin login — live in a private runbook and are never published here.",
+    "warning": "Pre-launch demo access — production holds test/seed data only. These credentials will be removed and the DEV_OTP bypass disabled before go-live (tracked on the roadmap). Don't enter real personal or payment data.",
+    "note": "Everything needed for an end-to-end test: log in, run a purchase, repay, reconcile, settle.",
     "surfaces": [
-      { "name": "customer app", "icon": "ti-device-mobile", "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/", "access": "real app via Expo Go — build steps in runbook" },
-      { "name": "admin console", "icon": "ti-layout-dashboard", "url": "https://qisto-admin-production.up.railway.app", "access": "super-admin login in runbook" },
-      { "name": "merchant portal", "icon": "ti-building-store", "url": "https://qisto-merchant-production.up.railway.app", "access": "OTP login — test phone in runbook" }
+      { "name": "customer app", "icon": "ti-device-mobile", "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/", "access": "Expo Go — cd apps/customer && pnpm start" },
+      { "name": "admin console", "icon": "ti-layout-dashboard", "url": "https://qisto-admin-production.up.railway.app", "access": "admin@qisto.sy + password" },
+      { "name": "merchant portal", "icon": "ti-building-store", "url": "https://qisto-merchant-production.up.railway.app", "access": "+963111000001 · OTP below" }
     ],
+    "credentials": [
+      { "label": "test customer", "value": "+963991234567" },
+      { "label": "customer PIN", "value": "123456" },
+      { "label": "OTP (any phone)", "value": "000000" },
+      { "label": "admin login", "value": "admin@qisto.sy" },
+      { "label": "admin password", "value": "ask team / Railway env" },
+      { "label": "test merchant", "value": "+963111000001 — Al-Nour Electronics" }
+    ],
+    "refFormats": "per-installment QIS-XXXXX-n · monthly QM-<userid8hex>-<YYYYMM>",
     "runbookUrl": "https://github.com/tnsaruniitr-lab/qisto-qa/blob/main/TEST-RUNBOOK.md",
-    "runbookLabel": "Open QA runbook (private — GitHub login required)"
+    "runbookLabel": "Full QA runbook (private repo)"
   },
   "decisions": [
     { "title": "One monthly bill", "detail": "all purchases roll into a single payment reference due at month-end — one transfer clears everything" },
