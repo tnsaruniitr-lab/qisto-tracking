@@ -120,12 +120,14 @@ function renderStatus(s, roadmapItems) {
     const t = s.testAccess;
     $('test-access').innerHTML =
       (t.warning ? `<div class="ta-warn"><i class="ti ti-alert-triangle" aria-hidden="true"></i><span>${esc(t.warning)}</span></div>` : '') +
-      `<p class="pend-r" style="margin:0 0 12px">${esc(t.note)}</p>
+      `<p class="pend-r" style="margin:0 0 14px">${esc(t.note)}</p>
       <div class="ta-grid">${t.surfaces.map(su => `<div class="ta-card">
         <div class="ta-head"><i class="ti ${esc(su.icon)}" aria-hidden="true"></i><span>${esc(su.name)}</span></div>
-        <a class="ta-link" href="${esc(su.url)}" target="_blank" rel="noopener">${esc(su.url.replace(/^https?:\/\//, ''))} <i class="ti ti-external-link"></i></a>
-        <p class="ta-cred"><i class="ti ti-login-2" aria-hidden="true"></i> ${esc(su.access)}</p></div>`).join('')}</div>` +
-      (t.credentials ? `<div class="ta-creds">${t.credentials.map(c => `<div class="ta-crow"><span class="ck">${esc(c.label)}</span><code class="cv">${esc(c.value)}</code></div>`).join('')}</div>` : '') +
+        ${su.run ? `<div class="ta-run"><i class="ti ti-terminal-2" aria-hidden="true"></i><code>${esc(su.run)}</code></div>` : ''}
+        ${su.runNote ? `<p class="ta-runnote">${esc(su.runNote)}</p>` : ''}
+        ${su.url ? `<a class="ta-link" href="${esc(su.url)}" target="_blank" rel="noopener">${esc(su.urlLabel || su.url.replace(/^https?:\/\//, ''))} <i class="ti ti-external-link"></i></a>` : ''}
+        <div class="ta-kvs">${(su.creds || []).map(c => `<div class="ta-kv"><span class="ck">${esc(c.label)}</span><code class="cv">${esc(c.value)}</code></div>`).join('')}</div>
+      </div>`).join('')}</div>` +
       (t.refFormats ? `<p class="ta-ref"><span class="ck">reference codes</span> <code>${esc(t.refFormats)}</code></p>` : '') +
       `<a class="ta-vault" href="${esc(t.runbookUrl)}" target="_blank" rel="noopener"><i class="ti ti-book" aria-hidden="true"></i> ${esc(t.runbookLabel)} <i class="ti ti-external-link"></i></a>`;
   }
