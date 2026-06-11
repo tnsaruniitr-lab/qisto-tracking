@@ -131,6 +131,13 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .sh{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:var(--mut);margin:26px 0 10px;letter-spacing:.4px}
 .sh .ti{font-size:16px}
 .sh-note{font-weight:400;color:var(--dim);font-size:11.5px;margin-left:2px}
+.sh[data-coll]{cursor:pointer;user-select:none;border-radius:var(--r-sm);padding:4px 6px;margin-left:-6px;margin-right:-6px;transition:background .12s}
+.sh[data-coll]:hover{background:var(--card-2)}
+.sh[data-coll]:focus-visible{outline:2px solid var(--ocean);outline-offset:1px}
+.coll-chev{margin-left:auto;font-size:15px !important;color:var(--dim);transition:transform .18s}
+.sh.collapsed .coll-chev{transform:rotate(-90deg)}
+.coll-body{display:contents}
+.sh.collapsed + .coll-body{display:none}
 
 .loop-card{padding:14px 16px}
 .loop{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
@@ -218,6 +225,17 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .sec-area .pill{margin-left:auto}
 .sec-area b{margin-left:auto;font-weight:500}
 
+.ta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.ta-card{background:var(--card-2);border:1px solid var(--line-soft);border-radius:var(--r-sm);padding:12px 14px}
+.ta-head{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;margin-bottom:8px}
+.ta-head .ti{font-size:16px;color:var(--ocean-soft)}
+.ta-link{display:block;font-size:11.5px;font-family:'IBM Plex Mono',monospace;margin-bottom:8px;word-break:break-all}
+.ta-cred{font-size:11px;color:var(--dim);margin:0;display:flex;align-items:center;gap:5px}
+.ta-cred .ti{font-size:13px}
+.ta-vault{display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:8px 14px;border-radius:var(--r-sm);background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.ta-vault:hover{border-color:var(--ocean);text-decoration:none}
+.ta-vault .ti{font-size:15px;color:var(--ocean-soft)}
+
 .pills{display:flex;gap:8px;flex-wrap:wrap}
 .pills .pill{background:var(--card);border:1px solid var(--line);color:var(--ink)}
 
@@ -228,7 +246,7 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 
 @media (max-width:760px){
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .twocol,.audit-grid,.grid2,.ws,.sdims,.lanes,.sec-areas{grid-template-columns:1fr}
+  .twocol,.audit-grid,.grid2,.ws,.sdims,.lanes,.sec-areas,.ta-grid{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stepper{flex-wrap:wrap;gap:10px 4px}
   .stepper li{flex:1 1 30%}

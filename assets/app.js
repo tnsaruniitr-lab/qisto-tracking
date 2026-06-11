@@ -111,8 +111,20 @@ function renderStatus(s, roadmapItems) {
   $('decisions').innerHTML = s.decisions.map(d => `<div class="card dcard">
     <p class="dt">${esc(d.title)}</p><p class="dd">${esc(d.detail)}</p></div>`).join('');
 
+  if ($('decisions-note')) $('decisions-note').textContent = `· ${s.decisions.length}`;
+  if ($('shipped-note')) $('shipped-note').textContent = `· ${s.shipped.length} this week`;
   $('shipped').innerHTML = s.shipped.map(it => `<div class="ship">
     <span class="area">${esc(it.area)}</span><span class="stext">${esc(it.text)}</span></div>`).join('');
+
+  if (s.testAccess && $('test-access')) {
+    const t = s.testAccess;
+    $('test-access').innerHTML = `<p class="pend-r" style="margin:0 0 12px">${esc(t.note)}</p>
+      <div class="ta-grid">${t.surfaces.map(su => `<div class="ta-card">
+        <div class="ta-head"><i class="ti ${esc(su.icon)}" aria-hidden="true"></i><span>${esc(su.name)}</span></div>
+        <a class="ta-link" href="${esc(su.url)}" target="_blank" rel="noopener">${esc(su.url.replace(/^https?:\/\//, ''))} <i class="ti ti-external-link"></i></a>
+        <p class="ta-cred"><i class="ti ti-lock" aria-hidden="true"></i> ${esc(su.access)}</p></div>`).join('')}</div>
+      <a class="ta-vault" href="${esc(t.runbookUrl)}" target="_blank" rel="noopener"><i class="ti ti-book" aria-hidden="true"></i> ${esc(t.runbookLabel)} <i class="ti ti-external-link"></i></a>`;
+  }
 
   $('gallery').innerHTML = s.gallery.map(g => `<a class="gcard" href="${esc(g.url)}" target="_blank" rel="noopener">
     ${g.img ? `<img class="gshot" src="${esc(g.img)}" alt="${esc(g.title)}" loading="lazy">`
@@ -258,6 +270,39 @@ async function fetchLive() {
   return list.map(c => ({ sha: c.sha, message: c.commit.message, date: c.commit.author.date }));
 }
 
+function initCollapsibles() {
+  document.querySelectorAll('h2.sh[data-coll]').forEach(h => {
+    if (h.dataset.collInit) return;
+    h.dataset.collInit = '1';
+    const key = 'coll:' + h.dataset.coll;
+    const body = document.createElement('div');
+    body.className = 'coll-body';
+    let n = h.nextElementSibling;
+    while (n && !(n.tagName === 'H2' && n.classList.contains('sh'))) {
+      const next = n.nextElementSibling;
+      body.appendChild(n);
+      n = next;
+    }
+    h.after(body);
+    const chev = document.createElement('i');
+    chev.className = 'ti ti-chevron-down coll-chev';
+    chev.setAttribute('aria-hidden', 'true');
+    h.appendChild(chev);
+    h.setAttribute('role', 'button');
+    h.tabIndex = 0;
+    const saved = localStorage.getItem(key);
+    const closed = saved === null ? h.dataset.default === 'closed' : saved === 'closed';
+    h.classList.toggle('collapsed', closed);
+    const toggle = () => {
+      const c = !h.classList.contains('collapsed');
+      h.classList.toggle('collapsed', c);
+      localStorage.setItem(key, c ? 'closed' : 'open');
+    };
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+}
+
 (async () => {
   const bust = '?t=' + Math.floor(Date.now() / 60e3);
   const [status, stats] = await Promise.all([
@@ -266,6 +311,7 @@ async function fetchLive() {
   ]);
   renderStatus(status, stats.roadmap?.items);
   renderStats(stats);
+  initCollapsibles();
   renderReviews().catch(e => { $('scorecard').innerHTML = '<p class="mut">no review yet</p>'; console.error(e); });
   try {
     const live = await fetchLive();

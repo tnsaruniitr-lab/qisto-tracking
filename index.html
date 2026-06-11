@@ -55,10 +55,10 @@
   <div class="card stat"><p class="lbl">open critical &amp; high</p><p class="num warn" id="stat-criticals">—</p></div>
 </section>
 
-<h2 class="sh"><i class="ti ti-coin" aria-hidden="true"></i>money loop status</h2>
+<h2 class="sh" data-coll="loop"><i class="ti ti-coin" aria-hidden="true"></i>money loop status</h2>
 <section class="card loop-card"><div class="loop" id="money-loop"></div></section>
 
-<h2 class="sh"><i class="ti ti-clock" aria-hidden="true"></i><span id="feed-title">last 4 hours</span></h2>
+<h2 class="sh" data-coll="feed"><i class="ti ti-clock" aria-hidden="true"></i><span id="feed-title">last 4 hours</span></h2>
 <section class="twocol">
   <div class="card feed" id="feed-4h"><p class="mut">loading live commits…</p></div>
   <div class="card">
@@ -67,38 +67,41 @@
   </div>
 </section>
 
-<h2 class="sh"><i class="ti ti-chart-bar" aria-hidden="true"></i>last 24 hours <span class="sh-note" id="summary-24h"></span></h2>
+<h2 class="sh" data-coll="areas"><i class="ti ti-chart-bar" aria-hidden="true"></i>last 24 hours <span class="sh-note" id="summary-24h"></span></h2>
 <section class="card"><div class="bars wide" id="areas-24h"></div></section>
 
-<h2 class="sh"><i class="ti ti-trending-up" aria-hidden="true"></i>velocity <span class="sh-note" id="velocity-note"></span></h2>
+<h2 class="sh" data-coll="velocity"><i class="ti ti-trending-up" aria-hidden="true"></i>velocity <span class="sh-note" id="velocity-note"></span></h2>
 <section class="card velocity"><div id="velocity"></div></section>
 
-<h2 class="sh"><i class="ti ti-shield-check" aria-hidden="true"></i>daily review <span class="sh-note" id="audit-date"></span></h2>
+<h2 class="sh" data-coll="review"><i class="ti ti-shield-check" aria-hidden="true"></i>daily review <span class="sh-note" id="audit-date"></span></h2>
 <section class="card scorecard" id="scorecard"><p class="mut">loading review…</p></section>
 <section class="card review-body" id="review-body"></section>
 <section class="card findings" id="audit-findings"></section>
 <div class="archive" id="review-archive"></div>
 
-<h2 class="sh"><i class="ti ti-lock" aria-hidden="true"></i>security audit <span class="sh-note" id="sec-note"></span></h2>
+<h2 class="sh" data-coll="security" data-default="closed"><i class="ti ti-lock" aria-hidden="true"></i>security audit <span class="sh-note" id="sec-note"></span></h2>
 <section class="card pend" id="security-audit"></section>
 
-<h2 class="sh"><i class="ti ti-bulb" aria-hidden="true"></i>design decisions</h2>
+<h2 class="sh" data-coll="decisions" data-default="closed"><i class="ti ti-bulb" aria-hidden="true"></i>design decisions <span class="sh-note" id="decisions-note"></span></h2>
 <section class="grid2" id="decisions"></section>
 
-<h2 class="sh"><i class="ti ti-package" aria-hidden="true"></i>shipped this week</h2>
+<h2 class="sh" data-coll="shipped" data-default="closed"><i class="ti ti-package" aria-hidden="true"></i>shipped this week <span class="sh-note" id="shipped-note"></span></h2>
 <section class="card shipped" id="shipped"></section>
 
-<h2 class="sh"><i class="ti ti-users" aria-hidden="true"></i>contributors · last 7 days</h2>
+<h2 class="sh" data-coll="contributors" data-default="closed"><i class="ti ti-users" aria-hidden="true"></i>contributors · last 7 days</h2>
 <section class="card"><div class="bars wide" id="contributors"></div></section>
 
-<h2 class="sh"><i class="ti ti-device-mobile" aria-hidden="true"></i>product</h2>
+<h2 class="sh" data-coll="product" data-default="closed"><i class="ti ti-device-mobile" aria-hidden="true"></i>product</h2>
 <section class="gallery" id="gallery"></section>
 
-<h2 class="sh"><i class="ti ti-gauge" aria-hidden="true"></i>app technical scores <span class="sh-note" id="appscore-note"></span></h2>
+<h2 class="sh" data-coll="appscores" data-default="closed"><i class="ti ti-gauge" aria-hidden="true"></i>app technical scores <span class="sh-note" id="appscore-note"></span></h2>
 <section class="grid2" id="app-scores"></section>
 
-<h2 class="sh"><i class="ti ti-rocket" aria-hidden="true"></i>roadmap <span class="sh-note" id="roadmap-note"></span></h2>
+<h2 class="sh" data-coll="roadmap"><i class="ti ti-rocket" aria-hidden="true"></i>roadmap <span class="sh-note" id="roadmap-note"></span></h2>
 <section class="lanes" id="roadmap"></section>
+
+<h2 class="sh" data-coll="access" data-default="closed"><i class="ti ti-key" aria-hidden="true"></i>test access <span class="sh-note">for QA &amp; stakeholders</span></h2>
+<section class="card" id="test-access"></section>
 
 <footer class="foot" id="links"></footer>
 

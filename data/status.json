@@ -56,6 +56,16 @@
     ],
     "plannedMetrics": ["startup time", "bundle size", "crash-free rate", "Lighthouse performance", "accessibility", "offline behaviour", "RTL rendering", "low-end device test"]
   },
+  "testAccess": {
+    "note": "Live surfaces for end-to-end testing. The URLs below are public; all credentials — test phone numbers, PINs, OTP, reference codes and the admin login — live in a private runbook and are never published here.",
+    "surfaces": [
+      { "name": "customer app", "icon": "ti-device-mobile", "url": "https://tnsaruniitr-lab.github.io/qisto-prototype/", "access": "real app via Expo Go — build steps in runbook" },
+      { "name": "admin console", "icon": "ti-layout-dashboard", "url": "https://qisto-admin-production.up.railway.app", "access": "super-admin login in runbook" },
+      { "name": "merchant portal", "icon": "ti-building-store", "url": "https://qisto-merchant-production.up.railway.app", "access": "OTP login — test phone in runbook" }
+    ],
+    "runbookUrl": "https://github.com/tnsaruniitr-lab/qisto-qa/blob/main/TEST-RUNBOOK.md",
+    "runbookLabel": "Open QA runbook (private — GitHub login required)"
+  },
   "decisions": [
     { "title": "One monthly bill", "detail": "all purchases roll into a single payment reference due at month-end — one transfer clears everything" },
     { "title": "Month-end due dates", "detail": "every installment lands on a calendar month-end, never odd mid-month dates" },
