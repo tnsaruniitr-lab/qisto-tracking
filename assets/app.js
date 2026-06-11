@@ -47,7 +47,8 @@ const COMP_ALIAS = {
   'merchant': 'merchant portal', 'merchant portal': 'merchant portal',
   'workers': 'workers', 'workers & dunning': 'workers',
   'localization': 'localization', 'hardening': 'hardening', 'hardening & qa': 'hardening', 'qa': 'hardening',
-  'integrations': 'integrations', 'sms': 'integrations', 'banking': 'integrations', 'push': 'integrations'
+  'integrations': 'integrations', 'sms': 'integrations', 'banking': 'integrations', 'push': 'integrations',
+  'release': 'release & store', 'store': 'release & store', 'bundling': 'release & store', 'eas': 'release & store'
 };
 const MSTATE = {
   todo: { label: 'not started', cls: 'todo' },
@@ -115,6 +116,27 @@ function renderStatus(s, roadmapItems) {
   if ($('shipped-note')) $('shipped-note').textContent = `· ${s.shipped.length} this week`;
   $('shipped').innerHTML = s.shipped.map(it => `<div class="ship">
     <span class="area">${esc(it.area)}</span><span class="stext">${esc(it.text)}</span></div>`).join('');
+
+  if (s.release && $('release')) {
+    const r = s.release;
+    const statLabel = { done: 'done', 'in-progress': 'in progress', blocked: 'blocked', planned: 'planned' };
+    let totDone = 0, totAll = 0;
+    const platHtml = r.platforms.map(p => {
+      const done = p.steps.reduce((a, st) => a + (st.status === 'done' ? 1 : st.status === 'in-progress' ? 0.5 : 0), 0);
+      totDone += done; totAll += p.steps.length;
+      const pct = Math.round(done / p.steps.length * 100);
+      return `<div class="rel-plat">
+        <div class="rel-head"><i class="ti ${esc(p.icon)}" aria-hidden="true"></i><span>${esc(p.name)}</span><span class="rel-store">${esc(p.store)}</span><span class="rel-count">${Math.round(done)}/${p.steps.length} stages</span></div>
+        <div class="rel-progress"><div class="pf" style="width:${Math.max(2, pct)}%"></div></div>
+        <ol class="rel-steps">${p.steps.map(st => `<li class="rel-step ${esc(st.status)}">
+          <span class="rel-node"></span>
+          <span class="rel-main"><span class="rel-label">${esc(st.label || st.stage)}</span>${st.note ? `<span class="rel-note">${esc(st.note)}</span>` : ''}</span>
+          <span class="rel-stat">${esc(statLabel[st.status] || st.status)}</span></li>`).join('')}</ol>
+      </div>`;
+    }).join('');
+    $('release').innerHTML = `<p class="pend-r" style="margin:0 0 12px">${esc(r.note)}</p><div class="rel-grid">${platHtml}</div>`;
+    if ($('release-note')) $('release-note').textContent = `· ${Math.round(totDone)}/${totAll} stages`;
+  }
 
   if (s.testAccess && $('test-access')) {
     const t = s.testAccess;

@@ -248,6 +248,31 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .ta-vault:hover{border-color:var(--ocean);text-decoration:none}
 .ta-vault .ti{font-size:15px;color:var(--ocean-soft)}
 
+.rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rel-plat{background:var(--card-2);border:1px solid var(--line-soft);border-radius:var(--r-sm);padding:14px 16px}
+.rel-head{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500}
+.rel-head .ti{font-size:18px;color:var(--ocean-soft)}
+.rel-store{font-size:11px;color:var(--dim);font-weight:400}
+.rel-count{margin-left:auto;font-size:11px;color:var(--mut);font-weight:400}
+.rel-progress{height:5px;border-radius:3px;background:var(--line-soft);overflow:hidden;margin:9px 0 12px}
+.rel-progress .pf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--ocean),var(--violet))}
+.rel-steps{list-style:none;margin:0;padding:0;position:relative}
+.rel-steps::before{content:'';position:absolute;left:6px;top:13px;bottom:13px;width:2px;background:var(--line-soft)}
+.rel-step{display:flex;align-items:center;gap:11px;padding:6px 0;position:relative}
+.rel-node{width:13px;height:13px;border-radius:50%;flex-shrink:0;z-index:1;border:2px solid var(--line);background:var(--card-2)}
+.rel-step.done .rel-node{background:var(--green);border-color:var(--green)}
+.rel-step.in-progress .rel-node{background:var(--amber);border-color:var(--amber)}
+.rel-step.blocked .rel-node{background:var(--red);border-color:var(--red)}
+.rel-main{flex:1;display:flex;flex-direction:column;gap:1px;min-width:0}
+.rel-label{font-size:12px}
+.rel-step.planned .rel-label{color:var(--mut)}
+.rel-note{font-size:10.5px;color:var(--dim)}
+.rel-stat{font-size:10px;padding:2px 8px;border-radius:999px;flex-shrink:0}
+.rel-step.done .rel-stat{background:var(--green-bg);color:var(--green)}
+.rel-step.in-progress .rel-stat{background:var(--amber-bg);color:var(--amber)}
+.rel-step.blocked .rel-stat{background:var(--red-bg);color:var(--red)}
+.rel-step.planned .rel-stat{background:var(--card);color:var(--dim);border:1px solid var(--line-soft)}
+
 .pills{display:flex;gap:8px;flex-wrap:wrap}
 .pills .pill{background:var(--card);border:1px solid var(--line);color:var(--ink)}
 
@@ -258,7 +283,7 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 
 @media (max-width:760px){
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .twocol,.audit-grid,.grid2,.ws,.sdims,.lanes,.sec-areas,.ta-grid{grid-template-columns:1fr}
+  .twocol,.audit-grid,.grid2,.ws,.sdims,.lanes,.sec-areas,.ta-grid,.rel-grid{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stepper{flex-wrap:wrap;gap:10px 4px}
   .stepper li{flex:1 1 30%}

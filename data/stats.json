@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-06-11T15:04:46.496Z",
+  "generatedAt": "2026-06-11T17:56:57.439Z",
   "totals24h": {
-    "commits": 21,
-    "files": 158,
-    "additions": 6931,
-    "deletions": 3085
+    "commits": 22,
+    "files": 136,
+    "additions": 5741,
+    "deletions": 3080
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 77
+      "files": 58
     },
     {
       "label": "customer app",
       "files": 53
     },
     {
-      "label": "tests",
-      "files": 9
-    },
-    {
       "label": "repo config",
-      "files": 6
+      "files": 8
     },
     {
-      "label": "migrations",
-      "files": 4
+      "label": "tests",
+      "files": 7
     },
     {
       "label": "admin console",
       "files": 3
+    },
+    {
+      "label": "migrations",
+      "files": 2
     },
     {
       "label": "docs",
@@ -41,7 +41,7 @@
     },
     {
       "label": "shared packages",
-      "files": 2
+      "files": 1
     }
   ],
   "velocity": [
@@ -163,13 +163,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 17
+      "commits": 20
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 32
+      "commits": 34
     },
     {
       "name": "Manasvi",
@@ -177,6 +177,24 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "c93598fadcc7102cefc8f870226d36d9dfc38db3",
+      "message": "roadmap: move store/EAS items to 'release' component (feeds release & store workstream)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T17:56:55Z"
+    },
+    {
+      "sha": "37da12526a3ec93db8cba2175857940026e7c421",
+      "message": "feat(admin): set-admin-password script to rotate an existing super_admin password (seed skips existing)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T17:25:11Z"
+    },
+    {
+      "sha": "0210112587b6afe5ef3088fcfb9cdb55564bc3c5",
+      "message": "roadmap: track removing public test creds + unsetting DEV_OTP before launch",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T17:02:51Z"
+    },
     {
       "sha": "5d7f6b86030dcc8b62da269fbb454854d36b44e0",
       "message": "docs(roadmap): integrations component (SMS/OTP, bank import, push) + store release split into pipeline & submission",
@@ -338,32 +356,22 @@
       "message": "chore(admin): Railway service config (nixpacks build + start)",
       "author": "Arun Sharma",
       "date": "2026-06-10T12:06:15Z"
-    },
-    {
-      "sha": "152bea19613264906b49aab237ec95b89e34f218",
-      "message": "chore(admin): add Railway start (vite preview) + allow host",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:02:17Z"
-    },
-    {
-      "sha": "49fecd7950ff35bc772ee020f960df14a2066e52",
-      "message": "feat: admin merchant CRUD + access-based ownership + prod CORS (#5)",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T11:59:07Z"
-    },
-    {
-      "sha": "39a70d08366bd7d133cd59fdf0c5bf1259226937",
-      "message": "Merge pull request #2 from tnsaruniitr-lab/feat/admin-module",
-      "author": "Manasvi",
-      "date": "2026-06-10T08:54:13Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-11T15:04:46.496Z",
+    "fetchedAt": "2026-06-11T17:56:57.439Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
         "component": "backend core",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Remove public test creds from tracker + unset DEV_OTP before launch",
+        "component": "hardening",
         "effort": "S",
         "status": "planned",
         "lane": "now",
@@ -435,7 +443,7 @@
       },
       {
         "item": "EAS build pipeline + signing (iOS & Android)",
-        "component": "customer app",
+        "component": "release",
         "effort": "M",
         "status": "planned",
         "lane": "next",
@@ -459,7 +467,7 @@
       },
       {
         "item": "App Store & Play Store submission, listings + review fixes",
-        "component": "customer app",
+        "component": "release",
         "effort": "L",
         "status": "planned",
         "lane": "later",
