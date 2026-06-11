@@ -67,8 +67,8 @@
         "steps": [
           { "stage": "developer account", "status": "done", "note": "Apple Team 7C2ZL7J8NP · App Store Connect app created" },
           { "stage": "signing & certificates", "status": "done", "note": "dist cert + provisioning profile + ASC API key all in place" },
-          { "stage": "EAS production build", "status": "planned", "note": "ready to run — only blocked on eas login" },
-          { "stage": "beta testing", "label": "TestFlight", "status": "planned" },
+          { "stage": "EAS production build", "status": "in-progress", "note": "building on EAS — build #3 (be7b0e1f)" },
+          { "stage": "beta testing", "label": "TestFlight", "status": "in-progress", "note": "auto-submit scheduled after build" },
           { "stage": "store listing", "status": "planned", "note": "screenshots, description, metadata" },
           { "stage": "app review", "status": "planned" },
           { "stage": "live", "status": "planned" }
