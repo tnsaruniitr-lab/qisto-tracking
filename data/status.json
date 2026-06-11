@@ -15,7 +15,7 @@
       { "label": "localization", "weight": 10, "pct": 0, "baseEffort": 12, "tested": false, "note": "Arabic, RTL, SYP amounts — required for a Damascus launch" },
       { "label": "hardening", "weight": 15, "pct": 35, "baseEffort": 20, "tested": false, "note": "124 unit tests green; DB-backed integration tests not started" },
       { "label": "integrations", "weight": 10, "pct": 0, "baseEffort": 10, "tested": false, "note": "SMS/OTP provider, bank-statement import, push notifications — external rails, not started" },
-      { "label": "release & store", "weight": 8, "pct": 5, "baseEffort": 12, "tested": false, "note": "iOS signing groundwork (App Store Connect key) in place; EAS builds, testing, store listings & review pending" }
+      { "label": "release & store", "weight": 8, "pct": 14, "baseEffort": 12, "tested": false, "note": "iOS account + signing fully wired (cert, profile, ASC app) — one eas login from a TestFlight build; Android & store listings pending" }
     ]
   },
   "milestones": [
@@ -65,9 +65,9 @@
         "icon": "ti-brand-apple",
         "store": "App Store",
         "steps": [
-          { "stage": "developer account", "status": "planned", "note": "needs Apple Developer enrolment" },
-          { "stage": "signing & certificates", "status": "in-progress", "note": "App Store Connect API key configured in eas.json" },
-          { "stage": "EAS production build", "status": "planned" },
+          { "stage": "developer account", "status": "done", "note": "Apple Team 7C2ZL7J8NP · App Store Connect app created" },
+          { "stage": "signing & certificates", "status": "done", "note": "dist cert + provisioning profile + ASC API key all in place" },
+          { "stage": "EAS production build", "status": "planned", "note": "ready to run — only blocked on eas login" },
           { "stage": "beta testing", "label": "TestFlight", "status": "planned" },
           { "stage": "store listing", "status": "planned", "note": "screenshots, description, metadata" },
           { "stage": "app review", "status": "planned" },
