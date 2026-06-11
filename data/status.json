@@ -74,10 +74,10 @@
       {
         "label": "release & store",
         "weight": 8,
-        "pct": 25,
+        "pct": 32,
         "baseEffort": 12,
         "tested": false,
-        "note": "iOS build #3 live in TestFlight (Apple processing); Android build, store listings & review pending"
+        "note": "iOS build #4 in TestFlight + EAS Update (OTA) live — JS/design changes ship without a store release; Android build, store listings & review pending"
       }
     ]
   },
@@ -236,13 +236,13 @@
           {
             "stage": "EAS production build",
             "status": "done",
-            "note": "build #3 succeeded — signed with your own Apple cert (local creds)"
+            "note": "build #4 — OTA-capable (expo-updates, 'production' channel); signed with your own Apple cert"
           },
           {
             "stage": "beta testing",
             "label": "TestFlight",
             "status": "in-progress",
-            "note": "binary uploaded to App Store Connect — Apple processing + export-compliance pending"
+            "note": "build #4 uploaded to App Store Connect — Apple processing; OTA now live for JS changes"
           },
           {
             "stage": "store listing",
@@ -392,6 +392,10 @@
     }
   ],
   "shipped": [
+    {
+      "area": "mobile",
+      "text": "iOS customer app live in TestFlight (build #4) + EAS Update (OTA) enabled — design & logic changes now ship to installed apps without an App Store release"
+    },
     {
       "area": "panels",
       "text": "admin console & merchant portal rebranded to the Qisto design system and switched to auto-deploy — every push to main ships both, at the same URLs"
