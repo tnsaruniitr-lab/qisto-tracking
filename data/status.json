@@ -74,10 +74,10 @@
       {
         "label": "release & store",
         "weight": 8,
-        "pct": 14,
+        "pct": 25,
         "baseEffort": 12,
         "tested": false,
-        "note": "iOS account + signing fully wired (cert, profile, ASC app) — one eas login from a TestFlight build; Android & store listings pending"
+        "note": "iOS build #3 live in TestFlight (Apple processing); Android build, store listings & review pending"
       }
     ]
   },
@@ -235,14 +235,14 @@
           },
           {
             "stage": "EAS production build",
-            "status": "in-progress",
-            "note": "building on EAS — build #3 (be7b0e1f)"
+            "status": "done",
+            "note": "build #3 succeeded — signed with your own Apple cert (local creds)"
           },
           {
             "stage": "beta testing",
             "label": "TestFlight",
             "status": "in-progress",
-            "note": "auto-submit scheduled after build"
+            "note": "binary uploaded to App Store Connect — Apple processing + export-compliance pending"
           },
           {
             "stage": "store listing",
