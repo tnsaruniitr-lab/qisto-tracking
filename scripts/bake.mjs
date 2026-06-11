@@ -33,6 +33,20 @@ async function gh(path) {
   return r.json();
 }
 
+// Fetch a file's raw text via the contents API (works for private repos with the token,
+// unlike raw.githubusercontent which 404s without auth).
+async function ghRaw(filePath) {
+  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${filePath}`, {
+    headers: {
+      Accept: 'application/vnd.github.raw',
+      'User-Agent': 'qisto-tracking-bake',
+      ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {})
+    }
+  });
+  if (!r.ok) throw new Error(`raw ${filePath} -> ${r.status}`);
+  return r.text();
+}
+
 async function allCommitsSince(sinceISO) {
   const out = [];
   for (let page = 1; page <= 5; page++) {
@@ -87,11 +101,8 @@ const areas24h = Object.entries(areas)
 
 let roadmap = null;
 try {
-  const r = await fetch(`https://raw.githubusercontent.com/${REPO}/main/productroadmap.md`, {
-    headers: { 'User-Agent': 'qisto-tracking-bake' }
-  });
-  if (r.ok) {
-    const md = await r.text();
+  const md = await ghRaw('productroadmap.md');
+  {
     const rows = md.split('\n').filter(l => l.trim().startsWith('|'));
     const items = [];
     for (const row of rows) {
@@ -110,11 +121,27 @@ try {
     }
     roadmap = { fetchedAt: new Date(now).toISOString(), items };
     console.log(`roadmap: ${items.length} items parsed`);
-  } else {
-    console.log(`roadmap: not found (${r.status})`);
   }
 } catch (e) {
   console.log('roadmap: fetch failed', e.message);
+}
+
+let bugs = null;
+try {
+  const md = await ghRaw('docs/BUGS.md');
+  const rows = md.split('\n').filter(l => l.trim().startsWith('|'));
+  const items = [];
+  for (const row of rows) {
+    const cells = row.split('|').slice(1, -1).map(c => c.trim());
+    if (cells.length < 6 || cells[0] === 'id' || /^-+$/.test(cells[0].replace(/[: ]/g, '-'))) continue;
+    const [id, title, severity, area, status, note] = cells;
+    if (!id) continue;
+    items.push({ id, title, severity: severity.toLowerCase(), area: area.toLowerCase(), status: status.toLowerCase(), note });
+  }
+  bugs = { fetchedAt: new Date(now).toISOString(), items };
+  console.log(`bugs: ${items.length} parsed`);
+} catch (e) {
+  console.log('bugs: fetch failed', e.message);
 }
 
 const recentCommits = commits.slice(0, 30).map(c => ({
@@ -131,7 +158,8 @@ const stats = {
   velocity,
   contributors7d,
   recentCommits,
-  roadmap
+  roadmap,
+  bugs
 };
 
 mkdirSync('data', { recursive: true });

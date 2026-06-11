@@ -1,46 +1,42 @@
 {
-  "generatedAt": "2026-06-11T18:29:19.309Z",
+  "generatedAt": "2026-06-11T22:43:50.817Z",
   "totals24h": {
-    "commits": 22,
-    "files": 136,
-    "additions": 5741,
-    "deletions": 3080
+    "commits": 32,
+    "files": 200,
+    "additions": 7251,
+    "deletions": 3965
   },
   "areas24h": [
     {
-      "label": "backend core",
-      "files": 58
+      "label": "customer app",
+      "files": 97
     },
     {
-      "label": "customer app",
-      "files": 53
+      "label": "backend core",
+      "files": 54
     },
     {
       "label": "repo config",
-      "files": 8
-    },
-    {
-      "label": "tests",
-      "files": 7
+      "files": 16
     },
     {
       "label": "admin console",
-      "files": 3
-    },
-    {
-      "label": "migrations",
-      "files": 2
-    },
-    {
-      "label": "docs",
-      "files": 2
+      "files": 12
     },
     {
       "label": "merchant portal",
-      "files": 2
+      "files": 10
     },
     {
-      "label": "shared packages",
+      "label": "docs",
+      "files": 5
+    },
+    {
+      "label": "tests",
+      "files": 5
+    },
+    {
+      "label": "migrations",
       "files": 1
     }
   ],
@@ -163,13 +159,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 20
+      "commits": 32
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 34
+      "commits": 46
     },
     {
       "name": "Manasvi",
@@ -177,6 +173,78 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "e2a3a758783f23d399d70057c139282c5b56fd19",
+      "message": "docs: BUGS.md — known-bugs backlog from the 2026-06 FE + contract audits (also surfaced on the tracker)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T22:39:06Z"
+    },
+    {
+      "sha": "369b92bedf6d8b40072f86468436f9fd71957220",
+      "message": "fix(customer-app): handle 401/expiry — redirect to login + catch load errors",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T22:38:02Z"
+    },
+    {
+      "sha": "29e395ed41dffebdb77af82f658a280e22ac5f92",
+      "message": "fix(customer-app): remove user theme picker, wire Personal info, honest \"soon\" rows",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T22:08:08Z"
+    },
+    {
+      "sha": "7d158fb0685d83a3f6a55cd166496c30d4f87945",
+      "message": "fix(customer-app): RTL/Arabic polish — logo, back buttons, chevrons, letter-spacing",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T21:55:04Z"
+    },
+    {
+      "sha": "31c446b4745c1364403bb35edda9381475784a7a",
+      "message": "feat(customer-app): Mature design port + full Arabic/RTL/SYP + supporting backend",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T21:35:46Z"
+    },
+    {
+      "sha": "12bc71b9a76aaafe83425fc819be9f0ecb2fcecf",
+      "message": "Roadmap: PIN change + forgot-PIN recovery flow",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T20:53:34Z"
+    },
+    {
+      "sha": "4e11b49d705dc39197fcc9759f17f88cd11d8317",
+      "message": "feat(customer-app): enable EAS Update (OTA) — JS changes ship without a store release",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T20:52:46Z"
+    },
+    {
+      "sha": "11680ce1f0582cb8ff3ddb880e8988dbc19bc1f5",
+      "message": "docs: release, versioning & API backward-compatibility rules (docs/13)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T20:26:05Z"
+    },
+    {
+      "sha": "c045da7f325fa8f3406a89453ff35cdbc2c86b21",
+      "message": "Add apps/admin/railway.json (GitHub admin service's railwayConfigFile points here)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T20:15:43Z"
+    },
+    {
+      "sha": "9dc5ff50bb3fb535570bb5e80170ffbcb46a2247",
+      "message": "Add apps/merchant/railway.json (service's railwayConfigFile points here)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T20:02:53Z"
+    },
+    {
+      "sha": "1fda8793b4247690c27b8c42666cca911589df4b",
+      "message": "Admin + merchant panels: Qisto brand restyle (visual only, no logic)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T19:10:41Z"
+    },
+    {
+      "sha": "7dcdc7cd8a6f9c230500d21b5522840471e85cc8",
+      "message": "qa: money-math audit report + open-findings register; roadmap rows for QA fixes",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T18:35:48Z"
+    },
     {
       "sha": "c93598fadcc7102cefc8f870226d36d9dfc38db3",
       "message": "roadmap: move store/EAS items to 'release' component (feeds release & store workstream)",
@@ -284,82 +352,10 @@
       "message": "feat(agency): M3 repayment + reconciliation + ledger + settlement (money loop closes)",
       "author": "Arun Sharma",
       "date": "2026-06-11T09:42:40Z"
-    },
-    {
-      "sha": "05b97085c3093728506b182bf43eaf497d0ac02a",
-      "message": "fix(rate-limit): key OTP limits by phone (IP-independent) + trustProxy",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T08:44:52Z"
-    },
-    {
-      "sha": "a7473acbafc615bbf1b3e7198cf4957a166967fb",
-      "message": "fix(backend): atomicity + hardening batch (audit follow-ups)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T08:38:44Z"
-    },
-    {
-      "sha": "d7165879c9dd1a4e0dc6ed07e30c2734bad511c8",
-      "message": "fix(admin): SECURITY — reject non-admin roles in requireRole/requireAuth",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T22:41:00Z"
-    },
-    {
-      "sha": "18af63edd0ec093e7d4e13bf55125b76e9a81700",
-      "message": "feat(commerce): month-end installment model — plan owned by merchant",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T21:24:29Z"
-    },
-    {
-      "sha": "6b7f57011930763b8eb82bd842c114de0f3abf24",
-      "message": "feat(commerce): customer purchase loop — scan quote, confirm with PIN, installment schedule",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T16:47:52Z"
-    },
-    {
-      "sha": "b00154276375a2ab062a0537d1135460fb5e6e53",
-      "message": "feat(identity,credit): customer OTP auth, KYC flow, credit engine + platform settings",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T16:30:43Z"
-    },
-    {
-      "sha": "43d9609c36077abb1b2d60c46c58540e153fb9f4",
-      "message": "feat(commerce): dev-OTP login bypass + sample tx/installment/settlement seed",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T14:07:01Z"
-    },
-    {
-      "sha": "1c77616c4dc30516187258dd97ec2154812f0b74",
-      "message": "build(deploy): Docker for all 3 web services; drop Nixpacks railway.json",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:54:55Z"
-    },
-    {
-      "sha": "d752ce9766dc71220af49b3df0b731e7553b22cf",
-      "message": "docs: add DEPLOY.md — Railway wiring for the 3 web services",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:32:13Z"
-    },
-    {
-      "sha": "18ea2743d8ccae61b28b6fcafdd3f14b797e16b8",
-      "message": "chore(backend): add railway.json — self-migrating deploy config",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:30:31Z"
-    },
-    {
-      "sha": "ee73a1a638fe310b352f5fabdd25297730e24e12",
-      "message": "chore(merchant): make deployable like admin — start, railway.json, edge, dedupe",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:14:39Z"
-    },
-    {
-      "sha": "64b906fdc97ff75d7ac3ded26048a109ebe6f075",
-      "message": "chore(admin): Railway service config (nixpacks build + start)",
-      "author": "Arun Sharma",
-      "date": "2026-06-10T12:06:15Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-11T18:29:19.309Z",
+    "fetchedAt": "2026-06-11T22:43:50.817Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -496,6 +492,219 @@
         "status": "planned",
         "lane": "later",
         "added": "2026-06-11"
+      },
+      {
+        "item": "Guard reconciliation & billing on goods-delivered (QA-1)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Fix settlement approve/pay race — conditional UPDATE (QA-2)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Delivery-accrual integrity sweep / outbox (QA-3)",
+        "component": "hardening",
+        "effort": "M",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Zero-amount guards on quote, confirm & settlement legs (QA-4)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "now",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Scope idempotency keys per user+endpoint, add TTL (QA-5)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Lock quoted terms at display — schedule + down %% (QA-7)",
+        "component": "backend core",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "Per-line error isolation + summary in reconcileBatch (QA-8)",
+        "component": "backend core",
+        "effort": "S",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      },
+      {
+        "item": "PIN change & forgot-PIN recovery (re-verify OTP → set new PIN; screen + endpoint guard)",
+        "component": "customer app",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-11"
+      }
+    ]
+  },
+  "bugs": {
+    "fetchedAt": "2026-06-11T22:43:50.817Z",
+    "items": [
+      {
+        "id": "BUG-001",
+        "title": "Placeholder bank account shown on Pay (`SY00 1234 5678 9012`)",
+        "severity": "high",
+        "area": "frontend",
+        "status": "keep-testing",
+        "note": "hardcoded in pay.tsx; fine for test days, MUST come from platform settings before launch or customers transfer to a fake IBAN"
+      },
+      {
+        "id": "BUG-002",
+        "title": "Quote/confirm screen shows USD, not SYP",
+        "severity": "high",
+        "area": "frontend",
+        "status": "open",
+        "note": "money path in a SYP market; `amountSyp`/`downPaymentSyp` already in the API response, just unused"
+      },
+      {
+        "id": "BUG-003",
+        "title": "Hardcoded FX fallback (13000 SYP/USD)",
+        "severity": "high",
+        "area": "frontend",
+        "status": "open",
+        "note": "home.tsx + profile.tsx default when profile is null → wrong SYP figures shown as real; show `—` instead"
+      },
+      {
+        "id": "BUG-004",
+        "title": "`getMe` 404 on boot strands the user",
+        "severity": "high",
+        "area": "frontend",
+        "status": "open",
+        "note": "a non-401 boot failure doesn't clear the dead token → onboarding loop; treat non-2xx as logout"
+      },
+      {
+        "id": "BUG-005",
+        "title": "Purchase confirm is not retry-safe (no Idempotency-Key)",
+        "severity": "high",
+        "area": "contract",
+        "status": "open",
+        "note": "backend supports it; a timeout after commit shows an error while the loan exists, retry → 409"
+      },
+      {
+        "id": "BUG-006",
+        "title": "\"Reported payment\" not reflected after reload + duplicate report rows",
+        "severity": "medium",
+        "area": "contract",
+        "status": "open",
+        "note": "report IS persisted server-side, but the statement doesn't expose it, so re-tap inserts duplicate `payment_reports`; needs FE+BE + dedupe"
+      },
+      {
+        "id": "BUG-007",
+        "title": "`getTransaction` types `merchantName` but backend never returns it",
+        "severity": "medium",
+        "area": "contract",
+        "status": "open",
+        "note": "undefined-at-runtime landmine; join merchants in the detail route or narrow the FE type"
+      },
+      {
+        "id": "BUG-008",
+        "title": "`/me` over-returns PII (nationalId, address, DOB, occupation)",
+        "severity": "medium",
+        "area": "backend",
+        "status": "open",
+        "note": "FE ignores them but the contract ships more than the `Me` type admits"
+      },
+      {
+        "id": "BUG-009",
+        "title": "KYC photos sent as multi-MB base64 — timeout/413 risk on slow networks",
+        "severity": "medium",
+        "area": "frontend",
+        "status": "open",
+        "note": "downscale with ImageManipulator before submit; current quality:0.4 with no resize"
+      },
+      {
+        "id": "BUG-010",
+        "title": "Language → Arabic needs an app restart for full RTL on native, no feedback",
+        "severity": "medium",
+        "area": "frontend",
+        "status": "open",
+        "note": "show a \"restart required\" prompt or trigger a controlled reload on native"
+      },
+      {
+        "id": "BUG-011",
+        "title": "Quote/loan dates render as raw ISO, not localized",
+        "severity": "medium",
+        "area": "frontend",
+        "status": "open",
+        "note": "wrap installment `dueDate` with `fmtDate` (loans + quote)"
+      },
+      {
+        "id": "BUG-012",
+        "title": "Hardcoded hex colors instead of theme tokens (esp. `#C04848` sign-out)",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "off-brand red; replace structural hex with `theme.color.*`"
+      },
+      {
+        "id": "BUG-013",
+        "title": "Installments returned unordered",
+        "severity": "low",
+        "area": "backend",
+        "status": "open",
+        "note": "add `orderBy(sequence)` in `listInstallmentsByTransaction`; schedule can render out of order"
+      },
+      {
+        "id": "BUG-014",
+        "title": "Frozen account shows \"exceeds your credit\" on quote",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "wrong message for a frozen customer (canAfford is false when frozen)"
+      },
+      {
+        "id": "BUG-015",
+        "title": "Missing accessibility labels on icon-only controls",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "scan FAB + home bell have no accessibilityLabel"
+      },
+      {
+        "id": "BUG-016",
+        "title": "WhatsApp support number env var unset → broken support button",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "`EXPO_PUBLIC_WHATSAPP_OPS` not set; disable button when empty + set for builds"
+      },
+      {
+        "id": "BUG-017",
+        "title": "Profile progress bar shows a phantom 10% at tier boundaries",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "`"
+      },
+      {
+        "id": "BUG-018",
+        "title": "Some transaction/installment statuses untranslated (overdue, returned, etc.)",
+        "severity": "low",
+        "area": "frontend",
+        "status": "open",
+        "note": "only 7 statuses mapped; others fall back to raw English in Arabic"
       }
     ]
   }

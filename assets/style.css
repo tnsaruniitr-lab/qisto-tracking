@@ -188,6 +188,7 @@ h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
 .sev.medium{background:var(--amber-bg);color:var(--amber)}
 .sev.low{background:var(--card-2);color:var(--mut);border:1px solid var(--line-soft)}
 .fstatus{flex-shrink:0;font-size:11px;width:52px}
+.bug-area{flex-shrink:0;font-size:10.5px;color:var(--mut);width:96px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fstatus.fixed{color:var(--green)} .fstatus.open{color:var(--amber)}
 .ftext{font-size:12.5px;flex:1}
 .ftext .fd{display:block;font-size:11.5px;color:var(--mut)}

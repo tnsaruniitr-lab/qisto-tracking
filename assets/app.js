@@ -230,6 +230,24 @@ function renderStats(st) {
   bars($('contributors'), st.contributors7d.map(c => ({ label: c.name, value: c.commits, display: c.commits + ' commits' })), 'var(--ocean)');
 }
 
+function renderBugs(bugs) {
+  const el = $('bugs');
+  if (!el) return;
+  const items = (bugs && bugs.items) ? bugs.items : [];
+  const open = items.filter(b => b.status !== 'fixed' && b.status !== 'wontfix');
+  if (!open.length) { el.innerHTML = '<p class="mut" style="font-size:12px;margin:4px 0">no open issues tracked</p>'; return; }
+  const order = { critical: 0, high: 1, medium: 2, low: 3 };
+  open.sort((a, b) => (order[a.severity] ?? 9) - (order[b.severity] ?? 9));
+  const counts = {};
+  open.forEach(b => { counts[b.severity] = (counts[b.severity] || 0) + 1; });
+  const note = ['critical', 'high', 'medium', 'low'].filter(s => counts[s]).map(s => `${counts[s]} ${s}`).join(' · ');
+  if ($('bugs-note')) $('bugs-note').textContent = `· ${note} · from docs/BUGS.md`;
+  el.innerHTML = open.map(b => `<div class="finding">
+    <span class="sev ${esc(b.severity)}">${esc(b.severity)}</span>
+    <span class="bug-area">${esc(b.area)}${b.status === 'keep-testing' ? ' · keep' : ''}</span>
+    <span class="ftext">${esc(b.title)}<span class="fd">${esc(b.note)}</span></span></div>`).join('');
+}
+
 const SCORE_COLOR = s => s >= 7 ? 'var(--green)' : s >= 5.5 ? 'var(--ocean)' : s >= 4.5 ? 'var(--amber)' : 'var(--red)';
 
 async function renderReviews() {
@@ -347,6 +365,7 @@ function initCollapsibles() {
   ]);
   renderStatus(status, stats.roadmap?.items);
   renderStats(stats);
+  renderBugs(stats.bugs);
   initCollapsibles();
   renderReviews().catch(e => { $('scorecard').innerHTML = '<p class="mut">no review yet</p>'; console.error(e); });
   try {
