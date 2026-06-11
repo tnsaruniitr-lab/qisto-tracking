@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-11T22:43:50.817Z",
+  "generatedAt": "2026-06-11T23:30:16.015Z",
   "totals24h": {
-    "commits": 32,
-    "files": 200,
-    "additions": 7251,
-    "deletions": 3965
+    "commits": 34,
+    "files": 204,
+    "additions": 7316,
+    "deletions": 3985
   },
   "areas24h": [
     {
       "label": "customer app",
-      "files": 97
+      "files": 99
     },
     {
       "label": "backend core",
@@ -17,7 +17,7 @@
     },
     {
       "label": "repo config",
-      "files": 16
+      "files": 17
     },
     {
       "label": "admin console",
@@ -29,7 +29,7 @@
     },
     {
       "label": "docs",
-      "files": 5
+      "files": 6
     },
     {
       "label": "tests",
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-11",
-      "commits": 32
+      "commits": 34
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 46
+      "commits": 48
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,18 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "1c6f79552cad7e477ab1b25ad6a3a00e8bd86c4d",
+      "message": "track: bump BUG-006 to high (+repro), add BUG-019 partial payments; roadmap: persist reported-state + partial-payment handling",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T23:11:33Z"
+    },
+    {
+      "sha": "d0dabf74619de1404eee8aad47287de26252b3b5",
+      "message": "feat(customer-app): redesign Pay screen — SYP, merchant avatars, transfer panel",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T23:00:41Z"
+    },
     {
       "sha": "e2a3a758783f23d399d70057c139282c5b56fd19",
       "message": "docs: BUGS.md — known-bugs backlog from the 2026-06 FE + contract audits (also surfaced on the tracker)",
@@ -340,22 +352,10 @@
       "message": "feat(billing): consolidated monthly statement + reconcile-by-monthly-reference",
       "author": "Arun Sharma",
       "date": "2026-06-11T10:29:10Z"
-    },
-    {
-      "sha": "a6c56a1e87c3cf1bfbb85a6983958a8335504636",
-      "message": "fix(agency,credit): M3 review fixes — double-restore, settlement dup/race, ref uniqueness, recon lock",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T10:01:00Z"
-    },
-    {
-      "sha": "8ec2e7ef826277ff842007c1bea01142b712939d",
-      "message": "feat(agency): M3 repayment + reconciliation + ledger + settlement (money loop closes)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T09:42:40Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-11T22:43:50.817Z",
+    "fetchedAt": "2026-06-11T23:30:16.015Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -556,11 +556,27 @@
         "status": "planned",
         "lane": "next",
         "added": "2026-06-11"
+      },
+      {
+        "item": "Persist & expose reported-bill state + idempotent reports (BUG-006)",
+        "component": "backend core",
+        "effort": "M",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-12"
+      },
+      {
+        "item": "Partial-payment handling — balance model, allocation, over/underpayment",
+        "component": "backend core",
+        "effort": "L",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-12"
       }
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-11T22:43:50.817Z",
+    "fetchedAt": "2026-06-11T23:30:16.015Z",
     "items": [
       {
         "id": "BUG-001",
@@ -604,11 +620,11 @@
       },
       {
         "id": "BUG-006",
-        "title": "\"Reported payment\" not reflected after reload + duplicate report rows",
-        "severity": "medium",
+        "title": "\"Reported payment\" state reverts on reload — not persisted/read-back",
+        "severity": "high",
         "area": "contract",
         "status": "open",
-        "note": "report IS persisted server-side, but the statement doesn't expose it, so re-tap inserts duplicate `payment_reports`; needs FE+BE + dedupe"
+        "note": "repro: tap \"I've made the transfer\" → pill shows \"Reported · awaiting confirmation\", but navigating away or reopening reverts it to the button (report IS saved server-side, statement doesn't expose it). Should stay reported until admin reconciles. Needs statement to return per-bill report status + idempotent (deduped) reporting. FE+BE"
       },
       {
         "id": "BUG-007",
@@ -705,6 +721,14 @@
         "area": "frontend",
         "status": "open",
         "note": "only 7 statuses mapped; others fall back to raw English in Arabic"
+      },
+      {
+        "id": "BUG-019",
+        "title": "No partial-payment handling — installments are binary paid/unpaid",
+        "severity": "high",
+        "area": "backend",
+        "status": "open",
+        "note": "reconcile ignores the received amount (a small transfer marks the full installment paid); no balance/`partially_paid` state, monthly bill is all-or-nothing. Underpayment overcredits, leaves no residual. Needs balance model + allocation + over/underpayment (builds on the \"Enforce amount matching\" roadmap fix)"
       }
     ]
   }
