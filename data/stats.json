@@ -1,0 +1,361 @@
+{
+  "generatedAt": "2026-06-11T14:25:55.615Z",
+  "totals24h": {
+    "commits": 16,
+    "files": 146,
+    "additions": 6566,
+    "deletions": 2980
+  },
+  "areas24h": [
+    {
+      "label": "backend core",
+      "files": 75
+    },
+    {
+      "label": "customer app",
+      "files": 46
+    },
+    {
+      "label": "tests",
+      "files": 9
+    },
+    {
+      "label": "migrations",
+      "files": 4
+    },
+    {
+      "label": "repo config",
+      "files": 3
+    },
+    {
+      "label": "admin console",
+      "files": 3
+    },
+    {
+      "label": "docs",
+      "files": 2
+    },
+    {
+      "label": "merchant portal",
+      "files": 2
+    },
+    {
+      "label": "shared packages",
+      "files": 2
+    }
+  ],
+  "velocity": [
+    {
+      "date": "2026-05-13",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-14",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-15",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-16",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-17",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-18",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-19",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-20",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-21",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-22",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-23",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-24",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-25",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-26",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-27",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-28",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-29",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-30",
+      "commits": 0
+    },
+    {
+      "date": "2026-05-31",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-01",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-02",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-03",
+      "commits": 1
+    },
+    {
+      "date": "2026-06-04",
+      "commits": 1
+    },
+    {
+      "date": "2026-06-05",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-06",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-07",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-08",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-09",
+      "commits": 4
+    },
+    {
+      "date": "2026-06-10",
+      "commits": 24
+    },
+    {
+      "date": "2026-06-11",
+      "commits": 12
+    }
+  ],
+  "contributors7d": [
+    {
+      "name": "Arun Sharma",
+      "commits": 27
+    },
+    {
+      "name": "Manasvi",
+      "commits": 14
+    }
+  ],
+  "recentCommits": [
+    {
+      "sha": "07545046ab252682b49875f05681ee32bceb5229",
+      "message": "fix(customer-app): no +963 prefill on login (caused wrong-account logins); clearer placeholder",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T14:03:48Z"
+    },
+    {
+      "sha": "13c6b804c0ededf4448fa249370410fbf41073e3",
+      "message": "fix(customer-app): splash colour picker clears the notch (safe-area inset)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T13:56:27Z"
+    },
+    {
+      "sha": "1438a257c5151125e3baa57b67f1bca89fefe37c",
+      "message": "fix(customer-app): add 'Start over'/sign-out escape on KYC + pending screens",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T13:30:21Z"
+    },
+    {
+      "sha": "8c8cbc0852632b36b619c30fa8bbc5119c93e418",
+      "message": "feat(customer-app): animated welcomeE2 splash + top-left colour picker",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T13:18:26Z"
+    },
+    {
+      "sha": "ca9a0fdec12854b7e7bee76d7820d204b5fe1260",
+      "message": "fix(customer-app): faithful welcomeE2 splash — Green/Violet, radial bloom, light CTA, entrance animation",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T13:11:14Z"
+    },
+    {
+      "sha": "d5ae6f9ef7a0f8f2580f1b2fcec4ba942fe5520b",
+      "message": "feat(customer-app): SDK 54 upgrade + v2 'Ink Royale' design + 2-color theme picker",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T13:00:27Z"
+    },
+    {
+      "sha": "8a2407c3fbdbbb5a23201fbfe6bc269045c361c7",
+      "message": "feat(customer-app): wire Expo screens to live API (Login→KYC→Home→Scan→Pay)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T12:08:02Z"
+    },
+    {
+      "sha": "b56b5e94f0a76ae9b4e3e4169190f7f6e7bb0dc6",
+      "message": "feat(billing): consolidated monthly statement + reconcile-by-monthly-reference",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T10:29:10Z"
+    },
+    {
+      "sha": "a6c56a1e87c3cf1bfbb85a6983958a8335504636",
+      "message": "fix(agency,credit): M3 review fixes — double-restore, settlement dup/race, ref uniqueness, recon lock",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T10:01:00Z"
+    },
+    {
+      "sha": "8ec2e7ef826277ff842007c1bea01142b712939d",
+      "message": "feat(agency): M3 repayment + reconciliation + ledger + settlement (money loop closes)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T09:42:40Z"
+    },
+    {
+      "sha": "05b97085c3093728506b182bf43eaf497d0ac02a",
+      "message": "fix(rate-limit): key OTP limits by phone (IP-independent) + trustProxy",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T08:44:52Z"
+    },
+    {
+      "sha": "a7473acbafc615bbf1b3e7198cf4957a166967fb",
+      "message": "fix(backend): atomicity + hardening batch (audit follow-ups)",
+      "author": "Arun Sharma",
+      "date": "2026-06-11T08:38:44Z"
+    },
+    {
+      "sha": "d7165879c9dd1a4e0dc6ed07e30c2734bad511c8",
+      "message": "fix(admin): SECURITY — reject non-admin roles in requireRole/requireAuth",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T22:41:00Z"
+    },
+    {
+      "sha": "18af63edd0ec093e7d4e13bf55125b76e9a81700",
+      "message": "feat(commerce): month-end installment model — plan owned by merchant",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T21:24:29Z"
+    },
+    {
+      "sha": "6b7f57011930763b8eb82bd842c114de0f3abf24",
+      "message": "feat(commerce): customer purchase loop — scan quote, confirm with PIN, installment schedule",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T16:47:52Z"
+    },
+    {
+      "sha": "b00154276375a2ab062a0537d1135460fb5e6e53",
+      "message": "feat(identity,credit): customer OTP auth, KYC flow, credit engine + platform settings",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T16:30:43Z"
+    },
+    {
+      "sha": "43d9609c36077abb1b2d60c46c58540e153fb9f4",
+      "message": "feat(commerce): dev-OTP login bypass + sample tx/installment/settlement seed",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T14:07:01Z"
+    },
+    {
+      "sha": "1c77616c4dc30516187258dd97ec2154812f0b74",
+      "message": "build(deploy): Docker for all 3 web services; drop Nixpacks railway.json",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:54:55Z"
+    },
+    {
+      "sha": "d752ce9766dc71220af49b3df0b731e7553b22cf",
+      "message": "docs: add DEPLOY.md — Railway wiring for the 3 web services",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:32:13Z"
+    },
+    {
+      "sha": "18ea2743d8ccae61b28b6fcafdd3f14b797e16b8",
+      "message": "chore(backend): add railway.json — self-migrating deploy config",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:30:31Z"
+    },
+    {
+      "sha": "ee73a1a638fe310b352f5fabdd25297730e24e12",
+      "message": "chore(merchant): make deployable like admin — start, railway.json, edge, dedupe",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:14:39Z"
+    },
+    {
+      "sha": "64b906fdc97ff75d7ac3ded26048a109ebe6f075",
+      "message": "chore(admin): Railway service config (nixpacks build + start)",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:06:15Z"
+    },
+    {
+      "sha": "152bea19613264906b49aab237ec95b89e34f218",
+      "message": "chore(admin): add Railway start (vite preview) + allow host",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T12:02:17Z"
+    },
+    {
+      "sha": "49fecd7950ff35bc772ee020f960df14a2066e52",
+      "message": "feat: admin merchant CRUD + access-based ownership + prod CORS (#5)",
+      "author": "Arun Sharma",
+      "date": "2026-06-10T11:59:07Z"
+    },
+    {
+      "sha": "39a70d08366bd7d133cd59fdf0c5bf1259226937",
+      "message": "Merge pull request #2 from tnsaruniitr-lab/feat/admin-module",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:54:13Z"
+    },
+    {
+      "sha": "a6513fa7baa1a42dcccbfc1c27dabc3e48b7e459",
+      "message": "fix(tests): mock admin/repo.js so admin.test.ts runs without DATABASE_URL",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:52:57Z"
+    },
+    {
+      "sha": "ac1eb76d8a0e1af0ae4f6cf02f0c3f010856fb04",
+      "message": "fix: resolve all ESLint and TypeScript CI failures",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:49:35Z"
+    },
+    {
+      "sha": "c54e122584debe114c5e18cf0560249818905b3d",
+      "message": "fix: remove unused variables in merchant and admin screens (TS6133)",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:37:46Z"
+    },
+    {
+      "sha": "8159a90759fc4e63cafb23f3e22ee220cac02066",
+      "message": "merge: sync feat/admin-module with main — resolve module type conflicts and fix pnpm build approvals",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:30:05Z"
+    },
+    {
+      "sha": "3b6c817a3456defc4696ee15ad113997f5d59224",
+      "message": "fix: replace native argon2 with @node-rs/argon2, fix timestamptz and exactOptionalPropertyTypes errors",
+      "author": "Manasvi",
+      "date": "2026-06-10T08:09:30Z"
+    }
+  ]
+}

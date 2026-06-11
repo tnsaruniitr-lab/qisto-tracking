@@ -1,0 +1,48 @@
+{
+  "date": "2026-06-11",
+  "method": "fresh clone of the repo, judged only on its contents. Four independent reviewers (backend architecture, money/security, frontend, product/docs) read every backend file, all 10 migrations, all 12 docs and all three apps. Tests were actually run: 124/124 pass, typecheck clean, lint clean, no circular deps.",
+  "overall": 6,
+  "overallVerdict": "engineering quality well above prototype norm; product/ops layer significantly behind it",
+  "dimensions": [
+    { "label": "backend architecture", "score": 8, "verdict": "disciplined modular monolith with self-enforcing boundaries — rare at prototype stage" },
+    { "label": "backend code quality", "score": 7.5, "verdict": "strict TS, parameterized SQL, real concurrency control; held back by float money math and zero DB-integration tests" },
+    { "label": "money correctness", "score": 7, "verdict": "genuine double-entry ledger, atomic and exact — but reconciliation ignores the paid amount" },
+    { "label": "security posture", "score": 6, "verdict": "strong reflexes (argon2, anti-enumeration, real priv-esc fix) undermined by an ungated dev-login bypass" },
+    { "label": "frontend code quality", "score": 6, "verdict": "customer app well-crafted; dead code, copy-paste and contract drift elsewhere" },
+    { "label": "product execution (UIs)", "score": 4.5, "verdict": "one excellent consumer flow; admin console is ~70% mock-data theatre; zero Arabic/RTL/SYP for a Syrian product" },
+    { "label": "product design (business model)", "score": 5, "verdict": "right model choice, disciplined MVP cut — but the docs contradict themselves on the core capital question" },
+    { "label": "documentation freshness", "score": 4, "verdict": "well-written but 8 of 12 docs contradict the shipped code; README is flatly false" }
+  ],
+  "great": [
+    "the money core is real engineering, not prototype theatre — double-entry ledger with a balance invariant asserted before every write, DB check constraints, atomic purchase confirm, installment splits that sum exactly to the principal, and a test asserting the full accrual→repayment→settlement cycle nets to zero with the fee retained",
+    "architecture boundaries enforced three ways — lint import rules, circular-dependency checks in CI, and an architecture test with a 20-table ownership map that tests its own detectors against an intentional violation fixture",
+    "the git history shows real adversarial review — the race-condition fix batch is backed by row locks and DB-level partial unique indexes, not just app checks; the privilege-escalation fix is real and regression-tested",
+    "security reflexes above prototype level — argon2id for OTPs and PINs, CSPRNG generation, timing equalization on all three login paths, anti-enumeration responses, sanitized errors, consistent cross-tenant ownership checks",
+    "the customer app is a complete, live-wired product loop — OTP → KYC with camera → PIN → QR scan → affordability-gated quote → confirm → schedules → monthly statement; all 12 API calls match the backend exactly",
+    "MVP scope discipline is the best part of the design — the four-things cutting rule, manual ops with spreadsheets, and a decisions log with dated, reasoned entries"
+  ],
+  "issues": [
+    { "severity": "critical", "status": "open", "title": "reconciliation ignores the received amount", "detail": "the reconcile endpoint accepts an amount per bank line then never reads it — matching is by reference alone, so a $1 transfer can mark a $25 installment fully paid, restore $25 of credit and post $25 to the ledger. Two reviewers found this independently." },
+    { "severity": "critical", "status": "open", "title": "dev login bypass not gated to development", "detail": "if the dev OTP env var is merely set in production, anyone can log in as any active customer or merchant by phone number. The only safeguard is a code comment. Two-line fix, mandatory." },
+    { "severity": "high", "status": "open", "title": "business model contradicts itself on capital", "detail": "one doc sells capital-light pay-after-collection (~$100K to operate); another doc and the actual code front the merchant 68% of every ticket before any repayment ($350–600K of float). The merchant-collusion fraud vector this creates is structurally profitable at MVP and essentially unaddressed." },
+    { "severity": "high", "status": "open", "title": "the admin console can't run the business", "detail": "KYC approval, reconciliation, settlements and freezes all mutate hardcoded mock arrays while the real backend endpoints sit implemented and unused — a real customer's KYC can only be approved via curl" },
+    { "severity": "medium", "status": "open", "title": "money-critical accrual rides a non-durable in-process event bus", "detail": "if the transaction-committed listener fails, the merchant payable is never booked — no outbox, no retry, and the integrity-check worker promised in migration 0001 doesn't exist" },
+    { "severity": "medium", "status": "open", "title": "idempotency keys are globally scoped", "detail": "replaying another user's key returns their stored response body" },
+    { "severity": "medium", "status": "open", "title": "PIN reset needs only a bearer token", "detail": "defeats the PIN as a second spending factor on a stolen phone with a 30-day JWT; no durable PIN lockout — the in-memory limiter resets on deploy against a 4-digit space" },
+    { "severity": "medium", "status": "open", "title": "zero Arabic, zero RTL, zero SYP amounts", "detail": "for a Damascus mass-market product where down payments are paid in SYP cash; the merchant app shows SYP from a hardcoded FX of 13,000 that contradicts the backend's runtime setting" },
+    { "severity": "medium", "status": "open", "title": "zero DB-backed integration tests", "detail": "the 124 passing tests cover pure logic well, but everything that actually moves money through Postgres — recon, settlement locking, idempotency lifecycle — is tested only by reading the comments" },
+    { "severity": "medium", "status": "open", "title": "docs-vs-code drift is pervasive", "detail": "README claims no code written against 36 commits and a production deploy guide; ~1/3 of the documented schema is unbuilt; the worker tier (reminders, late fees, dunning) doesn't exist; the documented stack bears no relation to reality" },
+    { "severity": "low", "status": "open", "title": "float-dollar money math in the app layer", "detail": "the DB numeric type is the real safety net" },
+    { "severity": "low", "status": "open", "title": "reference codes collide around 77k transactions", "detail": "8-hex codes hit ~50% collision odds at that volume" },
+    { "severity": "low", "status": "open", "title": "SMS-pump exposure on the OTP endpoint", "detail": "unauthenticated user-row creation per unseen phone with no IP cap — fraud risk the day a real SMS provider lands" },
+    { "severity": "low", "status": "open", "title": "mobile build & serving misconfigurations", "detail": "the app build as configured will fail (missing assets, a removed SDK plugin); vite preview is serving production; settlement period parameters are decorative" }
+  ],
+  "verdict": "This is an unusually well-engineered backend attached to an unfinished product. The parts most prototypes fake — ledger integrity, atomicity, idempotency, tenant isolation, architecture enforcement — are real here, and the git history shows genuine review discipline rather than vibes. But the product can't currently operate (no admin ops UI, no dunning, no Arabic), and the business model documents disagree with the code and with each other about how much capital the company needs — which is the kind of contradiction that matters more than any bug.",
+  "next": [
+    "gate the dev login bypass to non-production",
+    "enforce amount matching in reconciliation",
+    "wire the admin UI to the existing endpoints",
+    "pick one settlement model and rewrite the docs to agree with the code",
+    "add a DB-backed test suite for the recon, settlement and idempotency paths"
+  ]
+}
