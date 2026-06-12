@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-06-11T23:30:16.015Z",
+  "generatedAt": "2026-06-12T15:41:20.242Z",
   "totals24h": {
-    "commits": 34,
-    "files": 204,
-    "additions": 7316,
-    "deletions": 3985
+    "commits": 33,
+    "files": 211,
+    "additions": 4831,
+    "deletions": 1952
   },
   "areas24h": [
     {
       "label": "customer app",
-      "files": 99
+      "files": 76
     },
     {
       "label": "backend core",
-      "files": 54
-    },
-    {
-      "label": "repo config",
-      "files": 17
+      "files": 59
     },
     {
       "label": "admin console",
-      "files": 12
+      "files": 33
     },
     {
       "label": "merchant portal",
-      "files": 10
+      "files": 17
+    },
+    {
+      "label": "repo config",
+      "files": 16
     },
     {
       "label": "docs",
-      "files": 6
+      "files": 5
     },
     {
       "label": "tests",
-      "files": 5
+      "files": 3
     },
     {
       "label": "migrations",
       "files": 1
+    },
+    {
+      "label": "shared packages",
+      "files": 1
     }
   ],
   "velocity": [
-    {
-      "date": "2026-05-13",
-      "commits": 0
-    },
     {
       "date": "2026-05-14",
       "commits": 0
@@ -160,12 +160,16 @@
     {
       "date": "2026-06-11",
       "commits": 34
+    },
+    {
+      "date": "2026-06-12",
+      "commits": 16
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 48
+      "commits": 64
     },
     {
       "name": "Manasvi",
@@ -173,6 +177,102 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "558135124e4e733a909a4af54fd98a6d703def01",
+      "message": "fix(customer): back button on the login screen",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T15:36:07Z"
+    },
+    {
+      "sha": "d988b1fd5f7462a2255b5f165420a6b0df4a6d33",
+      "message": "feat(admin): Platform Settings screen (super_admin) with live toggles",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T15:23:35Z"
+    },
+    {
+      "sha": "527b49c189b0a8694993ffa1185431e8cd1a7d4c",
+      "message": "KYC: per-field validation errors — no more blind 'Something went wrong' (#12)",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T15:18:06Z"
+    },
+    {
+      "sha": "9bd4211a7a8d7824ef80978af89e6ce818ff5d29",
+      "message": "feat: openable purchase cards + kyc_auto_approve beta toggle",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T14:51:33Z"
+    },
+    {
+      "sha": "3a5059771a7b41305f77b1021e25fd85aaffd5db",
+      "message": "fix(data): heal phantom in-use credit on profiles migrated by 0011",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T14:21:40Z"
+    },
+    {
+      "sha": "7aa281d57d441f914e74fa78532d39c5935ef627",
+      "message": "chore: build markers to force panel redeploys past Railway watch-path skip",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:36:12Z"
+    },
+    {
+      "sha": "55bce0bbbbe46c65edadc667d6b68cb0bd24cd57",
+      "message": "feat: EAS Update (OTA) wired into the customer app",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:21:21Z"
+    },
+    {
+      "sha": "af820596a09328609005894fe4aeb2cbf277a49f",
+      "message": "qa: SYP migration release report (UAT 70/70)",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:15:41Z"
+    },
+    {
+      "sha": "0b3d9dbc5e04013f864463a262a88d2810f5cd59",
+      "message": "fix: whole-pound rounding in commerce split + settlement fees (UAT catch)",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:13:49Z"
+    },
+    {
+      "sha": "168c32cd1304d15d13d98d4ba17b7de2317543cf",
+      "message": "feat!: SYP-native frontends + committed UAT suite",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:07:54Z"
+    },
+    {
+      "sha": "00f95dac5ca22f373687a8ab8787e616902da84a",
+      "message": "feat!: SYP-native money — single currency, no conversion anywhere",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T13:00:18Z"
+    },
+    {
+      "sha": "fabdc6de05922e44cf7278a68d716946dfde48da",
+      "message": "fix: SYP amounts silently snapped to 130-SYP steps on small sales",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T12:40:57Z"
+    },
+    {
+      "sha": "146626f0a0635de58b2d4304f40e9288799b3307",
+      "message": "admin: wire entire panel to live APIs + dashboard/customers/transactions endpoints",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T11:51:22Z"
+    },
+    {
+      "sha": "63bb715999d1b6d95d07447b32104494df5c9474",
+      "message": "admin: live KYC queue (was mock — real signups invisible) + merchant edit modal",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T11:29:52Z"
+    },
+    {
+      "sha": "bceb24979e2a826e0b10e1a4248d13893730efd2",
+      "message": "qa: lifecycle + display-accuracy audit 2026-06-12 (34/34 checks pass)",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T09:13:19Z"
+    },
+    {
+      "sha": "5c3a138130af3acc8358868346c074fff9c7eded",
+      "message": "currency: unify all surfaces to SYP display (USD stays internal ledger only)",
+      "author": "Arun Sharma",
+      "date": "2026-06-12T08:55:12Z"
+    },
     {
       "sha": "1c6f79552cad7e477ab1b25ad6a3a00e8bd86c4d",
       "message": "track: bump BUG-006 to high (+repro), add BUG-019 partial payments; roadmap: persist reported-state + partial-payment handling",
@@ -256,106 +356,10 @@
       "message": "qa: money-math audit report + open-findings register; roadmap rows for QA fixes",
       "author": "Arun Sharma",
       "date": "2026-06-11T18:35:48Z"
-    },
-    {
-      "sha": "c93598fadcc7102cefc8f870226d36d9dfc38db3",
-      "message": "roadmap: move store/EAS items to 'release' component (feeds release & store workstream)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T17:56:55Z"
-    },
-    {
-      "sha": "37da12526a3ec93db8cba2175857940026e7c421",
-      "message": "feat(admin): set-admin-password script to rotate an existing super_admin password (seed skips existing)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T17:25:11Z"
-    },
-    {
-      "sha": "0210112587b6afe5ef3088fcfb9cdb55564bc3c5",
-      "message": "roadmap: track removing public test creds + unsetting DEV_OTP before launch",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T17:02:51Z"
-    },
-    {
-      "sha": "5d7f6b86030dcc8b62da269fbb454854d36b44e0",
-      "message": "docs(roadmap): integrations component (SMS/OTP, bank import, push) + store release split into pipeline & submission",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T15:04:14Z"
-    },
-    {
-      "sha": "b0c4eb1b3e7a7ed7aac5683a2602867849f00612",
-      "message": "docs: productroadmap.md — drives the build tracker (read hourly)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T14:51:02Z"
-    },
-    {
-      "sha": "1517c87b818946cffdb3cdc4e7c2939027e0220c",
-      "message": "feat(customer-app): 4-mode splash selector — 2 styles (Ink/Bright) × 2 colours",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T14:36:08Z"
-    },
-    {
-      "sha": "54b984c52f3fe695099b9e11e00fb2400938f80f",
-      "message": "fix(auth): relax OTP rate limits while DEV_OTP set (staging); strict in prod",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T14:31:51Z"
-    },
-    {
-      "sha": "5b61b18fcd2375d350e5a6aca57a29bc15d085dd",
-      "message": "chore(customer-app): enable web target for in-browser testing",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T14:27:08Z"
-    },
-    {
-      "sha": "07545046ab252682b49875f05681ee32bceb5229",
-      "message": "fix(customer-app): no +963 prefill on login (caused wrong-account logins); clearer placeholder",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T14:03:48Z"
-    },
-    {
-      "sha": "13c6b804c0ededf4448fa249370410fbf41073e3",
-      "message": "fix(customer-app): splash colour picker clears the notch (safe-area inset)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T13:56:27Z"
-    },
-    {
-      "sha": "1438a257c5151125e3baa57b67f1bca89fefe37c",
-      "message": "fix(customer-app): add 'Start over'/sign-out escape on KYC + pending screens",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T13:30:21Z"
-    },
-    {
-      "sha": "8c8cbc0852632b36b619c30fa8bbc5119c93e418",
-      "message": "feat(customer-app): animated welcomeE2 splash + top-left colour picker",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T13:18:26Z"
-    },
-    {
-      "sha": "ca9a0fdec12854b7e7bee76d7820d204b5fe1260",
-      "message": "fix(customer-app): faithful welcomeE2 splash — Green/Violet, radial bloom, light CTA, entrance animation",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T13:11:14Z"
-    },
-    {
-      "sha": "d5ae6f9ef7a0f8f2580f1b2fcec4ba942fe5520b",
-      "message": "feat(customer-app): SDK 54 upgrade + v2 'Ink Royale' design + 2-color theme picker",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T13:00:27Z"
-    },
-    {
-      "sha": "8a2407c3fbdbbb5a23201fbfe6bc269045c361c7",
-      "message": "feat(customer-app): wire Expo screens to live API (Login→KYC→Home→Scan→Pay)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T12:08:02Z"
-    },
-    {
-      "sha": "b56b5e94f0a76ae9b4e3e4169190f7f6e7bb0dc6",
-      "message": "feat(billing): consolidated monthly statement + reconcile-by-monthly-reference",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T10:29:10Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-11T23:30:16.015Z",
+    "fetchedAt": "2026-06-12T15:41:20.242Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +580,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-11T23:30:16.015Z",
+    "fetchedAt": "2026-06-12T15:41:20.242Z",
     "items": [
       {
         "id": "BUG-001",
