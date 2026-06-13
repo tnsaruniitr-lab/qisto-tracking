@@ -1,27 +1,19 @@
 {
-  "generatedAt": "2026-06-13T14:30:55.014Z",
+  "generatedAt": "2026-06-13T16:51:19.786Z",
   "totals24h": {
-    "commits": 5,
-    "files": 34,
-    "additions": 1009,
-    "deletions": 147
+    "commits": 2,
+    "files": 6,
+    "additions": 376,
+    "deletions": 69
   },
   "areas24h": [
     {
-      "label": "backend core",
-      "files": 16
-    },
-    {
       "label": "customer app",
-      "files": 14
+      "files": 5
     },
     {
-      "label": "admin console",
-      "files": 2
-    },
-    {
-      "label": "tests",
-      "files": 2
+      "label": "backend core",
+      "files": 1
     }
   ],
   "velocity": [
@@ -143,13 +135,13 @@
     },
     {
       "date": "2026-06-13",
-      "commits": 1
+      "commits": 2
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 65
+      "commits": 66
     },
     {
       "name": "Manasvi",
@@ -157,6 +149,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "ea46b4b2cb8ce1e1918423f129d0682a63d1387e",
+      "message": "feat(customer): scoped Pay screens + Home visual refresh",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T16:49:22Z"
+    },
     {
       "sha": "c9fd31ab4a45ff8dac675fac77fbea250297d73b",
       "message": "feat(customer): split home payment into 'This month' + 'Upcoming' cards",
@@ -330,16 +328,10 @@
       "message": "Add apps/merchant/railway.json (service's railwayConfigFile points here)",
       "author": "Arun Sharma",
       "date": "2026-06-11T20:02:53Z"
-    },
-    {
-      "sha": "1fda8793b4247690c27b8c42666cca911589df4b",
-      "message": "Admin + merchant panels: Qisto brand restyle (visual only, no logic)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T19:10:41Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T14:30:55.014Z",
+    "fetchedAt": "2026-06-13T16:51:19.786Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -560,7 +552,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T14:30:55.014Z",
+    "fetchedAt": "2026-06-13T16:51:19.786Z",
     "items": [
       {
         "id": "BUG-001",
