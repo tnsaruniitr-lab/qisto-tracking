@@ -1,43 +1,27 @@
 {
-  "generatedAt": "2026-06-13T11:25:43.922Z",
+  "generatedAt": "2026-06-13T14:30:55.014Z",
   "totals24h": {
-    "commits": 15,
-    "files": 103,
-    "additions": 2845,
-    "deletions": 876
+    "commits": 5,
+    "files": 34,
+    "additions": 1009,
+    "deletions": 147
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 50
-    },
-    {
-      "label": "customer app",
-      "files": 24
-    },
-    {
-      "label": "admin console",
       "files": 16
     },
     {
-      "label": "merchant portal",
-      "files": 5
+      "label": "customer app",
+      "files": 14
+    },
+    {
+      "label": "admin console",
+      "files": 2
     },
     {
       "label": "tests",
-      "files": 3
-    },
-    {
-      "label": "repo config",
-      "files": 3
-    },
-    {
-      "label": "migrations",
-      "files": 1
-    },
-    {
-      "label": "shared packages",
-      "files": 1
+      "files": 2
     }
   ],
   "velocity": [
@@ -355,7 +339,7 @@
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T11:25:43.922Z",
+    "fetchedAt": "2026-06-13T14:30:55.014Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +560,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T11:25:43.922Z",
+    "fetchedAt": "2026-06-13T14:30:55.014Z",
     "items": [
       {
         "id": "BUG-001",
