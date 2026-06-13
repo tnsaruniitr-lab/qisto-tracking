@@ -1,27 +1,35 @@
 {
-  "generatedAt": "2026-06-13T20:42:26.372Z",
+  "generatedAt": "2026-06-13T22:32:45.932Z",
   "totals24h": {
-    "commits": 9,
-    "files": 70,
-    "additions": 2805,
-    "deletions": 196
+    "commits": 16,
+    "files": 129,
+    "additions": 5785,
+    "deletions": 492
   },
   "areas24h": [
     {
-      "label": "backend core",
-      "files": 35
+      "label": "customer app",
+      "files": 51
     },
     {
-      "label": "customer app",
-      "files": 13
+      "label": "backend core",
+      "files": 45
+    },
+    {
+      "label": "tests",
+      "files": 11
     },
     {
       "label": "admin console",
       "files": 6
     },
     {
-      "label": "tests",
-      "files": 5
+      "label": "repo config",
+      "files": 4
+    },
+    {
+      "label": "shared packages",
+      "files": 4
     },
     {
       "label": "merchant portal",
@@ -30,14 +38,6 @@
     {
       "label": "migrations",
       "files": 4
-    },
-    {
-      "label": "shared packages",
-      "files": 2
-    },
-    {
-      "label": "repo config",
-      "files": 1
     }
   ],
   "velocity": [
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-13",
-      "commits": 9
+      "commits": 16
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 73
+      "commits": 80
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,48 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "74a10cad477b1d39d0fc932d06a73c7e7fea1104",
+      "message": "Merge: persistent Tabs layout (fix nav jump + card re-load)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T22:08:48Z"
+    },
+    {
+      "sha": "8778c6530ca50c34d4c71a8c81583f21c227b18e",
+      "message": "fix(customer): persistent Tabs layout — stop nav jump + card re-load flash",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T22:07:09Z"
+    },
+    {
+      "sha": "225f827c4aa16c816b5a6a8955b98726123140f9",
+      "message": "Merge: redesigned Loans screen (segmented limit bar + monthly cards)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T21:37:55Z"
+    },
+    {
+      "sha": "9de12d48ce88920eeb398ea0b4abddb9139c92a5",
+      "message": "feat(loans): redesigned Loans screen — segmented limit bar + monthly cards",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T21:32:31Z"
+    },
+    {
+      "sha": "41b7085d5ab4e1e39a2cbdb4d78674ac712de3c1",
+      "message": "docs: scale & concurrency audit — 23 findings, 17 tracked as issues #13-29",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T21:06:43Z"
+    },
+    {
+      "sha": "bf2e36aa5a90c12c40daf1f46200309fda598338",
+      "message": "Merge: money-flow audit fixes (released-leak, zero-fee settlement, FE float/reversed)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T20:43:12Z"
+    },
+    {
+      "sha": "f53cbc43c36886ce59e57d17ee4aeb614c3e2828",
+      "message": "fix(money): close 4 money-flow audit findings + add live ledger harness",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T20:38:05Z"
+    },
     {
       "sha": "e14841e7c9511725fad43209d191a64e62ec4f5e",
       "message": "Merge: loan auth-hold → capture → release (capture model live)",
@@ -310,52 +352,10 @@
       "message": "admin: live KYC queue (was mock — real signups invisible) + merchant edit modal",
       "author": "Arun Sharma",
       "date": "2026-06-12T11:29:52Z"
-    },
-    {
-      "sha": "bceb24979e2a826e0b10e1a4248d13893730efd2",
-      "message": "qa: lifecycle + display-accuracy audit 2026-06-12 (34/34 checks pass)",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T09:13:19Z"
-    },
-    {
-      "sha": "5c3a138130af3acc8358868346c074fff9c7eded",
-      "message": "currency: unify all surfaces to SYP display (USD stays internal ledger only)",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T08:55:12Z"
-    },
-    {
-      "sha": "1c6f79552cad7e477ab1b25ad6a3a00e8bd86c4d",
-      "message": "track: bump BUG-006 to high (+repro), add BUG-019 partial payments; roadmap: persist reported-state + partial-payment handling",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T23:11:33Z"
-    },
-    {
-      "sha": "d0dabf74619de1404eee8aad47287de26252b3b5",
-      "message": "feat(customer-app): redesign Pay screen — SYP, merchant avatars, transfer panel",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T23:00:41Z"
-    },
-    {
-      "sha": "e2a3a758783f23d399d70057c139282c5b56fd19",
-      "message": "docs: BUGS.md — known-bugs backlog from the 2026-06 FE + contract audits (also surfaced on the tracker)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T22:39:06Z"
-    },
-    {
-      "sha": "369b92bedf6d8b40072f86468436f9fd71957220",
-      "message": "fix(customer-app): handle 401/expiry — redirect to login + catch load errors",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T22:38:02Z"
-    },
-    {
-      "sha": "29e395ed41dffebdb77af82f658a280e22ac5f92",
-      "message": "fix(customer-app): remove user theme picker, wire Personal info, honest \"soon\" rows",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T22:08:08Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T20:42:26.372Z",
+    "fetchedAt": "2026-06-13T22:32:45.932Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T20:42:26.372Z",
+    "fetchedAt": "2026-06-13T22:32:45.932Z",
     "items": [
       {
         "id": "BUG-001",
