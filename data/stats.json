@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-06-13T08:33:19.765Z",
+  "generatedAt": "2026-06-13T11:25:43.922Z",
   "totals24h": {
-    "commits": 16,
-    "files": 125,
-    "additions": 2990,
-    "deletions": 968
+    "commits": 15,
+    "files": 103,
+    "additions": 2845,
+    "deletions": 876
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 54
+      "files": 50
     },
     {
       "label": "customer app",
-      "files": 30
+      "files": 24
     },
     {
       "label": "admin console",
-      "files": 23
+      "files": 16
     },
     {
       "label": "merchant portal",
-      "files": 8
-    },
-    {
-      "label": "repo config",
       "files": 5
     },
     {
       "label": "tests",
+      "files": 3
+    },
+    {
+      "label": "repo config",
       "files": 3
     },
     {
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-13",
-      "commits": 0
+      "commits": 1
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 64
+      "commits": 65
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "c9fd31ab4a45ff8dac675fac77fbea250297d73b",
+      "message": "feat(customer): split home payment into 'This month' + 'Upcoming' cards",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T11:02:48Z"
+    },
     {
       "sha": "558135124e4e733a909a4af54fd98a6d703def01",
       "message": "fix(customer): back button on the login screen",
@@ -346,16 +352,10 @@
       "message": "Admin + merchant panels: Qisto brand restyle (visual only, no logic)",
       "author": "Arun Sharma",
       "date": "2026-06-11T19:10:41Z"
-    },
-    {
-      "sha": "7dcdc7cd8a6f9c230500d21b5522840471e85cc8",
-      "message": "qa: money-math audit report + open-findings register; roadmap rows for QA fixes",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T18:35:48Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T08:33:19.765Z",
+    "fetchedAt": "2026-06-13T11:25:43.922Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T08:33:19.765Z",
+    "fetchedAt": "2026-06-13T11:25:43.922Z",
     "items": [
       {
         "id": "BUG-001",
