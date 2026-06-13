@@ -1,22 +1,42 @@
 {
-  "generatedAt": "2026-06-13T18:47:48.407Z",
+  "generatedAt": "2026-06-13T20:42:26.372Z",
   "totals24h": {
-    "commits": 3,
-    "files": 7,
-    "additions": 504,
-    "deletions": 69
+    "commits": 9,
+    "files": 70,
+    "additions": 2805,
+    "deletions": 196
   },
   "areas24h": [
     {
+      "label": "backend core",
+      "files": 35
+    },
+    {
       "label": "customer app",
+      "files": 13
+    },
+    {
+      "label": "admin console",
+      "files": 6
+    },
+    {
+      "label": "tests",
       "files": 5
     },
     {
-      "label": "repo config",
-      "files": 1
+      "label": "merchant portal",
+      "files": 4
     },
     {
-      "label": "backend core",
+      "label": "migrations",
+      "files": 4
+    },
+    {
+      "label": "shared packages",
+      "files": 2
+    },
+    {
+      "label": "repo config",
       "files": 1
     }
   ],
@@ -139,13 +159,13 @@
     },
     {
       "date": "2026-06-13",
-      "commits": 3
+      "commits": 9
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 67
+      "commits": 73
     },
     {
       "name": "Manasvi",
@@ -153,6 +173,42 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "e14841e7c9511725fad43209d191a64e62ec4f5e",
+      "message": "Merge: loan auth-hold → capture → release (capture model live)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T19:30:27Z"
+    },
+    {
+      "sha": "d244564277b8960532b1e6f0800e9c041d0d6496",
+      "message": "test: rebaseline UAT + two-card audit for capture model (flag ON)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T19:30:22Z"
+    },
+    {
+      "sha": "55240336ebc41867866726e50c1d70deff2e4441",
+      "message": "feat(cutover): relabel held loans + heal invariant for capture model",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T19:14:12Z"
+    },
+    {
+      "sha": "cd34886e1628bc5dac8b765849b2536b3eebf581",
+      "message": "feat: loan capture model Phase 4 — display + release-guard hardening",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T19:06:27Z"
+    },
+    {
+      "sha": "cee7dc19371e4a10b55df3d36d00d12b86f3c220",
+      "message": "test: live auth-hold→capture→release harness (23 checks, prod-verified)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T18:51:48Z"
+    },
+    {
+      "sha": "56bae7331fe3b8f92d7e12cd1671b2ea8c0beaa7",
+      "message": "feat(backend): loan auth-hold → capture → release (Phases 0-3, flag-gated)",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T18:46:50Z"
+    },
     {
       "sha": "94ee361705fbde86b92f4e696e80e459ee4cf254",
       "message": "docs(spec): loan lifecycle auth-hold → capture → release",
@@ -296,46 +352,10 @@
       "message": "fix(customer-app): remove user theme picker, wire Personal info, honest \"soon\" rows",
       "author": "Arun Sharma",
       "date": "2026-06-11T22:08:08Z"
-    },
-    {
-      "sha": "7d158fb0685d83a3f6a55cd166496c30d4f87945",
-      "message": "fix(customer-app): RTL/Arabic polish — logo, back buttons, chevrons, letter-spacing",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T21:55:04Z"
-    },
-    {
-      "sha": "31c446b4745c1364403bb35edda9381475784a7a",
-      "message": "feat(customer-app): Mature design port + full Arabic/RTL/SYP + supporting backend",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T21:35:46Z"
-    },
-    {
-      "sha": "12bc71b9a76aaafe83425fc819be9f0ecb2fcecf",
-      "message": "Roadmap: PIN change + forgot-PIN recovery flow",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T20:53:34Z"
-    },
-    {
-      "sha": "4e11b49d705dc39197fcc9759f17f88cd11d8317",
-      "message": "feat(customer-app): enable EAS Update (OTA) — JS changes ship without a store release",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T20:52:46Z"
-    },
-    {
-      "sha": "11680ce1f0582cb8ff3ddb880e8988dbc19bc1f5",
-      "message": "docs: release, versioning & API backward-compatibility rules (docs/13)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T20:26:05Z"
-    },
-    {
-      "sha": "c045da7f325fa8f3406a89453ff35cdbc2c86b21",
-      "message": "Add apps/admin/railway.json (GitHub admin service's railwayConfigFile points here)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T20:15:43Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T18:47:48.407Z",
+    "fetchedAt": "2026-06-13T20:42:26.372Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -556,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T18:47:48.407Z",
+    "fetchedAt": "2026-06-13T20:42:26.372Z",
     "items": [
       {
         "id": "BUG-001",
