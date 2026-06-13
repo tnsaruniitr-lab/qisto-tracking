@@ -1,15 +1,19 @@
 {
-  "generatedAt": "2026-06-13T16:51:19.786Z",
+  "generatedAt": "2026-06-13T18:47:48.407Z",
   "totals24h": {
-    "commits": 2,
-    "files": 6,
-    "additions": 376,
+    "commits": 3,
+    "files": 7,
+    "additions": 504,
     "deletions": 69
   },
   "areas24h": [
     {
       "label": "customer app",
       "files": 5
+    },
+    {
+      "label": "repo config",
+      "files": 1
     },
     {
       "label": "backend core",
@@ -135,13 +139,13 @@
     },
     {
       "date": "2026-06-13",
-      "commits": 2
+      "commits": 3
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 66
+      "commits": 67
     },
     {
       "name": "Manasvi",
@@ -149,6 +153,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "94ee361705fbde86b92f4e696e80e459ee4cf254",
+      "message": "docs(spec): loan lifecycle auth-hold → capture → release",
+      "author": "Arun Sharma",
+      "date": "2026-06-13T18:07:03Z"
+    },
     {
       "sha": "ea46b4b2cb8ce1e1918423f129d0682a63d1387e",
       "message": "feat(customer): scoped Pay screens + Home visual refresh",
@@ -322,16 +332,10 @@
       "message": "Add apps/admin/railway.json (GitHub admin service's railwayConfigFile points here)",
       "author": "Arun Sharma",
       "date": "2026-06-11T20:15:43Z"
-    },
-    {
-      "sha": "9dc5ff50bb3fb535570bb5e80170ffbcb46a2247",
-      "message": "Add apps/merchant/railway.json (service's railwayConfigFile points here)",
-      "author": "Arun Sharma",
-      "date": "2026-06-11T20:02:53Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-13T16:51:19.786Z",
+    "fetchedAt": "2026-06-13T18:47:48.407Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -552,7 +556,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-13T16:51:19.786Z",
+    "fetchedAt": "2026-06-13T18:47:48.407Z",
     "items": [
       {
         "id": "BUG-001",
