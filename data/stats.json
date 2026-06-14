@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-14T13:07:24.307Z",
+  "generatedAt": "2026-06-14T15:20:35.309Z",
   "totals24h": {
-    "commits": 20,
-    "files": 143,
-    "additions": 6723,
-    "deletions": 1027
+    "commits": 26,
+    "files": 158,
+    "additions": 6911,
+    "deletions": 1065
   },
   "areas24h": [
     {
       "label": "customer app",
-      "files": 65
+      "files": 72
     },
     {
       "label": "backend core",
-      "files": 45
+      "files": 52
     },
     {
       "label": "tests",
@@ -22,6 +22,10 @@
     {
       "label": "admin console",
       "files": 6
+    },
+    {
+      "label": "migrations",
+      "files": 5
     },
     {
       "label": "repo config",
@@ -33,10 +37,6 @@
     },
     {
       "label": "merchant portal",
-      "files": 4
-    },
-    {
-      "label": "migrations",
       "files": 4
     }
   ],
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-14",
-      "commits": 5
+      "commits": 11
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 85
+      "commits": 91
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,42 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "ab3401d75391547322314ed3cec26556062d9772",
+      "message": "style(customer): This-month debts as separate cards",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T15:20:31Z"
+    },
+    {
+      "sha": "93c26c7028f130d92020ee5f35e4e9b3f0cf2b93",
+      "message": "feat(customer): durable \"reported\" state + Undo (step 3b/3)",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T14:27:37Z"
+    },
+    {
+      "sha": "2b70578fd780e6ab2e4a38ad0fc38e300cd02d90",
+      "message": "feat(agency): durable reported flag on statement + withdraw endpoint (step 3a/3)",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T14:20:04Z"
+    },
+    {
+      "sha": "f4743465d89d8967f0f18cf750783301ec03e1fb",
+      "message": "fix(agency): dedupe payment reports — reportPayment is idempotent (step 2/3)",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T14:05:54Z"
+    },
+    {
+      "sha": "14a87c3489a3417042d679e3e58a533074661261",
+      "message": "feat(customer): confirm sheet before \"I've made the transfer\" (step 1/3)",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T13:56:04Z"
+    },
+    {
+      "sha": "9513ba3ba8d81173c9ea99610d5e65e2c62d8480",
+      "message": "copy(customer): unify hub naming to \"Loans\"; third tab \"Loans\" → \"Overview\"",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T13:36:54Z"
+    },
     {
       "sha": "f126d42b2d6cc1d96f1159576c531e9486d3fc35",
       "message": "fix(customer): audit fixes — phantom progress bar, financed header, date TZ",
@@ -316,46 +352,10 @@
       "message": "KYC: per-field validation errors — no more blind 'Something went wrong' (#12)",
       "author": "Arun Sharma",
       "date": "2026-06-12T15:18:06Z"
-    },
-    {
-      "sha": "9bd4211a7a8d7824ef80978af89e6ce818ff5d29",
-      "message": "feat: openable purchase cards + kyc_auto_approve beta toggle",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T14:51:33Z"
-    },
-    {
-      "sha": "3a5059771a7b41305f77b1021e25fd85aaffd5db",
-      "message": "fix(data): heal phantom in-use credit on profiles migrated by 0011",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T14:21:40Z"
-    },
-    {
-      "sha": "7aa281d57d441f914e74fa78532d39c5935ef627",
-      "message": "chore: build markers to force panel redeploys past Railway watch-path skip",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:36:12Z"
-    },
-    {
-      "sha": "55bce0bbbbe46c65edadc667d6b68cb0bd24cd57",
-      "message": "feat: EAS Update (OTA) wired into the customer app",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:21:21Z"
-    },
-    {
-      "sha": "af820596a09328609005894fe4aeb2cbf277a49f",
-      "message": "qa: SYP migration release report (UAT 70/70)",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:15:41Z"
-    },
-    {
-      "sha": "0b3d9dbc5e04013f864463a262a88d2810f5cd59",
-      "message": "fix: whole-pound rounding in commerce split + settlement fees (UAT catch)",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:13:49Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-14T13:07:24.307Z",
+    "fetchedAt": "2026-06-14T15:20:35.309Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-14T13:07:24.307Z",
+    "fetchedAt": "2026-06-14T15:20:35.309Z",
     "items": [
       {
         "id": "BUG-001",
