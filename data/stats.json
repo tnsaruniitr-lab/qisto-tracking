@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-14T15:20:35.309Z",
+  "generatedAt": "2026-06-14T17:52:11.849Z",
   "totals24h": {
     "commits": 26,
-    "files": 158,
-    "additions": 6911,
-    "deletions": 1065
+    "files": 157,
+    "additions": 6750,
+    "deletions": 1236
   },
   "areas24h": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "label": "backend core",
-      "files": 52
+      "files": 51
     },
     {
       "label": "tests",
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-14",
-      "commits": 11
+      "commits": 12
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 91
+      "commits": 92
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "f320cfafb68068593a3e11145a7feda06e0ddaab",
+      "message": "feat(customer): Overview as orders list → Order-detail payment schedule",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T16:19:16Z"
+    },
     {
       "sha": "ab3401d75391547322314ed3cec26556062d9772",
       "message": "style(customer): This-month debts as separate cards",
@@ -346,16 +352,10 @@
       "message": "feat(admin): Platform Settings screen (super_admin) with live toggles",
       "author": "Arun Sharma",
       "date": "2026-06-12T15:23:35Z"
-    },
-    {
-      "sha": "527b49c189b0a8694993ffa1185431e8cd1a7d4c",
-      "message": "KYC: per-field validation errors — no more blind 'Something went wrong' (#12)",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T15:18:06Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-14T15:20:35.309Z",
+    "fetchedAt": "2026-06-14T17:52:11.849Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-14T15:20:35.309Z",
+    "fetchedAt": "2026-06-14T17:52:11.849Z",
     "items": [
       {
         "id": "BUG-001",
