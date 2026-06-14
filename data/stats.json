@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-14T10:33:31.134Z",
+  "generatedAt": "2026-06-14T13:07:24.307Z",
   "totals24h": {
-    "commits": 16,
-    "files": 129,
-    "additions": 5785,
-    "deletions": 492
+    "commits": 20,
+    "files": 143,
+    "additions": 6723,
+    "deletions": 1027
   },
   "areas24h": [
     {
       "label": "customer app",
-      "files": 51
+      "files": 65
     },
     {
       "label": "backend core",
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-14",
-      "commits": 0
+      "commits": 5
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 80
+      "commits": 85
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,36 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "f126d42b2d6cc1d96f1159576c531e9486d3fc35",
+      "message": "fix(customer): audit fixes — phantom progress bar, financed header, date TZ",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T12:59:25Z"
+    },
+    {
+      "sha": "267051ca950718fac470c1b4b8103fdd0a04448d",
+      "message": "copy(customer): reframe held loans as \"awaiting down-payment confirmation\"",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T12:26:40Z"
+    },
+    {
+      "sha": "43d67e8e253700bc198c808c57eaeefa75f30f36",
+      "message": "fix(customer): pin the This-month Pay footer + roomier Debts tabs",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T11:55:41Z"
+    },
+    {
+      "sha": "e9e27d393423a8f9187f08a397efcdb6576be83a",
+      "message": "Merge feat/debts-hub: customer Debts hub (This month/Future/Loans)",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T11:44:56Z"
+    },
+    {
+      "sha": "978e8c25138dd06a121b5731c22474e771b1a2b2",
+      "message": "feat(customer): Debts hub — This month / Future / Loans, retire Pay",
+      "author": "Arun Sharma",
+      "date": "2026-06-14T11:44:46Z"
+    },
     {
       "sha": "74a10cad477b1d39d0fc932d06a73c7e7fea1104",
       "message": "Merge: persistent Tabs layout (fix nav jump + card re-load)",
@@ -322,40 +352,10 @@
       "message": "fix: whole-pound rounding in commerce split + settlement fees (UAT catch)",
       "author": "Arun Sharma",
       "date": "2026-06-12T13:13:49Z"
-    },
-    {
-      "sha": "168c32cd1304d15d13d98d4ba17b7de2317543cf",
-      "message": "feat!: SYP-native frontends + committed UAT suite",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:07:54Z"
-    },
-    {
-      "sha": "00f95dac5ca22f373687a8ab8787e616902da84a",
-      "message": "feat!: SYP-native money — single currency, no conversion anywhere",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T13:00:18Z"
-    },
-    {
-      "sha": "fabdc6de05922e44cf7278a68d716946dfde48da",
-      "message": "fix: SYP amounts silently snapped to 130-SYP steps on small sales",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T12:40:57Z"
-    },
-    {
-      "sha": "146626f0a0635de58b2d4304f40e9288799b3307",
-      "message": "admin: wire entire panel to live APIs + dashboard/customers/transactions endpoints",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T11:51:22Z"
-    },
-    {
-      "sha": "63bb715999d1b6d95d07447b32104494df5c9474",
-      "message": "admin: live KYC queue (was mock — real signups invisible) + merchant edit modal",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T11:29:52Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-14T10:33:31.134Z",
+    "fetchedAt": "2026-06-14T13:07:24.307Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -576,7 +576,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-14T10:33:31.134Z",
+    "fetchedAt": "2026-06-14T13:07:24.307Z",
     "items": [
       {
         "id": "BUG-001",
