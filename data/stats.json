@@ -1,22 +1,30 @@
 {
-  "generatedAt": "2026-06-15T12:45:43.166Z",
+  "generatedAt": "2026-06-15T18:04:54.708Z",
   "totals24h": {
-    "commits": 8,
-    "files": 20,
-    "additions": 378,
-    "deletions": 273
+    "commits": 2,
+    "files": 13,
+    "additions": 450,
+    "deletions": 35
   },
   "areas24h": [
     {
-      "label": "customer app",
-      "files": 12
-    },
-    {
       "label": "backend core",
-      "files": 7
+      "files": 5
     },
     {
-      "label": "migrations",
+      "label": "repo config",
+      "files": 3
+    },
+    {
+      "label": "customer app",
+      "files": 3
+    },
+    {
+      "label": "admin console",
+      "files": 1
+    },
+    {
+      "label": "tests",
       "files": 1
     }
   ],
@@ -139,13 +147,13 @@
     },
     {
       "date": "2026-06-15",
-      "commits": 0
+      "commits": 2
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 92
+      "commits": 94
     },
     {
       "name": "Manasvi",
@@ -153,6 +161,18 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "15550cb920830f543b9d24b854b667a2141d2289",
+      "message": "docs(roadmap): add PR#30 photo-KYC fast-follows + PII sign-off gate",
+      "author": "Arun Sharma",
+      "date": "2026-06-15T16:54:47Z"
+    },
+    {
+      "sha": "bff931d4830c1d9e7ca55d5c0cd33a12df865256",
+      "message": "feat(kyc): photo-first signup with Claude Vision OCR, behind default-OFF flag (#30)",
+      "author": "Arun Sharma",
+      "date": "2026-06-15T16:48:37Z"
+    },
     {
       "sha": "f320cfafb68068593a3e11145a7feda06e0ddaab",
       "message": "feat(customer): Overview as orders list → Order-detail payment schedule",
@@ -320,22 +340,10 @@
       "message": "feat(customer): split home payment into 'This month' + 'Upcoming' cards",
       "author": "Arun Sharma",
       "date": "2026-06-13T11:02:48Z"
-    },
-    {
-      "sha": "558135124e4e733a909a4af54fd98a6d703def01",
-      "message": "fix(customer): back button on the login screen",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T15:36:07Z"
-    },
-    {
-      "sha": "d988b1fd5f7462a2255b5f165420a6b0df4a6d33",
-      "message": "feat(admin): Platform Settings screen (super_admin) with live toggles",
-      "author": "Arun Sharma",
-      "date": "2026-06-12T15:23:35Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-15T12:45:43.166Z",
+    "fetchedAt": "2026-06-15T18:04:54.708Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -552,11 +560,51 @@
         "status": "planned",
         "lane": "later",
         "added": "2026-06-12"
+      },
+      {
+        "item": "PII/sanctions sign-off before enabling photo-KYC (Syrian IDs → US LLM) + Anthropic retention review (PR#30)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "next",
+        "added": "2026-06-15"
+      },
+      {
+        "item": "Route-layer integration test for /kyc/extract — ocrFailed fallback + auth/schema/no-leak (PR#30)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-15"
+      },
+      {
+        "item": "Harden kycSubmitSchema — max lengths + nationalId format regex (PR#30)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-15"
+      },
+      {
+        "item": "Startup warning when kyc_photo_flow_enabled ON but ANTHROPIC_API_KEY unset (PR#30)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-15"
+      },
+      {
+        "item": "/settings/public allowlist-guard comment — keep sensitive keys out (PR#30)",
+        "component": "hardening",
+        "effort": "S",
+        "status": "planned",
+        "lane": "later",
+        "added": "2026-06-15"
       }
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-15T12:45:43.166Z",
+    "fetchedAt": "2026-06-15T18:04:54.708Z",
     "items": [
       {
         "id": "BUG-001",
