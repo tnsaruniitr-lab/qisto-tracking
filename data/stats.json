@@ -1,30 +1,34 @@
 {
-  "generatedAt": "2026-06-16T11:38:09.563Z",
+  "generatedAt": "2026-06-16T17:24:53.553Z",
   "totals24h": {
-    "commits": 2,
-    "files": 13,
-    "additions": 450,
-    "deletions": 35
+    "commits": 6,
+    "files": 28,
+    "additions": 1082,
+    "deletions": 61
   },
   "areas24h": [
     {
       "label": "backend core",
+      "files": 7
+    },
+    {
+      "label": "customer app",
       "files": 5
     },
     {
       "label": "repo config",
-      "files": 3
-    },
-    {
-      "label": "customer app",
-      "files": 3
+      "files": 5
     },
     {
       "label": "admin console",
-      "files": 1
+      "files": 5
     },
     {
-      "label": "tests",
+      "label": "merchant portal",
+      "files": 5
+    },
+    {
+      "label": "docs",
       "files": 1
     }
   ],
@@ -147,13 +151,13 @@
     },
     {
       "date": "2026-06-16",
-      "commits": 0
+      "commits": 6
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 94
+      "commits": 99
     },
     {
       "name": "Manasvi",
@@ -161,6 +165,42 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "cb68feac163ee72c4322f87b8272454fa6ba7db1",
+      "message": "build(customer): iOS credentialsSource local -> remote (EAS-managed)",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:44:30Z"
+    },
+    {
+      "sha": "6b8064df4bac4d5a4374ed478eb205cc5cb3d4de",
+      "message": "feat(observability): @sentry/react-native in customer app (build #6)",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:41:34Z"
+    },
+    {
+      "sha": "f9f79c38003b2d41fdc62f751e1c1f0bbb6d8482",
+      "message": "chore(observability): drop the one-shot Sentry verify ping (pipeline confirmed live)",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:33:01Z"
+    },
+    {
+      "sha": "1941e302583b1d6cb37dcdf77910e225d0608571",
+      "message": "feat(observability): Sentry error monitoring + docs/14 audit log",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:27:56Z"
+    },
+    {
+      "sha": "7f32338d47cd7fbf1305da4d502a92dd17cf8849",
+      "message": "feat(reliability): root ErrorBoundary (all 3 apps) + boot-time env validation",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:09:59Z"
+    },
+    {
+      "sha": "71ff6bb845f9ce2ec63f672b0119f0c17f941e39",
+      "message": "docs(audit): full end-to-end repo audit (2026-06-16)",
+      "author": "Arun Sharma",
+      "date": "2026-06-16T15:09:59Z"
+    },
     {
       "sha": "15550cb920830f543b9d24b854b667a2141d2289",
       "message": "docs(roadmap): add PR#30 photo-KYC fast-follows + PII sign-off gate",
@@ -304,46 +344,10 @@
       "message": "feat(cutover): relabel held loans + heal invariant for capture model",
       "author": "Arun Sharma",
       "date": "2026-06-13T19:14:12Z"
-    },
-    {
-      "sha": "cd34886e1628bc5dac8b765849b2536b3eebf581",
-      "message": "feat: loan capture model Phase 4 — display + release-guard hardening",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T19:06:27Z"
-    },
-    {
-      "sha": "cee7dc19371e4a10b55df3d36d00d12b86f3c220",
-      "message": "test: live auth-hold→capture→release harness (23 checks, prod-verified)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T18:51:48Z"
-    },
-    {
-      "sha": "56bae7331fe3b8f92d7e12cd1671b2ea8c0beaa7",
-      "message": "feat(backend): loan auth-hold → capture → release (Phases 0-3, flag-gated)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T18:46:50Z"
-    },
-    {
-      "sha": "94ee361705fbde86b92f4e696e80e459ee4cf254",
-      "message": "docs(spec): loan lifecycle auth-hold → capture → release",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T18:07:03Z"
-    },
-    {
-      "sha": "ea46b4b2cb8ce1e1918423f129d0682a63d1387e",
-      "message": "feat(customer): scoped Pay screens + Home visual refresh",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T16:49:22Z"
-    },
-    {
-      "sha": "c9fd31ab4a45ff8dac675fac77fbea250297d73b",
-      "message": "feat(customer): split home payment into 'This month' + 'Upcoming' cards",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T11:02:48Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-16T11:38:09.563Z",
+    "fetchedAt": "2026-06-16T17:24:53.553Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -604,7 +608,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-16T11:38:09.563Z",
+    "fetchedAt": "2026-06-16T17:24:53.553Z",
     "items": [
       {
         "id": "BUG-001",
