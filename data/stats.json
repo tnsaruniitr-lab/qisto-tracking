@@ -1,31 +1,39 @@
 {
-  "generatedAt": "2026-06-17T05:19:49.983Z",
+  "generatedAt": "2026-06-17T11:19:12.851Z",
   "totals24h": {
-    "commits": 6,
-    "files": 28,
-    "additions": 1082,
-    "deletions": 61
+    "commits": 8,
+    "files": 76,
+    "additions": 2823,
+    "deletions": 83
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 7
+      "files": 35
     },
     {
       "label": "customer app",
-      "files": 5
-    },
-    {
-      "label": "repo config",
-      "files": 5
+      "files": 14
     },
     {
       "label": "admin console",
-      "files": 5
+      "files": 8
+    },
+    {
+      "label": "repo config",
+      "files": 6
     },
     {
       "label": "merchant portal",
       "files": 5
+    },
+    {
+      "label": "migrations",
+      "files": 4
+    },
+    {
+      "label": "tests",
+      "files": 3
     },
     {
       "label": "docs",
@@ -147,11 +155,11 @@
     },
     {
       "date": "2026-06-16",
-      "commits": 6
+      "commits": 8
     },
     {
       "date": "2026-06-17",
-      "commits": 0
+      "commits": 1
     }
   ],
   "contributors7d": [
@@ -161,10 +169,22 @@
     },
     {
       "name": "Manasvi",
-      "commits": 12
+      "commits": 3
     }
   ],
   "recentCommits": [
+    {
+      "sha": "fcde1e0b1d4f180c72785a9907f9ed2d78bf50f3",
+      "message": "Merge branch 'notifications/engagement-module' into main",
+      "author": "Manasvi",
+      "date": "2026-06-17T07:05:26Z"
+    },
+    {
+      "sha": "0a92df38e8ef8a29262a4c8689b1b00f11d81689",
+      "message": "feat(engagement): deep-link notifications to a screen on tap",
+      "author": "Manasvi",
+      "date": "2026-06-16T17:44:52Z"
+    },
     {
       "sha": "cb68feac163ee72c4322f87b8272454fa6ba7db1",
       "message": "build(customer): iOS credentialsSource local -> remote (EAS-managed)",
@@ -200,6 +220,12 @@
       "message": "docs(audit): full end-to-end repo audit (2026-06-16)",
       "author": "Arun Sharma",
       "date": "2026-06-16T15:09:59Z"
+    },
+    {
+      "sha": "ac436586c24481d108ff0a48837e5f7f38b0f4cc",
+      "message": "feat(engagement): push + SMS notifications — admin rule set, outbox engine",
+      "author": "Manasvi",
+      "date": "2026-06-16T10:19:50Z"
     },
     {
       "sha": "15550cb920830f543b9d24b854b667a2141d2289",
@@ -326,28 +352,10 @@
       "message": "fix(money): close 4 money-flow audit findings + add live ledger harness",
       "author": "Arun Sharma",
       "date": "2026-06-13T20:38:05Z"
-    },
-    {
-      "sha": "e14841e7c9511725fad43209d191a64e62ec4f5e",
-      "message": "Merge: loan auth-hold → capture → release (capture model live)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T19:30:27Z"
-    },
-    {
-      "sha": "d244564277b8960532b1e6f0800e9c041d0d6496",
-      "message": "test: rebaseline UAT + two-card audit for capture model (flag ON)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T19:30:22Z"
-    },
-    {
-      "sha": "55240336ebc41867866726e50c1d70deff2e4441",
-      "message": "feat(cutover): relabel held loans + heal invariant for capture model",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T19:14:12Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-17T05:19:49.983Z",
+    "fetchedAt": "2026-06-17T11:19:12.851Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -608,7 +616,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-17T05:19:49.983Z",
+    "fetchedAt": "2026-06-17T11:19:12.851Z",
     "items": [
       {
         "id": "BUG-001",
