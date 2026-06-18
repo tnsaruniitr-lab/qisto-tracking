@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-18T09:48:46.201Z",
+  "generatedAt": "2026-06-18T13:44:23.311Z",
   "totals24h": {
-    "commits": 2,
-    "files": 23,
-    "additions": 387,
-    "deletions": 82
+    "commits": 3,
+    "files": 25,
+    "additions": 391,
+    "deletions": 85
   },
   "areas24h": [
     {
@@ -12,12 +12,12 @@
       "files": 16
     },
     {
-      "label": "tests",
-      "files": 3
+      "label": "customer app",
+      "files": 4
     },
     {
-      "label": "customer app",
-      "files": 2
+      "label": "tests",
+      "files": 3
     },
     {
       "label": "migrations",
@@ -147,13 +147,13 @@
     },
     {
       "date": "2026-06-18",
-      "commits": 2
+      "commits": 3
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 85
+      "commits": 79
     },
     {
       "name": "Manasvi",
@@ -161,6 +161,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "0c5744b80d74113ee212521e2d4d2cdc45d6a784",
+      "message": "fix(customer): missing comma in app.json plugins (merge artifact broke eas build)",
+      "author": "Arun Sharma",
+      "date": "2026-06-18T10:27:13Z"
+    },
     {
       "sha": "9369edccc73b191c705a3926da433097682281f9",
       "message": "Notifications: PR #33 review fixes — i18n, delivery reliability, cohort scans (#34)",
@@ -334,16 +340,10 @@
       "message": "feat(loans): redesigned Loans screen — segmented limit bar + monthly cards",
       "author": "Arun Sharma",
       "date": "2026-06-13T21:32:31Z"
-    },
-    {
-      "sha": "41b7085d5ab4e1e39a2cbdb4d78674ac712de3c1",
-      "message": "docs: scale & concurrency audit — 23 findings, 17 tracked as issues #13-29",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T21:06:43Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-18T09:48:46.201Z",
+    "fetchedAt": "2026-06-18T13:44:23.311Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -716,7 +716,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-18T09:48:46.201Z",
+    "fetchedAt": "2026-06-18T13:44:23.311Z",
     "items": [
       {
         "id": "BUG-001",
