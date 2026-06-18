@@ -1,35 +1,35 @@
 {
-  "updatedAt": "2026-06-11",
+  "updatedAt": "2026-06-18",
   "progress": {
     "modelNote": "every bar reserves its last 20% as a test & rework buffer (hatched) — it only fills once the stream is tested in production; build progress alone can never reach 100%",
-    "scopeNote": "scope expanded 2026-06-11 after the first full review: admin ops wiring, portal redesigns, localization, DB-integration tests, an integrations workstream (SMS/OTP, banking, push) and a release & store workstream (iOS/Android bundling) added — overall % dropped accordingly. New productroadmap.md items added after this date lower the affected workstream automatically.",
-    "headline": "money loop live in production · product layer catching up to the backend",
+    "scopeNote": "scope expanded 2026-06-11 after the first full review (admin wiring, portal redesigns, localization, DB-integration tests, integrations & release workstreams). Expanded again 2026-06-13: a scale & concurrency audit added 17 findings as new scope — backend core and hardening are diluted accordingly. New productroadmap.md items added after the baseline keep lowering the affected workstream automatically until they're done.",
+    "headline": "money loop live in production · product layer has caught up — scale & concurrency hardening is now the main lift to launch",
     "scopeBaseline": "2026-06-11",
     "bufferPct": 20,
     "workstreams": [
       {
         "label": "backend core",
         "weight": 25,
-        "pct": 85,
+        "pct": 86,
         "baseEffort": 40,
         "tested": false,
-        "note": "money loop live; reconciliation amount check + durable events outstanding"
+        "note": "money loop + loan capture model (auth-hold → capture → release) live and prod-verified; reconciliation amount-matching and the scale-audit integrity gaps (double-booking, accrual-outside-txn, settlement TOCTOU) outstanding"
       },
       {
         "label": "customer app",
         "weight": 15,
-        "pct": 70,
+        "pct": 82,
         "baseEffort": 25,
         "tested": false,
-        "note": "full loop wired to live API; Arabic/RTL/SYP and store builds missing"
+        "note": "Debts hub, redesigned Loans + Order-detail schedule, durable 'reported' state with Undo, SYP-native, Sentry-instrumented; Arabic/RTL and store builds still missing"
       },
       {
         "label": "admin console",
         "weight": 15,
-        "pct": 25,
+        "pct": 70,
         "baseEffort": 20,
         "tested": false,
-        "note": "screens exist but mostly mock data — being wired to the live endpoints"
+        "note": "wired to the live API — KYC queue, dashboard, customers & transactions, super-admin Platform Settings; full redesign and the remaining ops flows pending"
       },
       {
         "label": "merchant portal",
@@ -37,47 +37,47 @@
         "pct": 45,
         "baseEffort": 12,
         "tested": false,
-        "note": "QR quote + order flow works; redesign planned"
+        "note": "QR quote + order flow works and is rebranded to the design system; redesign planned"
       },
       {
         "label": "workers",
         "weight": 10,
-        "pct": 0,
+        "pct": 20,
         "baseEffort": 10,
         "tested": false,
-        "note": "reminders, late fees, dunning — not started"
+        "note": "engagement outbox engine + admin notification rules live; late-fee & dunning logic not started"
       },
       {
         "label": "localization",
         "weight": 10,
-        "pct": 0,
+        "pct": 35,
         "baseEffort": 12,
         "tested": false,
-        "note": "Arabic, RTL, SYP amounts — required for a Damascus launch"
+        "note": "SYP-native money & frontends shipped (single currency, no conversion); Arabic + RTL still required for a Damascus launch"
       },
       {
         "label": "hardening",
         "weight": 15,
-        "pct": 35,
+        "pct": 45,
         "baseEffort": 20,
         "tested": false,
-        "note": "124 unit tests green; DB-backed integration tests not started"
+        "note": "124 unit tests green; Sentry + root ErrorBoundary + boot-time env validation across all 3 apps; a scale & concurrency audit opened 17 findings (per-process rate limits, missing indexes, pagination, idempotency) — the main remaining lift"
       },
       {
         "label": "integrations",
         "weight": 10,
-        "pct": 0,
+        "pct": 35,
         "baseEffort": 10,
         "tested": false,
-        "note": "SMS/OTP provider, bank-statement import, push notifications — external rails, not started"
+        "note": "push + SMS notification outbox with deep-links live; real SMS/OTP provider and bank-statement import still pending"
       },
       {
         "label": "release & store",
         "weight": 8,
-        "pct": 32,
+        "pct": 40,
         "baseEffort": 12,
         "tested": false,
-        "note": "iOS build #4 in TestFlight + EAS Update (OTA) live — JS/design changes ship without a store release; Android build, store listings & review pending"
+        "note": "iOS build #6 in TestFlight, EAS Update (OTA) live, EAS-managed signing, auto-submit wired; Android build, store listings & review pending"
       }
     ]
   },
@@ -98,25 +98,25 @@
       "id": "M3",
       "title": "money loop",
       "state": "testing",
-      "stateNote": "live, but reconciliation amount gap open"
+      "stateNote": "live, but reconciliation amount + scale-integrity gaps open"
     },
     {
       "id": "M4",
       "title": "customer app",
-      "state": "progress",
-      "stateNote": "wired to live API, in polish"
+      "state": "testing",
+      "stateNote": "wired to live API, SYP-native and polished — live, not formally tested"
     },
     {
       "id": "M5",
       "title": "ops & portals",
-      "state": "todo",
-      "stateNote": ""
+      "state": "progress",
+      "stateNote": "admin console wired to the live API; merchant & admin redesigns pending"
     },
     {
       "id": "M6",
       "title": "launch hardening",
-      "state": "todo",
-      "stateNote": ""
+      "state": "progress",
+      "stateNote": "Sentry/ErrorBoundary in; DEV_OTP gate, the 17-finding scale audit and the QA hardening batch still open"
     }
   ],
   "stats": {
@@ -152,7 +152,7 @@
   ],
   "securityAudit": {
     "status": "scheduled · not yet run",
-    "note": "dedicated pre-launch security audit — scheduled once the two open criticals are fixed and the apps are bundled. Until then, the daily review above tracks interim security posture.",
+    "note": "dedicated pre-launch security audit — scheduled once the open criticals are fixed and the apps are bundled. Until then, the scale & concurrency audit (17 findings) and the daily review track interim security posture.",
     "areas": [
       {
         "label": "authentication & sessions",
@@ -231,18 +231,18 @@
           {
             "stage": "signing & certificates",
             "status": "done",
-            "note": "dist cert + provisioning profile + ASC API key all in place"
+            "note": "dist cert + provisioning profile + ASC API key — now EAS-managed (moved from local 2026-06-16)"
           },
           {
             "stage": "EAS production build",
             "status": "done",
-            "note": "build #4 — OTA-capable (expo-updates, 'production' channel); signed with your own Apple cert"
+            "note": "build #6 — OTA-capable (expo-updates, 'production' channel) with Sentry instrumentation"
           },
           {
             "stage": "beta testing",
             "label": "TestFlight",
             "status": "in-progress",
-            "note": "build #4 uploaded to App Store Connect — Apple processing; OTA now live for JS changes"
+            "note": "build #6 uploaded to App Store Connect via auto-submit — Apple processing; OTA live for JS changes"
           },
           {
             "stage": "store listing",
@@ -389,12 +389,48 @@
     {
       "title": "Credit ladder",
       "detail": "down payment shrinks as customers repay on time — 60% for new customers down to 25% for trusted ones"
+    },
+    {
+      "title": "Loans captured, not just held",
+      "detail": "a loan is authorized at checkout (hold), captured on delivery, and released if cancelled — the ledger only commits real, delivered debt"
+    },
+    {
+      "title": "Single currency — SYP only",
+      "detail": "every surface displays and transacts in Syrian pounds; USD survives only as an internal ledger unit, with no conversion anywhere users can see"
     }
   ],
   "shipped": [
     {
+      "area": "money",
+      "text": "SYP-native single-currency money — no conversion anywhere; every frontend displays and transacts in Syrian pounds"
+    },
+    {
+      "area": "admin",
+      "text": "admin console wired to the live API — KYC queue, dashboard, customers & transactions, and a super-admin Platform Settings screen (was mostly mock data)"
+    },
+    {
+      "area": "backend",
+      "text": "loan capture model live — auth-hold → capture → release, flag-gated and verified in production"
+    },
+    {
+      "area": "engagement",
+      "text": "push + SMS notification engine — admin rule set, a durable outbox, and deep-link-on-tap into the right screen"
+    },
+    {
+      "area": "reliability",
+      "text": "Sentry error monitoring (customer build #6) plus root ErrorBoundary and boot-time env validation across all 3 apps"
+    },
+    {
+      "area": "customer app",
+      "text": "Debts hub (This month / Future / Loans), redesigned Loans and Order-detail payment schedule, and a durable 'reported' state with Undo"
+    },
+    {
+      "area": "kyc",
+      "text": "photo-first signup with Claude Vision OCR — behind a default-OFF flag pending a PII/sanctions sign-off"
+    },
+    {
       "area": "mobile",
-      "text": "iOS customer app live in TestFlight (build #4) + EAS Update (OTA) enabled — design & logic changes now ship to installed apps without an App Store release"
+      "text": "iOS customer app live in TestFlight (build #6) + EAS Update (OTA) — design & logic changes ship to installed apps without an App Store release"
     },
     {
       "area": "panels",
@@ -407,10 +443,6 @@
     {
       "area": "billing",
       "text": "consolidated monthly bill — one reference per customer per month across all purchases and merchants"
-    },
-    {
-      "area": "customer app",
-      "text": "mobile app wired to the live API — login, KYC, wallet, scan-to-pay, monthly statement — with the Ink Royale design and animated splash"
     },
     {
       "area": "commerce",
@@ -459,8 +491,8 @@
         "tag": "money"
       },
       {
-        "label": "wire admin console to live endpoints",
-        "tag": "admin"
+        "label": "scale audit criticals — ledger double-book, accrual outside txn, per-process rate limiter",
+        "tag": "scale"
       },
       {
         "label": "pick one settlement model, align docs with code",
@@ -473,7 +505,7 @@
         "tag": "quality"
       },
       {
-        "label": "Arabic + RTL + SYP amounts across the customer app",
+        "label": "Arabic + RTL across the customer app (SYP done)",
         "tag": "localization"
       },
       {
@@ -481,8 +513,8 @@
         "tag": "workers"
       },
       {
-        "label": "merchant portal redesign",
-        "tag": "portal"
+        "label": "indexing, pagination & idempotency keys on money routes",
+        "tag": "scale"
       },
       {
         "label": "real SMS provider + abuse caps",
@@ -491,7 +523,7 @@
     ],
     "later": [
       {
-        "label": "admin portal redesign",
+        "label": "merchant & admin portal redesigns",
         "tag": "portal"
       },
       {
@@ -535,6 +567,18 @@
     "registerUrl": "https://github.com/tnsaruniitr-lab/qisto/blob/main/qa-reports/OPEN-FINDINGS.md",
     "reports": [
       {
+        "date": "2026-06-16",
+        "title": "Full end-to-end repo audit",
+        "verdict": "Whole-repo audit across backend, apps, infra and docs — money loop and capture model sound; observability, reliability and the scale findings called out as the path to launch-readiness.",
+        "url": "https://github.com/tnsaruniitr-lab/qisto/blob/main/qa-reports/qisto-full-audit-2026-06-16.md"
+      },
+      {
+        "date": "2026-06-13",
+        "title": "Scale & concurrency audit",
+        "verdict": "23 findings — 6 critical, 11 high — on concurrency, idempotency, indexing and rate-limiting under load. Tracked as issues #13–29 and added to the roadmap as new scope (the headline % reflects the added work).",
+        "url": "https://github.com/tnsaruniitr-lab/qisto/blob/main/qa-reports/SCALE-AUDIT-2026-06-13.md"
+      },
+      {
         "date": "2026-06-11",
         "title": "Money-math end-to-end audit",
         "verdict": "Core math verified correct: live production scenarios across 3 merchant configs, 41-invariant checklist, 400k-case property tests, full ledger balance. 4 HIGH + 4 MED hardening cases opened (failure/race paths, not wrong math).",
@@ -542,6 +586,18 @@
       }
     ],
     "openCases": [
+      {
+        "id": "SCALE #13-16",
+        "sev": "critical",
+        "title": "Concurrency/integrity criticals: accrual outside capture txn (#13), ledger double-book on retry (#14), per-process rate limiter (#15), full-ledger balance scans (#16)",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/13"
+      },
+      {
+        "id": "SCALE #26-27",
+        "sev": "critical",
+        "title": "Auth amplification: argon2 per OTP call with no IP cap (#26); DEV_OTP master-bypass + rate-limit inflation (#27)",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/26"
+      },
       {
         "id": "QA-1",
         "sev": "high",
@@ -567,10 +623,10 @@
         "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/10"
       },
       {
-        "id": "QA-5..8",
-        "sev": "medium",
-        "title": "Idempotency scoping+TTL · bank-amount matching · term locking · reconcile batch isolation",
-        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/11"
+        "id": "SCALE #17-25",
+        "sev": "high",
+        "title": "Settlement TOCTOU, reconcile deadlock/idempotency, missing indexes, unpaginated lists, unsized pool, no money-route idempotency keys",
+        "issue": "https://github.com/tnsaruniitr-lab/qisto/issues/17"
       }
     ]
   }
