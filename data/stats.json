@@ -1,12 +1,28 @@
 {
-  "generatedAt": "2026-06-18T09:05:40.757Z",
+  "generatedAt": "2026-06-18T09:48:46.201Z",
   "totals24h": {
-    "commits": 1,
-    "files": 1,
-    "additions": 24,
-    "deletions": 10
+    "commits": 2,
+    "files": 23,
+    "additions": 387,
+    "deletions": 82
   },
   "areas24h": [
+    {
+      "label": "backend core",
+      "files": 16
+    },
+    {
+      "label": "tests",
+      "files": 3
+    },
+    {
+      "label": "customer app",
+      "files": 2
+    },
+    {
+      "label": "migrations",
+      "files": 1
+    },
     {
       "label": "repo config",
       "files": 1
@@ -131,7 +147,7 @@
     },
     {
       "date": "2026-06-18",
-      "commits": 1
+      "commits": 2
     }
   ],
   "contributors7d": [
@@ -145,6 +161,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "9369edccc73b191c705a3926da433097682281f9",
+      "message": "Notifications: PR #33 review fixes — i18n, delivery reliability, cohort scans (#34)",
+      "author": "Arun Sharma",
+      "date": "2026-06-18T09:41:54Z"
+    },
     {
       "sha": "5ab48d90a58814e1c2a743980cc2cafb6edd4809",
       "message": "docs(roadmap): mark admin-wiring/push/reported-bill done; add 14 scale-audit findings as new scope",
@@ -318,16 +340,10 @@
       "message": "docs: scale & concurrency audit — 23 findings, 17 tracked as issues #13-29",
       "author": "Arun Sharma",
       "date": "2026-06-13T21:06:43Z"
-    },
-    {
-      "sha": "bf2e36aa5a90c12c40daf1f46200309fda598338",
-      "message": "Merge: money-flow audit fixes (released-leak, zero-fee settlement, FE float/reversed)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T20:43:12Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-18T09:05:40.757Z",
+    "fetchedAt": "2026-06-18T09:48:46.201Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -700,7 +716,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-18T09:05:40.757Z",
+    "fetchedAt": "2026-06-18T09:48:46.201Z",
     "items": [
       {
         "id": "BUG-001",
