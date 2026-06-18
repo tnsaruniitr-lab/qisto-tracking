@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-18T13:44:23.311Z",
+  "generatedAt": "2026-06-18T17:32:59.709Z",
   "totals24h": {
-    "commits": 3,
-    "files": 25,
-    "additions": 391,
-    "deletions": 85
+    "commits": 4,
+    "files": 28,
+    "additions": 454,
+    "deletions": 87
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 16
+      "files": 19
     },
     {
       "label": "customer app",
@@ -147,13 +147,13 @@
     },
     {
       "date": "2026-06-18",
-      "commits": 3
+      "commits": 4
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 79
+      "commits": 71
     },
     {
       "name": "Manasvi",
@@ -161,6 +161,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "a895ae085f7580a61176b3a327fc4c042fc4a934",
+      "message": "feat(identity): WhatsApp OTP delivery via Twilio (env-gated)",
+      "author": "Arun Sharma",
+      "date": "2026-06-18T15:09:39Z"
+    },
     {
       "sha": "0c5744b80d74113ee212521e2d4d2cdc45d6a784",
       "message": "fix(customer): missing comma in app.json plugins (merge artifact broke eas build)",
@@ -334,16 +340,10 @@
       "message": "Merge: redesigned Loans screen (segmented limit bar + monthly cards)",
       "author": "Arun Sharma",
       "date": "2026-06-13T21:37:55Z"
-    },
-    {
-      "sha": "9de12d48ce88920eeb398ea0b4abddb9139c92a5",
-      "message": "feat(loans): redesigned Loans screen — segmented limit bar + monthly cards",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T21:32:31Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-18T13:44:23.311Z",
+    "fetchedAt": "2026-06-18T17:32:59.709Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -716,7 +716,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-18T13:44:23.311Z",
+    "fetchedAt": "2026-06-18T17:32:59.709Z",
     "items": [
       {
         "id": "BUG-001",
