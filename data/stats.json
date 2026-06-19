@@ -1,31 +1,15 @@
 {
-  "generatedAt": "2026-06-19T07:32:45.139Z",
+  "generatedAt": "2026-06-19T12:20:14.846Z",
   "totals24h": {
-    "commits": 4,
-    "files": 28,
-    "additions": 454,
-    "deletions": 87
+    "commits": 1,
+    "files": 3,
+    "additions": 63,
+    "deletions": 2
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 19
-    },
-    {
-      "label": "customer app",
-      "files": 4
-    },
-    {
-      "label": "tests",
       "files": 3
-    },
-    {
-      "label": "migrations",
-      "files": 1
-    },
-    {
-      "label": "repo config",
-      "files": 1
     }
   ],
   "velocity": [
@@ -153,7 +137,7 @@
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 56
+      "commits": 52
     },
     {
       "name": "Manasvi",
@@ -343,7 +327,7 @@
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-19T07:32:45.139Z",
+    "fetchedAt": "2026-06-19T12:20:14.846Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -716,7 +700,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-19T07:32:45.139Z",
+    "fetchedAt": "2026-06-19T12:20:14.846Z",
     "items": [
       {
         "id": "BUG-001",
