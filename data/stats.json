@@ -1,15 +1,23 @@
 {
-  "generatedAt": "2026-06-19T12:20:14.846Z",
+  "generatedAt": "2026-06-19T16:15:56.984Z",
   "totals24h": {
-    "commits": 1,
-    "files": 3,
-    "additions": 63,
-    "deletions": 2
+    "commits": 4,
+    "files": 22,
+    "additions": 209,
+    "deletions": 54
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 3
+      "files": 20
+    },
+    {
+      "label": "migrations",
+      "files": 1
+    },
+    {
+      "label": "tests",
+      "files": 1
     }
   ],
   "velocity": [
@@ -131,13 +139,13 @@
     },
     {
       "date": "2026-06-19",
-      "commits": 0
+      "commits": 4
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 52
+      "commits": 44
     },
     {
       "name": "Manasvi",
@@ -145,6 +153,30 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "33a3bb7f001c39f0c4d6cbe242429e348cb0f66d",
+      "message": "feat(auth): Phase 2 — shared OTP core (bias-free generator) + per-code attempt cap",
+      "author": "Arun Sharma",
+      "date": "2026-06-19T13:23:48Z"
+    },
+    {
+      "sha": "5ba7f4d55150983a57785b5b86bcfc803c98cac6",
+      "message": "feat(auth): Phase 1 — merchant WhatsApp OTP delivery + shared sender/phone schema",
+      "author": "Arun Sharma",
+      "date": "2026-06-19T13:16:01Z"
+    },
+    {
+      "sha": "c0666623de44a28432e65aa02426022444a29727",
+      "message": "feat(auth): Phase 0 — gate OTP master-bypass behind explicit OTP_DEV_BYPASS flag",
+      "author": "Arun Sharma",
+      "date": "2026-06-19T13:11:33Z"
+    },
+    {
+      "sha": "7ebc77e438401beed756ac27b1413082ac0d3b4c",
+      "message": "feat(identity): WhatsApp OTP via self-hosted Evolution gateway (reaches Syria)",
+      "author": "Arun Sharma",
+      "date": "2026-06-19T12:47:02Z"
+    },
     {
       "sha": "a895ae085f7580a61176b3a327fc4c042fc4a934",
       "message": "feat(identity): WhatsApp OTP delivery via Twilio (env-gated)",
@@ -300,34 +332,10 @@
       "message": "Merge feat/debts-hub: customer Debts hub (This month/Future/Loans)",
       "author": "Arun Sharma",
       "date": "2026-06-14T11:44:56Z"
-    },
-    {
-      "sha": "978e8c25138dd06a121b5731c22474e771b1a2b2",
-      "message": "feat(customer): Debts hub — This month / Future / Loans, retire Pay",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T11:44:46Z"
-    },
-    {
-      "sha": "74a10cad477b1d39d0fc932d06a73c7e7fea1104",
-      "message": "Merge: persistent Tabs layout (fix nav jump + card re-load)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T22:08:48Z"
-    },
-    {
-      "sha": "8778c6530ca50c34d4c71a8c81583f21c227b18e",
-      "message": "fix(customer): persistent Tabs layout — stop nav jump + card re-load flash",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T22:07:09Z"
-    },
-    {
-      "sha": "225f827c4aa16c816b5a6a8955b98726123140f9",
-      "message": "Merge: redesigned Loans screen (segmented limit bar + monthly cards)",
-      "author": "Arun Sharma",
-      "date": "2026-06-13T21:37:55Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-19T12:20:14.846Z",
+    "fetchedAt": "2026-06-19T16:15:56.984Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -700,7 +708,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-19T12:20:14.846Z",
+    "fetchedAt": "2026-06-19T16:15:56.984Z",
     "items": [
       {
         "id": "BUG-001",
