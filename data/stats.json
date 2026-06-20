@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-06-20T11:26:21.085Z",
+  "generatedAt": "2026-06-20T14:34:28.741Z",
   "totals24h": {
-    "commits": 9,
-    "files": 66,
-    "additions": 2527,
-    "deletions": 254
+    "commits": 11,
+    "files": 58,
+    "additions": 2729,
+    "deletions": 274
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 44
-    },
-    {
-      "label": "tests",
-      "files": 7
+      "files": 28
     },
     {
       "label": "customer app",
-      "files": 5
+      "files": 14
+    },
+    {
+      "label": "tests",
+      "files": 6
     },
     {
       "label": "admin console",
       "files": 4
     },
     {
-      "label": "migrations",
+      "label": "repo config",
       "files": 3
     },
     {
-      "label": "repo config",
+      "label": "migrations",
       "files": 2
     },
     {
@@ -155,13 +155,13 @@
     },
     {
       "date": "2026-06-20",
-      "commits": 5
+      "commits": 11
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 46
+      "commits": 52
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,42 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "1a1e2c8042796b76fde7be429060f8c338622466",
+      "message": "feat(customer): 3-bucket bills — net-new Overdue across Home + Loans (#48)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T14:09:57Z"
+    },
+    {
+      "sha": "72bcdab0eff6e3bd0880cb59e663f61c65a7dc4c",
+      "message": "feat(customer): label late fees on the home cards (#47)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T12:58:56Z"
+    },
+    {
+      "sha": "c870d0a093d6157bf74d2f25a2f7c2e049342401",
+      "message": "fix(customer): guard notifications setup for web (expo-notifications throws on web) (#46)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T12:38:21Z"
+    },
+    {
+      "sha": "a574109be98bb7c2cb44324f46b449e702c3e09b",
+      "message": "fix(ios): bump buildNumber to 12 (> TestFlight's stale build 11) (#45)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T12:21:46Z"
+    },
+    {
+      "sha": "b5830320039a7e6da58d4910f8f5b1bd89890a53",
+      "message": "ci: GitOps auto-deploy — merge to main → all services to Railway on CI-success (#44)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T11:48:25Z"
+    },
+    {
+      "sha": "47a130935f4a77d91b6dc157b0962336ff312a55",
+      "message": "feat(agency): in-process daily late-fee scheduler (the cron) + UAT-14 late-fee suite (#43)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T11:41:29Z"
+    },
     {
       "sha": "5f0cd50b583cb6a83cdb9e55be3d4819b3bdede0",
       "message": "feat(admin): full late-fee test console — switches, date-setter, reverse buttons (#42)",
@@ -316,46 +352,10 @@
       "message": "feat(kyc): photo-first signup with Claude Vision OCR, behind default-OFF flag (#30)",
       "author": "Arun Sharma",
       "date": "2026-06-15T16:48:37Z"
-    },
-    {
-      "sha": "f320cfafb68068593a3e11145a7feda06e0ddaab",
-      "message": "feat(customer): Overview as orders list → Order-detail payment schedule",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T16:19:16Z"
-    },
-    {
-      "sha": "ab3401d75391547322314ed3cec26556062d9772",
-      "message": "style(customer): This-month debts as separate cards",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T15:20:31Z"
-    },
-    {
-      "sha": "93c26c7028f130d92020ee5f35e4e9b3f0cf2b93",
-      "message": "feat(customer): durable \"reported\" state + Undo (step 3b/3)",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T14:27:37Z"
-    },
-    {
-      "sha": "2b70578fd780e6ab2e4a38ad0fc38e300cd02d90",
-      "message": "feat(agency): durable reported flag on statement + withdraw endpoint (step 3a/3)",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T14:20:04Z"
-    },
-    {
-      "sha": "f4743465d89d8967f0f18cf750783301ec03e1fb",
-      "message": "fix(agency): dedupe payment reports — reportPayment is idempotent (step 2/3)",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T14:05:54Z"
-    },
-    {
-      "sha": "14a87c3489a3417042d679e3e58a533074661261",
-      "message": "feat(customer): confirm sheet before \"I've made the transfer\" (step 1/3)",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T13:56:04Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-20T11:26:21.085Z",
+    "fetchedAt": "2026-06-20T14:34:28.741Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -728,7 +728,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-20T11:26:21.085Z",
+    "fetchedAt": "2026-06-20T14:34:28.741Z",
     "items": [
       {
         "id": "BUG-001",
