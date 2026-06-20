@@ -1,22 +1,38 @@
 {
-  "generatedAt": "2026-06-20T08:29:27.156Z",
+  "generatedAt": "2026-06-20T11:26:21.085Z",
   "totals24h": {
-    "commits": 4,
-    "files": 22,
-    "additions": 209,
-    "deletions": 54
+    "commits": 9,
+    "files": 66,
+    "additions": 2527,
+    "deletions": 254
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 20
-    },
-    {
-      "label": "migrations",
-      "files": 1
+      "files": 44
     },
     {
       "label": "tests",
+      "files": 7
+    },
+    {
+      "label": "customer app",
+      "files": 5
+    },
+    {
+      "label": "admin console",
+      "files": 4
+    },
+    {
+      "label": "migrations",
+      "files": 3
+    },
+    {
+      "label": "repo config",
+      "files": 2
+    },
+    {
+      "label": "docs",
       "files": 1
     }
   ],
@@ -139,20 +155,54 @@
     },
     {
       "date": "2026-06-20",
-      "commits": 0
+      "commits": 5
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 44
+      "commits": 46
     },
     {
       "name": "Manasvi",
-      "commits": 3
+      "commits": 4
+    },
+    {
+      "name": "Claude",
+      "commits": 1
     }
   ],
   "recentCommits": [
+    {
+      "sha": "5f0cd50b583cb6a83cdb9e55be3d4819b3bdede0",
+      "message": "feat(admin): full late-fee test console — switches, date-setter, reverse buttons (#42)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T11:19:54Z"
+    },
+    {
+      "sha": "6b81078040ff53ca85dd804ee5b63bea9e652445",
+      "message": "feat(late-fee): prod-safe test harness — test-mode gate, reverse/waive, date-setter (#41)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T10:53:29Z"
+    },
+    {
+      "sha": "62231bef42da9678dbd333796812b8c3c29fb94a",
+      "message": "fix(eas): disable Sentry source-map auto-upload in builds",
+      "author": "Claude",
+      "date": "2026-06-20T10:26:00Z"
+    },
+    {
+      "sha": "448e2494a72f3e79eace4a7713372e4d45314e2c",
+      "message": "fix(agency): gate past-due banner on late_fees_enabled (#40)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T09:48:19Z"
+    },
+    {
+      "sha": "52a473597ce4021b5f61def0bd7fb59424a12b2e",
+      "message": "feat(late-fee): flat-capped late-fee engine + customer UI (#38)",
+      "author": "Manasvi",
+      "date": "2026-06-20T09:20:30Z"
+    },
     {
       "sha": "33a3bb7f001c39f0c4d6cbe242429e348cb0f66d",
       "message": "feat(auth): Phase 2 — shared OTP core (bias-free generator) + per-code attempt cap",
@@ -302,40 +352,10 @@
       "message": "feat(customer): confirm sheet before \"I've made the transfer\" (step 1/3)",
       "author": "Arun Sharma",
       "date": "2026-06-14T13:56:04Z"
-    },
-    {
-      "sha": "9513ba3ba8d81173c9ea99610d5e65e2c62d8480",
-      "message": "copy(customer): unify hub naming to \"Loans\"; third tab \"Loans\" → \"Overview\"",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T13:36:54Z"
-    },
-    {
-      "sha": "f126d42b2d6cc1d96f1159576c531e9486d3fc35",
-      "message": "fix(customer): audit fixes — phantom progress bar, financed header, date TZ",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T12:59:25Z"
-    },
-    {
-      "sha": "267051ca950718fac470c1b4b8103fdd0a04448d",
-      "message": "copy(customer): reframe held loans as \"awaiting down-payment confirmation\"",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T12:26:40Z"
-    },
-    {
-      "sha": "43d67e8e253700bc198c808c57eaeefa75f30f36",
-      "message": "fix(customer): pin the This-month Pay footer + roomier Debts tabs",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T11:55:41Z"
-    },
-    {
-      "sha": "e9e27d393423a8f9187f08a397efcdb6576be83a",
-      "message": "Merge feat/debts-hub: customer Debts hub (This month/Future/Loans)",
-      "author": "Arun Sharma",
-      "date": "2026-06-14T11:44:56Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-20T08:29:27.156Z",
+    "fetchedAt": "2026-06-20T11:26:21.085Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -708,7 +728,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-20T08:29:27.156Z",
+    "fetchedAt": "2026-06-20T11:26:21.085Z",
     "items": [
       {
         "id": "BUG-001",
