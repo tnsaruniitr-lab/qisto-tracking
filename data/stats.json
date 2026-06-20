@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-20T20:43:43.053Z",
+  "generatedAt": "2026-06-20T22:36:54.439Z",
   "totals24h": {
-    "commits": 13,
-    "files": 64,
-    "additions": 3003,
-    "deletions": 284
+    "commits": 14,
+    "files": 67,
+    "additions": 3061,
+    "deletions": 291
   },
   "areas24h": [
     {
       "label": "backend core",
-      "files": 28
+      "files": 30
     },
     {
       "label": "customer app",
@@ -17,7 +17,7 @@
     },
     {
       "label": "tests",
-      "files": 6
+      "files": 7
     },
     {
       "label": "repo config",
@@ -155,13 +155,13 @@
     },
     {
       "date": "2026-06-20",
-      "commits": 13
+      "commits": 14
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 44
+      "commits": 40
     },
     {
       "name": "Manasvi",
@@ -173,6 +173,12 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "776a9bc21f9efc118dee8f80f100099b0aae6732",
+      "message": "fix(agency): gate late-fee reconcile + report on late_fees_enabled; date-driven pastDue (#51)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T22:05:08Z"
+    },
     {
       "sha": "e727caa5d88522609ca514309a15b8937c19f704",
       "message": "test(customer): exhaustive bill-classifier suite + CI gate (#50)",
@@ -346,16 +352,10 @@
       "message": "docs(audit): full end-to-end repo audit (2026-06-16)",
       "author": "Arun Sharma",
       "date": "2026-06-16T15:09:59Z"
-    },
-    {
-      "sha": "ac436586c24481d108ff0a48837e5f7f38b0f4cc",
-      "message": "feat(engagement): push + SMS notifications — admin rule set, outbox engine",
-      "author": "Manasvi",
-      "date": "2026-06-16T10:19:50Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-20T20:43:43.053Z",
+    "fetchedAt": "2026-06-20T22:36:54.439Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -728,7 +728,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-20T20:43:43.053Z",
+    "fetchedAt": "2026-06-20T22:36:54.439Z",
     "items": [
       {
         "id": "BUG-001",
