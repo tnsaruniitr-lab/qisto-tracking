@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-20T16:54:57.520Z",
+  "generatedAt": "2026-06-20T18:50:11.392Z",
   "totals24h": {
-    "commits": 11,
-    "files": 58,
-    "additions": 2729,
-    "deletions": 274
+    "commits": 13,
+    "files": 64,
+    "additions": 3003,
+    "deletions": 284
   },
   "areas24h": [
     {
@@ -13,19 +13,19 @@
     },
     {
       "label": "customer app",
-      "files": 14
+      "files": 19
     },
     {
       "label": "tests",
       "files": 6
     },
     {
-      "label": "admin console",
+      "label": "repo config",
       "files": 4
     },
     {
-      "label": "repo config",
-      "files": 3
+      "label": "admin console",
+      "files": 4
     },
     {
       "label": "migrations",
@@ -155,7 +155,7 @@
     },
     {
       "date": "2026-06-20",
-      "commits": 11
+      "commits": 13
     }
   ],
   "contributors7d": [
@@ -173,6 +173,18 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "e727caa5d88522609ca514309a15b8937c19f704",
+      "message": "test(customer): exhaustive bill-classifier suite + CI gate (#50)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T18:14:09Z"
+    },
+    {
+      "sha": "02f4d25d24a5dc6503c7dba3ce3c09d886913d10",
+      "message": "fix(customer): heldSyp must exclude late fees + bump iOS buildNumber to 13 (#49)",
+      "author": "Arun Sharma",
+      "date": "2026-06-20T17:22:14Z"
+    },
     {
       "sha": "1a1e2c8042796b76fde7be429060f8c338622466",
       "message": "feat(customer): 3-bucket bills — net-new Overdue across Home + Loans (#48)",
@@ -340,22 +352,10 @@
       "message": "feat(engagement): push + SMS notifications — admin rule set, outbox engine",
       "author": "Manasvi",
       "date": "2026-06-16T10:19:50Z"
-    },
-    {
-      "sha": "15550cb920830f543b9d24b854b667a2141d2289",
-      "message": "docs(roadmap): add PR#30 photo-KYC fast-follows + PII sign-off gate",
-      "author": "Arun Sharma",
-      "date": "2026-06-15T16:54:47Z"
-    },
-    {
-      "sha": "bff931d4830c1d9e7ca55d5c0cd33a12df865256",
-      "message": "feat(kyc): photo-first signup with Claude Vision OCR, behind default-OFF flag (#30)",
-      "author": "Arun Sharma",
-      "date": "2026-06-15T16:48:37Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-20T16:54:57.520Z",
+    "fetchedAt": "2026-06-20T18:50:11.392Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -728,7 +728,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-20T16:54:57.520Z",
+    "fetchedAt": "2026-06-20T18:50:11.392Z",
     "items": [
       {
         "id": "BUG-001",
