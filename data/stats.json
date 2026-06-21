@@ -1,26 +1,30 @@
 {
-  "generatedAt": "2026-06-21T13:19:13.817Z",
+  "generatedAt": "2026-06-21T16:13:13.402Z",
   "totals24h": {
-    "commits": 4,
-    "files": 13,
-    "additions": 560,
-    "deletions": 79
+    "commits": 6,
+    "files": 29,
+    "additions": 816,
+    "deletions": 88
   },
   "areas24h": [
     {
-      "label": "customer app",
-      "files": 9
+      "label": "backend core",
+      "files": 17
     },
     {
-      "label": "backend core",
-      "files": 2
+      "label": "customer app",
+      "files": 5
     },
     {
       "label": "tests",
-      "files": 1
+      "files": 3
     },
     {
       "label": "repo config",
+      "files": 3
+    },
+    {
+      "label": "migrations",
       "files": 1
     }
   ],
@@ -143,13 +147,13 @@
     },
     {
       "date": "2026-06-21",
-      "commits": 0
+      "commits": 3
     }
   ],
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 35
+      "commits": 32
     },
     {
       "name": "Manasvi",
@@ -161,6 +165,24 @@
     }
   ],
   "recentCommits": [
+    {
+      "sha": "19875b6bcf1d6cfbfc69994ee7310ab7641bceed",
+      "message": "fix: Wave 1 hardening — durable accrual, migration lock, graceful shutdown (#36)",
+      "author": "Arun Sharma",
+      "date": "2026-06-21T14:02:38Z"
+    },
+    {
+      "sha": "1784e7549f7f053ff407861dd35a12aeddf0adf4",
+      "message": "ci(e2e): invoke uat.mjs directly (pnpm run -- leaked '--' into argv); drop unneeded pnpm setup",
+      "author": "Arun Sharma",
+      "date": "2026-06-21T14:01:56Z"
+    },
+    {
+      "sha": "10cf8da40da611b29a567d1996ac5238c74c6063",
+      "message": "ci: wire the live UAT (backend/scripts/uat.mjs) into a manual e2e workflow (#52)",
+      "author": "Arun Sharma",
+      "date": "2026-06-21T13:59:46Z"
+    },
     {
       "sha": "776a9bc21f9efc118dee8f80f100099b0aae6732",
       "message": "fix(agency): gate late-fee reconcile + report on late_fees_enabled; date-driven pastDue (#51)",
@@ -322,28 +344,10 @@
       "message": "chore(observability): drop the one-shot Sentry verify ping (pipeline confirmed live)",
       "author": "Arun Sharma",
       "date": "2026-06-16T15:33:01Z"
-    },
-    {
-      "sha": "1941e302583b1d6cb37dcdf77910e225d0608571",
-      "message": "feat(observability): Sentry error monitoring + docs/14 audit log",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:27:56Z"
-    },
-    {
-      "sha": "7f32338d47cd7fbf1305da4d502a92dd17cf8849",
-      "message": "feat(reliability): root ErrorBoundary (all 3 apps) + boot-time env validation",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:09:59Z"
-    },
-    {
-      "sha": "71ff6bb845f9ce2ec63f672b0119f0c17f941e39",
-      "message": "docs(audit): full end-to-end repo audit (2026-06-16)",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:09:59Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-21T13:19:13.817Z",
+    "fetchedAt": "2026-06-21T16:13:13.402Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -716,7 +720,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-21T13:19:13.817Z",
+    "fetchedAt": "2026-06-21T16:13:13.402Z",
     "items": [
       {
         "id": "BUG-001",
