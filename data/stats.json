@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T10:30:49.010Z",
+  "generatedAt": "2026-06-26T13:24:13.153Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -132,7 +132,7 @@
   "contributors7d": [
     {
       "name": "Arun Sharma",
-      "commits": 19
+      "commits": 15
     },
     {
       "name": "Claude",
@@ -326,7 +326,7 @@
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-06-26T10:30:49.010Z",
+    "fetchedAt": "2026-06-26T13:24:13.153Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -699,7 +699,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-06-26T10:30:49.010Z",
+    "fetchedAt": "2026-06-26T13:24:13.153Z",
     "items": [
       {
         "id": "BUG-001",
