@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T23:13:31.162Z",
+  "generatedAt": "2026-07-15T00:09:18.037Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -8,10 +8,6 @@
   },
   "areas24h": [],
   "velocity": [
-    {
-      "date": "2026-06-15",
-      "commits": 2
-    },
     {
       "date": "2026-06-16",
       "commits": 8
@@ -126,6 +122,10 @@
     },
     {
       "date": "2026-07-14",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-15",
       "commits": 0
     }
   ],
@@ -313,7 +313,7 @@
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-14T23:13:31.162Z",
+    "fetchedAt": "2026-07-15T00:09:18.037Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -686,7 +686,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-14T23:13:31.162Z",
+    "fetchedAt": "2026-07-15T00:09:18.037Z",
     "items": [
       {
         "id": "BUG-001",
