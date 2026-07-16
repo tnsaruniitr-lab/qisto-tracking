@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T14:26:45.554Z",
+  "generatedAt": "2026-07-16T16:44:03.795Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -292,28 +292,10 @@
       "message": "feat(engagement): deep-link notifications to a screen on tap",
       "author": "Manasvi",
       "date": "2026-06-16T17:44:52Z"
-    },
-    {
-      "sha": "cb68feac163ee72c4322f87b8272454fa6ba7db1",
-      "message": "build(customer): iOS credentialsSource local -> remote (EAS-managed)",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:44:30Z"
-    },
-    {
-      "sha": "6b8064df4bac4d5a4374ed478eb205cc5cb3d4de",
-      "message": "feat(observability): @sentry/react-native in customer app (build #6)",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:41:34Z"
-    },
-    {
-      "sha": "f9f79c38003b2d41fdc62f751e1c1f0bbb6d8482",
-      "message": "chore(observability): drop the one-shot Sentry verify ping (pipeline confirmed live)",
-      "author": "Arun Sharma",
-      "date": "2026-06-16T15:33:01Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-16T14:26:45.554Z",
+    "fetchedAt": "2026-07-16T16:44:03.795Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -686,7 +668,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-16T14:26:45.554Z",
+    "fetchedAt": "2026-07-16T16:44:03.795Z",
     "items": [
       {
         "id": "BUG-001",
