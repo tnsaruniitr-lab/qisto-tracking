@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T16:44:03.795Z",
+  "generatedAt": "2026-07-16T18:34:28.256Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -286,16 +286,10 @@
       "message": "Merge branch 'notifications/engagement-module' into main",
       "author": "Manasvi",
       "date": "2026-06-17T07:05:26Z"
-    },
-    {
-      "sha": "0a92df38e8ef8a29262a4c8689b1b00f11d81689",
-      "message": "feat(engagement): deep-link notifications to a screen on tap",
-      "author": "Manasvi",
-      "date": "2026-06-16T17:44:52Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-16T16:44:03.795Z",
+    "fetchedAt": "2026-07-16T18:34:28.256Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -668,7 +662,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-16T16:44:03.795Z",
+    "fetchedAt": "2026-07-16T18:34:28.256Z",
     "items": [
       {
         "id": "BUG-001",
