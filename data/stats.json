@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T06:30:47.135Z",
+  "generatedAt": "2026-07-17T09:23:02.644Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -280,16 +280,10 @@
       "message": "docs(roadmap): mark admin-wiring/push/reported-bill done; add 14 scale-audit findings as new scope",
       "author": "Arun Sharma",
       "date": "2026-06-18T09:05:23Z"
-    },
-    {
-      "sha": "fcde1e0b1d4f180c72785a9907f9ed2d78bf50f3",
-      "message": "Merge branch 'notifications/engagement-module' into main",
-      "author": "Manasvi",
-      "date": "2026-06-17T07:05:26Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-17T06:30:47.135Z",
+    "fetchedAt": "2026-07-17T09:23:02.644Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -662,7 +656,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-17T06:30:47.135Z",
+    "fetchedAt": "2026-07-17T09:23:02.644Z",
     "items": [
       {
         "id": "BUG-001",
