@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T09:01:35.642Z",
+  "generatedAt": "2026-07-18T10:42:38.804Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -262,28 +262,10 @@
       "message": "feat(identity): WhatsApp OTP delivery via Twilio (env-gated)",
       "author": "Arun Sharma",
       "date": "2026-06-18T15:09:39Z"
-    },
-    {
-      "sha": "0c5744b80d74113ee212521e2d4d2cdc45d6a784",
-      "message": "fix(customer): missing comma in app.json plugins (merge artifact broke eas build)",
-      "author": "Arun Sharma",
-      "date": "2026-06-18T10:27:13Z"
-    },
-    {
-      "sha": "9369edccc73b191c705a3926da433097682281f9",
-      "message": "Notifications: PR #33 review fixes — i18n, delivery reliability, cohort scans (#34)",
-      "author": "Arun Sharma",
-      "date": "2026-06-18T09:41:54Z"
-    },
-    {
-      "sha": "5ab48d90a58814e1c2a743980cc2cafb6edd4809",
-      "message": "docs(roadmap): mark admin-wiring/push/reported-bill done; add 14 scale-audit findings as new scope",
-      "author": "Arun Sharma",
-      "date": "2026-06-18T09:05:23Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-18T09:01:35.642Z",
+    "fetchedAt": "2026-07-18T10:42:38.804Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -656,7 +638,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-18T09:01:35.642Z",
+    "fetchedAt": "2026-07-18T10:42:38.804Z",
     "items": [
       {
         "id": "BUG-001",
