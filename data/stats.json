@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T13:53:04.098Z",
+  "generatedAt": "2026-07-18T15:17:33.311Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -256,16 +256,10 @@
       "message": "feat(identity): WhatsApp OTP via self-hosted Evolution gateway (reaches Syria)",
       "author": "Arun Sharma",
       "date": "2026-06-19T12:47:02Z"
-    },
-    {
-      "sha": "a895ae085f7580a61176b3a327fc4c042fc4a934",
-      "message": "feat(identity): WhatsApp OTP delivery via Twilio (env-gated)",
-      "author": "Arun Sharma",
-      "date": "2026-06-18T15:09:39Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-18T13:53:04.098Z",
+    "fetchedAt": "2026-07-18T15:17:33.311Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -638,7 +632,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-18T13:53:04.098Z",
+    "fetchedAt": "2026-07-18T15:17:33.311Z",
     "items": [
       {
         "id": "BUG-001",
