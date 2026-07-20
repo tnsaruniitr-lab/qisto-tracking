@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T16:02:54.106Z",
+  "generatedAt": "2026-07-20T18:23:32.278Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -154,22 +154,10 @@
       "message": "fix(agency): gate late-fee reconcile + report on late_fees_enabled; date-driven pastDue (#51)",
       "author": "Arun Sharma",
       "date": "2026-06-20T22:05:08Z"
-    },
-    {
-      "sha": "e727caa5d88522609ca514309a15b8937c19f704",
-      "message": "test(customer): exhaustive bill-classifier suite + CI gate (#50)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T18:14:09Z"
-    },
-    {
-      "sha": "02f4d25d24a5dc6503c7dba3ce3c09d886913d10",
-      "message": "fix(customer): heldSyp must exclude late fees + bump iOS buildNumber to 13 (#49)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T17:22:14Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-20T16:02:54.106Z",
+    "fetchedAt": "2026-07-20T18:23:32.278Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -542,7 +530,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-20T16:02:54.106Z",
+    "fetchedAt": "2026-07-20T18:23:32.278Z",
     "items": [
       {
         "id": "BUG-001",
