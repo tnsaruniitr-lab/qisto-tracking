@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T20:43:22.347Z",
+  "generatedAt": "2026-07-20T22:14:54.770Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -148,16 +148,10 @@
       "message": "ci: wire the live UAT (backend/scripts/uat.mjs) into a manual e2e workflow (#52)",
       "author": "Arun Sharma",
       "date": "2026-06-21T13:59:46Z"
-    },
-    {
-      "sha": "776a9bc21f9efc118dee8f80f100099b0aae6732",
-      "message": "fix(agency): gate late-fee reconcile + report on late_fees_enabled; date-driven pastDue (#51)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T22:05:08Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-20T20:43:22.347Z",
+    "fetchedAt": "2026-07-20T22:14:54.770Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -530,7 +524,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-20T20:43:22.347Z",
+    "fetchedAt": "2026-07-20T22:14:54.770Z",
     "items": [
       {
         "id": "BUG-001",
