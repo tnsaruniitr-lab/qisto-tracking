@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T13:21:01.259Z",
+  "generatedAt": "2026-07-20T16:02:54.106Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -166,16 +166,10 @@
       "message": "fix(customer): heldSyp must exclude late fees + bump iOS buildNumber to 13 (#49)",
       "author": "Arun Sharma",
       "date": "2026-06-20T17:22:14Z"
-    },
-    {
-      "sha": "1a1e2c8042796b76fde7be429060f8c338622466",
-      "message": "feat(customer): 3-bucket bills — net-new Overdue across Home + Loans (#48)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T14:09:57Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-20T13:21:01.259Z",
+    "fetchedAt": "2026-07-20T16:02:54.106Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -548,7 +542,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-20T13:21:01.259Z",
+    "fetchedAt": "2026-07-20T16:02:54.106Z",
     "items": [
       {
         "id": "BUG-001",
