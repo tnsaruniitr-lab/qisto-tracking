@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T07:33:24.471Z",
+  "generatedAt": "2026-07-20T11:16:08.581Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -208,34 +208,10 @@
       "message": "feat(admin): full late-fee test console — switches, date-setter, reverse buttons (#42)",
       "author": "Arun Sharma",
       "date": "2026-06-20T11:19:54Z"
-    },
-    {
-      "sha": "6b81078040ff53ca85dd804ee5b63bea9e652445",
-      "message": "feat(late-fee): prod-safe test harness — test-mode gate, reverse/waive, date-setter (#41)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T10:53:29Z"
-    },
-    {
-      "sha": "62231bef42da9678dbd333796812b8c3c29fb94a",
-      "message": "fix(eas): disable Sentry source-map auto-upload in builds",
-      "author": "Claude",
-      "date": "2026-06-20T10:26:00Z"
-    },
-    {
-      "sha": "448e2494a72f3e79eace4a7713372e4d45314e2c",
-      "message": "fix(agency): gate past-due banner on late_fees_enabled (#40)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T09:48:19Z"
-    },
-    {
-      "sha": "52a473597ce4021b5f61def0bd7fb59424a12b2e",
-      "message": "feat(late-fee): flat-capped late-fee engine + customer UI (#38)",
-      "author": "Manasvi",
-      "date": "2026-06-20T09:20:30Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-20T07:33:24.471Z",
+    "fetchedAt": "2026-07-20T11:16:08.581Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -608,7 +584,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-20T07:33:24.471Z",
+    "fetchedAt": "2026-07-20T11:16:08.581Z",
     "items": [
       {
         "id": "BUG-001",
