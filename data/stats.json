@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T11:16:08.581Z",
+  "generatedAt": "2026-07-20T13:21:01.259Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -172,46 +172,10 @@
       "message": "feat(customer): 3-bucket bills — net-new Overdue across Home + Loans (#48)",
       "author": "Arun Sharma",
       "date": "2026-06-20T14:09:57Z"
-    },
-    {
-      "sha": "72bcdab0eff6e3bd0880cb59e663f61c65a7dc4c",
-      "message": "feat(customer): label late fees on the home cards (#47)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T12:58:56Z"
-    },
-    {
-      "sha": "c870d0a093d6157bf74d2f25a2f7c2e049342401",
-      "message": "fix(customer): guard notifications setup for web (expo-notifications throws on web) (#46)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T12:38:21Z"
-    },
-    {
-      "sha": "a574109be98bb7c2cb44324f46b449e702c3e09b",
-      "message": "fix(ios): bump buildNumber to 12 (> TestFlight's stale build 11) (#45)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T12:21:46Z"
-    },
-    {
-      "sha": "b5830320039a7e6da58d4910f8f5b1bd89890a53",
-      "message": "ci: GitOps auto-deploy — merge to main → all services to Railway on CI-success (#44)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T11:48:25Z"
-    },
-    {
-      "sha": "47a130935f4a77d91b6dc157b0962336ff312a55",
-      "message": "feat(agency): in-process daily late-fee scheduler (the cron) + UAT-14 late-fee suite (#43)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T11:41:29Z"
-    },
-    {
-      "sha": "5f0cd50b583cb6a83cdb9e55be3d4819b3bdede0",
-      "message": "feat(admin): full late-fee test console — switches, date-setter, reverse buttons (#42)",
-      "author": "Arun Sharma",
-      "date": "2026-06-20T11:19:54Z"
     }
   ],
   "roadmap": {
-    "fetchedAt": "2026-07-20T11:16:08.581Z",
+    "fetchedAt": "2026-07-20T13:21:01.259Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -584,7 +548,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-20T11:16:08.581Z",
+    "fetchedAt": "2026-07-20T13:21:01.259Z",
     "items": [
       {
         "id": "BUG-001",
