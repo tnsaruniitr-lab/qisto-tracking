@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T12:02:16.260Z",
+  "generatedAt": "2026-07-21T14:27:16.567Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -130,28 +130,9 @@
     }
   ],
   "contributors7d": [],
-  "recentCommits": [
-    {
-      "sha": "19875b6bcf1d6cfbfc69994ee7310ab7641bceed",
-      "message": "fix: Wave 1 hardening — durable accrual, migration lock, graceful shutdown (#36)",
-      "author": "Arun Sharma",
-      "date": "2026-06-21T14:02:38Z"
-    },
-    {
-      "sha": "1784e7549f7f053ff407861dd35a12aeddf0adf4",
-      "message": "ci(e2e): invoke uat.mjs directly (pnpm run -- leaked '--' into argv); drop unneeded pnpm setup",
-      "author": "Arun Sharma",
-      "date": "2026-06-21T14:01:56Z"
-    },
-    {
-      "sha": "10cf8da40da611b29a567d1996ac5238c74c6063",
-      "message": "ci: wire the live UAT (backend/scripts/uat.mjs) into a manual e2e workflow (#52)",
-      "author": "Arun Sharma",
-      "date": "2026-06-21T13:59:46Z"
-    }
-  ],
+  "recentCommits": [],
   "roadmap": {
-    "fetchedAt": "2026-07-21T12:02:16.260Z",
+    "fetchedAt": "2026-07-21T14:27:16.567Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -524,7 +505,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-07-21T12:02:16.260Z",
+    "fetchedAt": "2026-07-21T14:27:16.567Z",
     "items": [
       {
         "id": "BUG-001",
