@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T16:58:26.811Z",
+  "generatedAt": "2026-08-25T17:47:47.154Z",
   "totals24h": {
     "commits": 0,
     "files": 0,
@@ -132,7 +132,7 @@
   "contributors7d": [],
   "recentCommits": [],
   "roadmap": {
-    "fetchedAt": "2026-08-25T16:58:26.811Z",
+    "fetchedAt": "2026-08-25T17:47:47.154Z",
     "items": [
       {
         "item": "Gate dev login bypass to non-production",
@@ -505,7 +505,7 @@
     ]
   },
   "bugs": {
-    "fetchedAt": "2026-08-25T16:58:26.811Z",
+    "fetchedAt": "2026-08-25T17:47:47.154Z",
     "items": [
       {
         "id": "BUG-001",
